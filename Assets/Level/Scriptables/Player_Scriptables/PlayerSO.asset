@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: PlayerSO
   m_EditorClassIdentifier: 
   MovementSpeed: 15
-  LongJumpForce: 50
-  ShortJumpForce: 1
-  LongJumpHoldTime: 0.1
+  LongJumpForce: 15
+  ShortJumpForce: 5
+  LongJumpHoldTime: 0.5
   FallScalar: 0.25
   GroundCheckDistance: 0.05
   GroundCheckOffsetY: 0.02

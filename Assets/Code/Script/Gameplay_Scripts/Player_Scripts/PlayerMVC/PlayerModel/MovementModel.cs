@@ -27,7 +27,7 @@ namespace Player.Model
             _longJumpForce = playerSO.LongJumpForce;
             _shortJumpForce = playerSO.ShortJumpForce;
             _fallSpeedScalar = playerSO.FallScalar;
-            _longJumpTime = playerSO.LongJumpForce;
+            _longJumpTime = playerSO.LongJumpHoldTime;
 
             _groundCheckDistance = playerSO.GroundCheckDistance;
             _groundCheckOffset = playerSO.GroundCheckOffsetY;
@@ -50,6 +50,7 @@ namespace Player.Model
 
         public float GetJumpForce(float jumpProgress) => Mathf.Lerp(_shortJumpForce, _longJumpForce, jumpProgress);
         public float LongJumpTime => _longJumpTime;
+        public float FallScalar => _fallSpeedScalar;
 
         public bool CanMove
         {

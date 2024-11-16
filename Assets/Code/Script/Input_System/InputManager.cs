@@ -7,6 +7,7 @@ public static class InputManager
     static InputManager()
     {
         ActionMap = new PlayerInput();
+        GameManager.OnGameStateChange += ChangeInputScheme;
     }
     
     private static void ChangeInputScheme(GameState gameState)

@@ -21,6 +21,10 @@ namespace GameManagement
             }
 
             DontDestroyOnLoad(this.gameObject);
+        }
+
+        private void Start()
+        {
             OnGameStateChange?.Invoke(GameState.Gameplay);
         }
     }

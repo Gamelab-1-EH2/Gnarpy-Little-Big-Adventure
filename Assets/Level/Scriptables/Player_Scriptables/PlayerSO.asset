@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerSO
   m_EditorClassIdentifier: 
   MovementSpeed: 15
-  LongJumpForce: 15
+  LongJumpForce: 8
   ShortJumpForce: 5
   LongJumpHoldTime: 0.5
   FallScalar: 0.25

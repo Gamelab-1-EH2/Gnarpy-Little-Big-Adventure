@@ -35,6 +35,7 @@ namespace Player.Behaviour.States
 
             //Apply fall movement control
             Vector3 directionForce = _playerModel.Movement.Direction * _playerModel.Movement.FallScalar;
+            directionForce.y = 0;
             _rigidBody.velocity += directionForce;
         }
 
@@ -67,7 +68,9 @@ namespace Player.Behaviour.States
 
         public override void TriggerEnter(Collider other)
         {
-
+            //Climb
+            if(other.gameObject.layer == 7)
+                base.OnStateExit(new PlayerClimb_State(_playerModel));
         }
 
         public override void TriggerExit(Collider other)

@@ -12,12 +12,6 @@ namespace Player.Behaviour.Machine
 
         }
 
-        protected override void ChangeState(StateMachines.States.State state)
-        {
-            base.ChangeState(state);
-            //Debug.Log(state.ToString());
-        }
-
         public void PushState(PlayerState state) => base.ChangeState(state);
         
         public void OnTriggerEnter(Collider collider)

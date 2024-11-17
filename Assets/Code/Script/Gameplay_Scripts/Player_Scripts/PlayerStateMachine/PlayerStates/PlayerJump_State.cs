@@ -17,6 +17,7 @@ namespace Player.Behaviour.States
         {
             _playerModel = playerModel;
             _rigidbody = _playerModel.Movement.Body;
+            
             jumpStartTime = 0;
             _isJumping = false;
         }

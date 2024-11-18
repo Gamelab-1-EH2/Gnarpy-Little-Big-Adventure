@@ -13,10 +13,34 @@ MonoBehaviour:
   m_Name: PlayerSO
   m_EditorClassIdentifier: 
   MovementSpeed: 15
-  LongJumpForce: 8
-  ShortJumpForce: 5
-  LongJumpHoldTime: 0.5
+  JumpForce: 50
+  JumpSpeedCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -2.5668235
+      outSlope: -2.5668235
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.43304342
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  JumpTime: 0.3
   FallScalar: 0.25
+  Gravity: {x: -0, y: -75.5, z: -0}
   GroundCheckDistance: 0.05
   GroundCheckOffsetY: 0.02
   _jumpSFX: {fileID: 0}

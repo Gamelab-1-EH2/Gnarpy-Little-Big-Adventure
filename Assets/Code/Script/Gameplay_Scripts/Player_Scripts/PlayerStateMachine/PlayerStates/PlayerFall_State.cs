@@ -18,6 +18,7 @@ namespace Player.Behaviour.States
         public override void Enter()
         {
             _playerModel.State = Model.PlayerState.Fall;
+            _rigidBody.velocity = new Vector3(_rigidBody.velocity.x, 0f, _rigidBody.velocity.z);
 
             InputManager.ActionMap.Gameplay.Movement.performed += UpdateDirection;
             InputManager.ActionMap.Gameplay.Movement.canceled += UpdateDirection;
@@ -31,12 +32,18 @@ namespace Player.Behaviour.States
 
         public override void Process()
         {
+            HandleMovement();
             HandleGroundCheck();
+        }
 
+        private void HandleMovement()
+        {
             //Apply fall movement control
             Vector3 directionForce = _playerModel.Movement.Direction * _playerModel.Movement.FallScalar;
             directionForce.y = 0;
             _rigidBody.velocity += directionForce;
+
+            _rigidBody.AddForce(_playerModel.Movement.Gravity, ForceMode.Acceleration);
         }
 
         private void HandleGroundCheck()

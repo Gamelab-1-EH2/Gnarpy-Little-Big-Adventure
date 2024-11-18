@@ -8,9 +8,10 @@ namespace Player.Model
         private float _movementSpeed;
         private float _speedMultiplier;
         
-        private float _longJumpForce;
-        private float _shortJumpForce;
-        private float _longJumpTime;
+        private float _jumpForce;
+        private AnimationCurve _jumpCurve;
+        private float _jumpTime;
+        private Vector3 _gravity;
 
         private float _groundCheckDistance;
         private float _groundCheckOffset;
@@ -24,10 +25,12 @@ namespace Player.Model
             _movementSpeed = playerSO.MovementSpeed;
             _speedMultiplier = 1f;
 
-            _longJumpForce = playerSO.LongJumpForce;
-            _shortJumpForce = playerSO.ShortJumpForce;
+            _jumpForce = playerSO.JumpForce;
+            _jumpTime = playerSO.JumpTime;
+            _jumpCurve = playerSO.JumpSpeedCurve;
+
+            _gravity = playerSO.Gravity;
             _fallSpeedScalar = playerSO.FallScalar;
-            _longJumpTime = playerSO.LongJumpHoldTime;
 
             _groundCheckDistance = playerSO.GroundCheckDistance;
             _groundCheckOffset = playerSO.GroundCheckOffsetY;
@@ -48,9 +51,11 @@ namespace Player.Model
             set => _movementSpeed = value;
         }
 
-        public float GetJumpForce(float jumpProgress) => Mathf.Lerp(_shortJumpForce, _longJumpForce, jumpProgress);
-        public float LongJumpTime => _longJumpTime;
+        public float JumpForce => _jumpForce;
+        public float JumpTime => _jumpTime;
+        public AnimationCurve JumpCurve => _jumpCurve;
         public float FallScalar => _fallSpeedScalar;
+        public Vector3 Gravity => _gravity;
 
         public bool CanMove
         {

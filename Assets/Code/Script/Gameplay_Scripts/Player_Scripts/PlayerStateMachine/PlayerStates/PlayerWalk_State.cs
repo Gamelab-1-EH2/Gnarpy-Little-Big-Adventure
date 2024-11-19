@@ -48,12 +48,28 @@ namespace Player.Behaviour.States
             Vector3 globalPos = _rigidBody.transform.position;
             globalPos.y += _playerModel.Movement.GroundCheckOffset;
 
-            //Debug
+            //Check if is grounded
+            if(!IsGrounded())
+                base.OnStateExit?.Invoke(new PlayerFall_State(_playerModel));
+        }
+
+        private bool IsGrounded()
+        {
+            bool isGrounded = false;
+
+            //Position for GroundCheck
+            Vector3 globalPos = _rigidBody.transform.position;
+            globalPos.y += _playerModel.Movement.GroundCheckOffset;
+
+            globalPos.x += 0.5f;
+            isGrounded = Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, 1 << 6);
             Debug.DrawRay(globalPos, Vector3.down * _playerModel.Movement.GroundCheckDistance, Color.red, Time.deltaTime);
 
-            //Check if is grounded
-            if(!Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance*2, 1 << 6))
-                    base.OnStateExit?.Invoke(new PlayerFall_State(_playerModel));
+            globalPos.x += -1f;
+            isGrounded |= Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, 1 << 6);
+            Debug.DrawRay(globalPos, Vector3.down * _playerModel.Movement.GroundCheckDistance, Color.red, Time.deltaTime);
+
+            return isGrounded;
         }
 
         public override void Exit()

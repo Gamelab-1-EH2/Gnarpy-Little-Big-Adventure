@@ -52,11 +52,8 @@ namespace Player.Behaviour.States
             Vector3 globalPos = _rigidBody.transform.position;
             globalPos.y += _playerModel.Movement.GroundCheckOffset;
 
-            //Debug
-            Debug.DrawRay(globalPos, Vector3.down * _playerModel.Movement.GroundCheckDistance, Color.red, Time.deltaTime);
-
             //Check if is grounded
-            if (Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, 1 << 6))
+            if(IsGrounded())
             {
                 //Check Input
                 Vector3 inputDir = InputManager.ActionMap.Gameplay.Movement.ReadValue<Vector3>();
@@ -65,6 +62,25 @@ namespace Player.Behaviour.States
                 else                            //To Walk
                     base.OnStateExit?.Invoke(new PlayerWalk_State(_playerModel));
             }
+        }
+
+        private bool IsGrounded()
+        {
+            bool isGrounded = false;
+
+            //Position for GroundCheck
+            Vector3 globalPos = _rigidBody.transform.position;
+            globalPos.y += _playerModel.Movement.GroundCheckOffset;
+
+            globalPos.x += 0.5f;
+            isGrounded = Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, 1 << 6);
+            Debug.DrawRay(globalPos, Vector3.down * _playerModel.Movement.GroundCheckDistance, Color.red, Time.deltaTime);
+
+            globalPos.x += -1f;
+            isGrounded |= Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, 1 << 6);
+            Debug.DrawRay(globalPos, Vector3.down * _playerModel.Movement.GroundCheckDistance, Color.red, Time.deltaTime);
+
+            return isGrounded;
         }
 
         private void UpdateDirection(InputAction.CallbackContext context)

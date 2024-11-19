@@ -2,6 +2,7 @@ using UnityEngine;
 
 using StateMachines;
 using Player.Behaviour.States;
+using StateMachines.States;
 
 namespace Player.Behaviour.Machine
 {
@@ -11,6 +12,12 @@ namespace Player.Behaviour.Machine
         {
 
         }
+
+        //protected override void ChangeState(State state)
+        //{
+        //    base.ChangeState(state);
+        //    Debug.Log(state.ToString());
+        //}
 
         public void PushState(PlayerState state) => base.ChangeState(state);
         

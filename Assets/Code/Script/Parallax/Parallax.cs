@@ -9,8 +9,6 @@ public class Paralax : MonoBehaviour
 
     [SerializeField]Transform _toFollow;
     [SerializeField]Parallax_SO _so;
-    [SerializeField] float _offset;
-    [SerializeField] float _backgroundSize;
     [SerializeField] float _backgroundspeed;
 
 
@@ -22,7 +20,14 @@ public class Paralax : MonoBehaviour
     private void Awake()
     {
         _oldCameraPos=_toFollow.position.x;
-        _background=this.GetComponentsInChildren<Transform>();
+
+
+        _background = new Transform[transform.childCount];
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            _background[i] = transform.GetChild(i);
+        }
+
         _left = 0;
         _right = _background.Length - 1;
     }
@@ -34,18 +39,18 @@ public class Paralax : MonoBehaviour
         transform.Translate(move);
         _oldCameraPos = _toFollow.position.x;
 
-        if (_oldCameraPos < _background[_left].position.x + _offset)
+        if (_oldCameraPos < _background[_left].position.x + _so.Offset)
         {
             ScrollLeft();
         }
-        else if (_oldCameraPos > _background[_right].position.x - _offset)
+        else if (_oldCameraPos > _background[_right].position.x - _so.Offset)
         {
             ScrollRight();
         }
     }
     void ScrollLeft()
     {
-        _background[_right].position = Vector3.right * (_background[_left].position.x - _backgroundSize);
+        _background[_right].position = Vector3.right * (_background[_left].position.x - _so.BackgroundSize);
         _left = _right;
         _right--;
 
@@ -54,7 +59,7 @@ public class Paralax : MonoBehaviour
     }
     void ScrollRight()
     {
-        _background[_left].position = Vector3.right * (_background[_right].position.x + _backgroundSize);
+        _background[_left].position = Vector3.right * (_background[_right].position.x + _so.BackgroundSize);
         _right = _left;
         _left++;
 

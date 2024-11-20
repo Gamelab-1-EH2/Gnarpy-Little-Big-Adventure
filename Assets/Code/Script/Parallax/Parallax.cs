@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Paralax : MonoBehaviour
+public class Parallax : MonoBehaviour
 {
 
     [SerializeField]Transform _toFollow;
@@ -34,8 +34,8 @@ public class Paralax : MonoBehaviour
 
     private void Update()
     {
-        float deltaX = _toFollow.position.x - _oldCameraPos;
-        Vector3 move = Vector3.right * deltaX / _backgroundspeed;
+        float delta = _toFollow.position.x - _oldCameraPos;
+        Vector3 move = Vector3.right * delta / _backgroundspeed;
         transform.Translate(move);
         _oldCameraPos = _toFollow.position.x;
 

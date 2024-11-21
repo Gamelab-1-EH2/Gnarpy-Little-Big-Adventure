@@ -8,5 +8,4 @@ public class Parallax_SO :ScriptableObject
 {
     public float BackgroundSize;
     public float Offset;
-    public bool IsVertical = false;
 }

@@ -6,7 +6,6 @@ using UnityEngine.UIElements;
 
 public class Parallax : MonoBehaviour
 {
-
     [SerializeField]Transform _toFollow;
     [SerializeField]Parallax_SO _so;
     [SerializeField] float _backgroundspeed;

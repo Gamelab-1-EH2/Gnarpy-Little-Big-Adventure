@@ -18,10 +18,18 @@ public class Player_SO : ScriptableObject
     [Header("Power Ups")]
     [SerializeField] public float RedPowerUpRadius = 5f;
     [SerializeField] public float RedPowerUpStrenght = 15f;
-    [Space(3)]
+    [SerializeField] public float RedPowerUpDelay = 15f;
+    [Space(10f)]
     [SerializeField] public float GreenPowerUpRadius = 7f;
     [SerializeField] public float GreenPowerUpStrenght = 7f;
-    [SerializeField] public Vector3 GreenPowerUpOffset = Vector3.up/2;
+    [SerializeField] public float GreenPowerUpDelay = 20f;
+    [SerializeField] public Vector3 GreenPowerUpOffset = Vector3.up / 2;
+    [Space(10f)]
+    [SerializeField] public GameObject BluePowerUpProjectile;
+    [SerializeField] public float ProjectileSpeed = 15f;
+    [SerializeField] public float ShootDelay = 1f;
+    [SerializeField] public Vector2 ShootDirectionOffset = new Vector2(0.5f, 0.25f);
+    [SerializeField] public Vector2 ShootOffset = new Vector2(0.5f, 0.5f);
     [Header("SFX")]
     [SerializeField] private SFX_SO _jumpSFX;
     [SerializeField] private SFX_SO _shootSFX;

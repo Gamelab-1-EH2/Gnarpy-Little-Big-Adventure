@@ -17,6 +17,8 @@ namespace Player.Model
         private Vector3 _direction;
         private Rigidbody _rigidbody;
 
+        private bool _lookingRight;
+
         public MovementModel(Player_SO playerSO, Rigidbody rigidbody)
         {
             _movementSpeed = playerSO.MovementSpeed;
@@ -27,6 +29,8 @@ namespace Player.Model
 
             _rigidbody = rigidbody;
             _canMove = true;
+
+            _lookingRight = true;
 
             _jumpModel = new JumpModel(playerSO);
             _fallModel = new FallModel(playerSO);
@@ -53,7 +57,15 @@ namespace Player.Model
         public Vector3 Direction
         {
             get => _direction;
-            set => _direction = value;
+            set
+            {
+                if (Direction.x > 0)
+                    _lookingRight = true;
+                else if(Direction.x < 0)
+                    _lookingRight = false;
+
+                _direction = value;
+            }
         }
 
         public Rigidbody RigidBody
@@ -61,6 +73,8 @@ namespace Player.Model
             get => _rigidbody;
             set => _rigidbody = value;
         }
+
+        public bool LookingRight => _lookingRight;
 
         public JumpModel Jump => _jumpModel;
         public FallModel Fall => _fallModel;

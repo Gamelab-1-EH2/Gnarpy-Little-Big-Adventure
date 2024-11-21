@@ -8,11 +8,11 @@ namespace Player.Model
         private PowerUpModel _powerUpModel;
         private PlayerState _playerState;
 
-        public PlayerModel(Player_SO playerSO, Rigidbody body)
+        public PlayerModel(Player_SO playerSO, Rigidbody body, Transform shieldTransform)
         {
             _playerState = PlayerState.Idle;
             _movementModel = new MovementModel(playerSO, body);
-            _powerUpModel = new PowerUpModel(playerSO);
+            _powerUpModel = new PowerUpModel(playerSO, shieldTransform);
         }
 
         public MovementModel Movement

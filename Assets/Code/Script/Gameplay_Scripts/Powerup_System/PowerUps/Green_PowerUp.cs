@@ -25,6 +25,7 @@ namespace Collectible_System.PowerUp
                 return;
 
             base._isBeingUsed = true;
+            base._playerModel.PowerUp.ShieldTransform.gameObject.SetActive(true);
         }
 
         public override void Update()

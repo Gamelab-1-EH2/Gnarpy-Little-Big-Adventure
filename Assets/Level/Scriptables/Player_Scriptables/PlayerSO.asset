@@ -45,8 +45,16 @@ MonoBehaviour:
   GroundCheckOffsetY: 0.02
   RedPowerUpRadius: 6
   RedPowerUpStrenght: 30
+  RedPowerUpDelay: 15
   GreenPowerUpRadius: 1
   GreenPowerUpStrenght: 7
+  GreenPowerUpDelay: 20
   GreenPowerUpOffset: {x: 0, y: 0.5, z: 0}
+  BluePowerUpProjectile: {fileID: 8592442538128691829, guid: 04d1449a439c4bb49a5df1772598e3d4,
+    type: 3}
+  ProjectileSpeed: 10
+  ShootDelay: 1
+  ShootDirectionOffset: {x: 0, y: 0}
+  ShootOffset: {x: 0.8, y: 0.5}
   _jumpSFX: {fileID: 0}
   _shootSFX: {fileID: 0}

@@ -11,11 +11,14 @@ namespace Collectible_System.PowerUp
         private Blue_PowerUp _powBlue;
         private Green_PowerUp _powGreen;
 
+        private PlayerModel _playerModel;
         public PowerUpController(PlayerModel playerModel)
         {
             _powRed = new Red_PowerUp(playerModel);
             _powBlue = new Blue_PowerUp(playerModel);
             _powGreen = new Green_PowerUp(playerModel);
+
+            _playerModel = playerModel;
 
             InputManager.ActionMap.Gameplay.Powerup_1.started += EnterRed;
             InputManager.ActionMap.Gameplay.Powerup_2.started += EnterBlue;
@@ -34,14 +37,17 @@ namespace Collectible_System.PowerUp
             switch(type)
             {
                 case PowerUpType.RED_STRAWBERRY:
+                    _playerModel.PowerUp.UnlockPowerUp(PowerUpType.RED_STRAWBERRY);
                     _powRed.Unlocked = true;
                     break;
 
                 case PowerUpType.BLUE_STRAWBERRY:
+                    _playerModel.PowerUp.UnlockPowerUp(PowerUpType.BLUE_STRAWBERRY);
                     _powBlue.Unlocked = true;
                     break;
 
                 case PowerUpType.GREEN_STRAWBERRY:
+                    _playerModel.PowerUp.UnlockPowerUp(PowerUpType.GREEN_STRAWBERRY);
                     _powGreen.Unlocked = true;
                     break;
             }

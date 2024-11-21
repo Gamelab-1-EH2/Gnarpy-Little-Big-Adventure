@@ -1,3 +1,6 @@
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using UnityEngine;
 
 using Player.View;
@@ -5,7 +8,6 @@ using Player.Model;
 using Player.Behaviour.Machine;
 using Player.Behaviour.States;
 using Collectible_System.PowerUp;
-using UnityEditor;
 
 namespace Player
 {
@@ -13,6 +15,7 @@ namespace Player
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private Player_SO _playerSO;
+        [SerializeField] private Transform _shieldTransform;
 
         private PlayerStateMachine _stateMachine;
         private SpriteRenderer _spriteRenderer;
@@ -30,7 +33,7 @@ namespace Player
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
             //Initialize Model
-            _playerModel = new PlayerModel(_playerSO, _rigidbody);
+            _playerModel = new PlayerModel(_playerSO, _rigidbody, _shieldTransform);
 
             //Initialize View
             Animator animator = GetComponent<Animator>();

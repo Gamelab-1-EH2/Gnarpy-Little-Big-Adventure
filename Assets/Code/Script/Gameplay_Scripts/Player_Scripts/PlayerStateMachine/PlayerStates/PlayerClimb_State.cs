@@ -14,7 +14,7 @@ namespace Player.Behaviour.States
         public PlayerClimb_State(PlayerModel playerModel) : base(playerModel)
         {
             _playerModel = playerModel;
-            _rigidBody = playerModel.Movement.Body;
+            _rigidBody = playerModel.Movement.RigidBody;
         }
 
         public override void Enter()
@@ -31,7 +31,7 @@ namespace Player.Behaviour.States
         public override void Process()
         {
             Vector3 velocity = _playerModel.Movement.Direction * _playerModel.Movement.Speed;
-            _playerModel.Movement.Body.velocity = velocity;
+            _playerModel.Movement.RigidBody.velocity = velocity;
         }
 
         public override void Exit()

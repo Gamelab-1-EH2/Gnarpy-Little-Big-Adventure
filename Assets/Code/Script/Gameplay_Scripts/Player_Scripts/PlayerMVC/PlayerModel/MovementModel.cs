@@ -7,15 +7,12 @@ namespace Player.Model
         private bool _canMove;
         private float _movementSpeed;
         private float _speedMultiplier;
-        
-        private float _jumpForce;
-        private AnimationCurve _jumpCurve;
-        private float _jumpTime;
-        private Vector3 _gravity;
+
+        private JumpModel _jumpModel;
+        private FallModel _fallModel;
 
         private float _groundCheckDistance;
         private float _groundCheckOffset;
-        private float _fallSpeedScalar;
 
         private Vector3 _direction;
         private Rigidbody _rigidbody;
@@ -25,18 +22,14 @@ namespace Player.Model
             _movementSpeed = playerSO.MovementSpeed;
             _speedMultiplier = 1f;
 
-            _jumpForce = playerSO.JumpForce;
-            _jumpTime = playerSO.JumpTime;
-            _jumpCurve = playerSO.JumpSpeedCurve;
-
-            _gravity = playerSO.Gravity;
-            _fallSpeedScalar = playerSO.FallScalar;
-
             _groundCheckDistance = playerSO.GroundCheckDistance;
             _groundCheckOffset = playerSO.GroundCheckOffsetY;
 
             _rigidbody = rigidbody;
             _canMove = true;
+
+            _jumpModel = new JumpModel(playerSO);
+            _fallModel = new FallModel(playerSO);
         }
 
         public float SpeedMultiplier
@@ -51,12 +44,6 @@ namespace Player.Model
             set => _movementSpeed = value;
         }
 
-        public float JumpForce => _jumpForce;
-        public float JumpTime => _jumpTime;
-        public AnimationCurve JumpCurve => _jumpCurve;
-        public float FallScalar => _fallSpeedScalar;
-        public Vector3 Gravity => _gravity;
-
         public bool CanMove
         {
             get => _canMove;
@@ -69,11 +56,14 @@ namespace Player.Model
             set => _direction = value;
         }
 
-        public Rigidbody Body
+        public Rigidbody RigidBody
         {
             get => _rigidbody;
             set => _rigidbody = value;
         }
+
+        public JumpModel Jump => _jumpModel;
+        public FallModel Fall => _fallModel;
 
         public float GroundCheckDistance => _groundCheckDistance;
         public float GroundCheckOffset => _groundCheckOffset;

@@ -12,7 +12,7 @@ namespace Player.Behaviour.States
         public PlayerWalk_State(PlayerModel playerModel) : base(playerModel)
         {
             _playerModel = playerModel;
-            _rigidBody = _playerModel.Movement.Body;
+            _rigidBody = _playerModel.Movement.RigidBody;
         }
 
         public override void Enter()
@@ -38,8 +38,8 @@ namespace Player.Behaviour.States
         {
             //Handle Movement
             Vector3 velocity = _playerModel.Movement.Direction * _playerModel.Movement.Speed;
-            velocity.y = _playerModel.Movement.Body.velocity.y;
-            _playerModel.Movement.Body.velocity = velocity;
+            velocity.y = _playerModel.Movement.RigidBody.velocity.y;
+            _playerModel.Movement.RigidBody.velocity = velocity;
         }
 
         private void HandleGroundCheck()
@@ -62,11 +62,11 @@ namespace Player.Behaviour.States
             globalPos.y += _playerModel.Movement.GroundCheckOffset;
 
             globalPos.x += 0.5f;
-            isGrounded = Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, 1 << 6);
+            isGrounded = Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, ~(1 << 3));
             Debug.DrawRay(globalPos, Vector3.down * _playerModel.Movement.GroundCheckDistance, Color.red, Time.deltaTime);
 
             globalPos.x += -1f;
-            isGrounded |= Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, 1 << 6);
+            isGrounded |= Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, ~(1 << 3));
             Debug.DrawRay(globalPos, Vector3.down * _playerModel.Movement.GroundCheckDistance, Color.red, Time.deltaTime);
 
             return isGrounded;

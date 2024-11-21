@@ -43,5 +43,10 @@ MonoBehaviour:
   Gravity: {x: -0, y: -75.5, z: -0}
   GroundCheckDistance: 0.05
   GroundCheckOffsetY: 0.02
+  RedPowerUpRadius: 6
+  RedPowerUpStrenght: 30
+  GreenPowerUpRadius: 1
+  GreenPowerUpStrenght: 7
+  GreenPowerUpOffset: {x: 0, y: 0.5, z: 0}
   _jumpSFX: {fileID: 0}
   _shootSFX: {fileID: 0}

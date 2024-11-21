@@ -12,7 +12,7 @@ namespace Player.Behaviour.States
         public PlayerFall_State(PlayerModel playerModel) : base(playerModel)
         {
             _playerModel = playerModel;
-            _rigidBody = playerModel.Movement.Body;
+            _rigidBody = playerModel.Movement.RigidBody;
         }
 
         public override void Enter()
@@ -39,11 +39,11 @@ namespace Player.Behaviour.States
         private void HandleMovement()
         {
             //Apply fall movement control
-            Vector3 directionForce = _playerModel.Movement.Direction * _playerModel.Movement.FallScalar;
+            Vector3 directionForce = _playerModel.Movement.Direction * _playerModel.Movement.Fall.FallScalar;
             directionForce.y = 0;
             _rigidBody.velocity += directionForce;
 
-            _rigidBody.AddForce(_playerModel.Movement.Gravity, ForceMode.Acceleration);
+            _rigidBody.AddForce(_playerModel.Movement.Fall.Gravity, ForceMode.Acceleration);
         }
 
         private void HandleGroundCheck()
@@ -73,11 +73,11 @@ namespace Player.Behaviour.States
             globalPos.y += _playerModel.Movement.GroundCheckOffset;
 
             globalPos.x += 0.5f;
-            isGrounded = Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, 1 << 6);
+            isGrounded = Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, ~(1 << 3));
             Debug.DrawRay(globalPos, Vector3.down * _playerModel.Movement.GroundCheckDistance, Color.red, Time.deltaTime);
 
             globalPos.x += -1f;
-            isGrounded |= Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, 1 << 6);
+            isGrounded |= Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, ~(1 << 3));
             Debug.DrawRay(globalPos, Vector3.down * _playerModel.Movement.GroundCheckDistance, Color.red, Time.deltaTime);
 
             return isGrounded;

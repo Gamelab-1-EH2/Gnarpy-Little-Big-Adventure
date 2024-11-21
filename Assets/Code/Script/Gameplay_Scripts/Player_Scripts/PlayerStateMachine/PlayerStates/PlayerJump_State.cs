@@ -14,7 +14,7 @@ namespace Player.Behaviour.States
         public PlayerJump_State(PlayerModel playerModel) : base(playerModel)
         {
             _playerModel = playerModel;
-            _rigidbody = _playerModel.Movement.Body;
+            _rigidbody = _playerModel.Movement.RigidBody;
             
             jumpStartTime = 0;
         }
@@ -32,11 +32,11 @@ namespace Player.Behaviour.States
         public override void Process()
         {
             float enlapsedTime = Time.time - jumpStartTime;
-            float jumpProgress =  enlapsedTime / _playerModel.Movement.JumpTime;
+            float jumpProgress =  enlapsedTime / _playerModel.Movement.Jump.JumpTime;
 
             Vector3 vel = _rigidbody.velocity;
-            vel.x = _rigidbody.velocity.x + (_playerModel.Movement.Direction.x * _playerModel.Movement.FallScalar);
-            vel.y = _playerModel.Movement.JumpCurve.Evaluate(jumpProgress) * _playerModel.Movement.JumpForce;
+            vel.x = _rigidbody.velocity.x + (_playerModel.Movement.Direction.x * _playerModel.Movement.Fall.FallScalar);
+            vel.y = _playerModel.Movement.Jump.JumpCurve.Evaluate(jumpProgress) * _playerModel.Movement.Jump.JumpForce;
 
             _rigidbody.velocity = vel;
 

@@ -15,6 +15,13 @@ public class Player_SO : ScriptableObject
     [Space(5f)]
     [SerializeField, Min(0f)] public float GroundCheckDistance = 0.1f;
     [SerializeField] public float GroundCheckOffsetY = -0.5f;
+    [Header("Power Ups")]
+    [SerializeField] public float RedPowerUpRadius = 5f;
+    [SerializeField] public float RedPowerUpStrenght = 15f;
+    [Space(3)]
+    [SerializeField] public float GreenPowerUpRadius = 7f;
+    [SerializeField] public float GreenPowerUpStrenght = 7f;
+    [SerializeField] public Vector3 GreenPowerUpOffset = Vector3.up/2;
     [Header("SFX")]
     [SerializeField] private SFX_SO _jumpSFX;
     [SerializeField] private SFX_SO _shootSFX;

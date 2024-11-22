@@ -1,8 +1,4 @@
-using Player;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Parallax : MonoBehaviour
 {
@@ -49,7 +45,8 @@ public class Parallax : MonoBehaviour
     }
     void ScrollLeft()
     {
-        _background[_right].position = Vector3.right * (_background[_left].position.x - _so.BackgroundSize);
+        _background[_right].position =Vector3.right * (_background[_right].position.x - _so.BackgroundSize);
+        _background[_right].position = new Vector3(_background[_right].position.x, transform.position.y, 0);
         _left = _right;
         _right--;
 
@@ -58,7 +55,8 @@ public class Parallax : MonoBehaviour
     }
     void ScrollRight()
     {
-        _background[_left].position = Vector3.right * (_background[_right].position.x + _so.BackgroundSize);
+        _background[_left].position = Vector3.right * (_background[_left].position.x + _so.BackgroundSize);
+        _background[_left].position= new Vector3(_background[_left].position.x,transform.position.y,0);
         _right = _left;
         _left++;
 

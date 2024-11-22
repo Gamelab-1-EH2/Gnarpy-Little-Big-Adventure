@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class MovableObject : MonoBehaviour
+public class MovableObject : MonoBehaviour, IFallable
 {
     private Rigidbody _rigidBody;
 
     private bool _canBreak = false;
+    private bool _isFalling = false;
 
     private void Awake()
     {
@@ -33,9 +32,11 @@ public class MovableObject : MonoBehaviour
         _rigidBody.AddForce(dir * strenght, ForceMode.Impulse);
     }
 
+    public void UpdateFall() => _isFalling = _rigidBody.velocity.y < -0.1f;
+
     private void OnCollisionEnter(Collision collision)
     {
-        if(_canBreak)
+        if(_canBreak && _isFalling)
             this.gameObject.SetActive(false);
     }
 }

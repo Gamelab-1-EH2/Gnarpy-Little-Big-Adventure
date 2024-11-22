@@ -24,7 +24,7 @@ namespace Player
         private PowerUpController _powerUpController;
 
         //MVC
-        private PlayerModel _playerModel;
+        public PlayerModel PlayerModel { get; private set; }
         private PlayerView _view;
 
         private void Awake()
@@ -33,16 +33,16 @@ namespace Player
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
             //Initialize Model
-            _playerModel = new PlayerModel(_playerSO, _rigidbody, _shieldTransform);
+            PlayerModel = new PlayerModel(_playerSO, _rigidbody, _shieldTransform);
 
             //Initialize View
             Animator animator = GetComponent<Animator>();
             SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
             _view = new PlayerView(animator, spriteRenderer);
 
-            _stateMachine = new PlayerStateMachine(new PlayerIdle_State(_playerModel));
+            _stateMachine = new PlayerStateMachine(new PlayerIdle_State(PlayerModel));
 
-            _powerUpController = new PowerUpController(_playerModel);
+            _powerUpController = new PowerUpController(PlayerModel);
         }
 
         private void OnTriggerEnter(Collider other)
@@ -76,8 +76,8 @@ namespace Player
 
         private void UpdateView()
         {
-            _view.SetDirection(_playerModel.Movement.Direction);
-            _view.PlayAnimation(_playerModel.State);
+            _view.SetDirection(PlayerModel.Movement.Direction);
+            _view.PlayAnimation(PlayerModel.State);
         }
 
         private void HandlePowerUp()

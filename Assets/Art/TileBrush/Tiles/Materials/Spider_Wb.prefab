@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d129e9fd4a2aada44bf1f955dc8df48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BouceForce: 10
+  BouceForce: 15
 --- !u!1 &8916497267285819392
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,312 @@
+fileFormatVersion: 2
+guid: 2c00256b257cc42439a4464a5af6cb68
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 235
+        width: 85
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7342d43c6263ce044ab3e44c389fde46
+      internalID: 1473289930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_1
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 235
+        width: 85
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15568e947a7965a44bd40204ea47b787
+      internalID: -1780357344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_2
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 235
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00f5ad7e36f0de84dbde067b0cf0c9b9
+      internalID: -1905005006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_3
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 139
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd1cad38ffac734d9e052791c3358db
+      internalID: -1768608177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_4
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 139
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835d0b4d696227f478ff1872dd21567c
+      internalID: 656405472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_5
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 139
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578f0ae7194e34540a3bcc042aa76d07
+      internalID: 1162799714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_6
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 45
+        width: 85
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e02fda1f4dad34a892f550423e65c6
+      internalID: -919566212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_7
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 45
+        width: 85
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601f8dccf7be982489dfc46c76ec71f1
+      internalID: 2014330822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_8
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 45
+        width: 85
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b76350727c5f04aa08ff92d1b1c400
+      internalID: -1412661895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 990253008799cb140a53333533a071a9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_0: 1473289930
+      pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_1: -1780357344
+      pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_2: -1905005006
+      pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_3: -1768608177
+      pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_4: 656405472
+      pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_5: 1162799714
+      pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_6: -919566212
+      pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_7: 2014330822
+      pngtree-the-colorful-series-of-circles-shows-several-different-shapes-vector-png-image_7075950_8: -1412661895
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

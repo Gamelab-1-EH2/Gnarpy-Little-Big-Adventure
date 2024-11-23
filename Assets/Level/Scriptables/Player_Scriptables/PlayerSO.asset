@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3a963405b28204488cc17cf0ce7fb99, type: 3}
   m_Name: PlayerSO
   m_EditorClassIdentifier: 
-  MovementSpeed: 15
+  MovementSpeed: 13
   JumpForce: 50
   JumpSpeedCurve:
     serializedVersion: 2
@@ -52,7 +52,7 @@ MonoBehaviour:
   GreenPowerUpOffset: {x: 0, y: 0.5, z: 0}
   BluePowerUpProjectile: {fileID: 8592442538128691829, guid: 04d1449a439c4bb49a5df1772598e3d4,
     type: 3}
-  ProjectileSpeed: 10
+  ProjectileSpeed: 16
   ShootDelay: 1
   ShootDirectionOffset: {x: 0, y: 0}
   ShootOffset: {x: 0.8, y: 0.5}

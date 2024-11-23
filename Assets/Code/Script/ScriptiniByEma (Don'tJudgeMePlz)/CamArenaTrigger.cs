@@ -14,10 +14,6 @@ public class CamArenaTrigger : MonoBehaviour
         if (playerAnimator == null)
         {
             playerAnimator = GetComponentInParent<Animator>();
-            if (playerAnimator == null)
-            {
-                Debug.LogError("No Animator");
-            }
         }
     }
 

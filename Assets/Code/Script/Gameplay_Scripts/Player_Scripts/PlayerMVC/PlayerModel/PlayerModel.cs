@@ -6,12 +6,14 @@ namespace Player.Model
     public class PlayerModel
     {
         public Action<int> OnHPChanged;
+        public Action<int> OnBallOfWoolCollected;
 
         private MovementModel _movementModel;
         private PowerUpModel _powerUpModel;
         private PlayerState _playerState;
 
         private int _playerHealtPoints;
+        private int _ballsOfWool;
 
         public PlayerModel(Player_SO playerSO, Rigidbody body, Transform shieldTransform)
         {
@@ -46,6 +48,16 @@ namespace Player.Model
             {
                 _playerHealtPoints = value;
                 OnHPChanged?.Invoke(_playerHealtPoints);
+            }
+        }
+
+        public int BallOfWool
+        {
+            get => _ballsOfWool;
+            set
+            {
+                _ballsOfWool = value;
+                OnBallOfWoolCollected?.Invoke(_ballsOfWool);
             }
         }
 

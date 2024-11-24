@@ -9,6 +9,7 @@ using Player.Behaviour.Machine;
 using Player.Behaviour.States;
 using Collectible_System.PowerUp;
 using System;
+using Collectible_System;
 
 namespace Player
 {
@@ -53,8 +54,20 @@ namespace Player
             if(other.TryGetComponent<PowerUp_Collectible>(out PowerUp_Collectible powerup))
             {
                 _spriteRenderer.color = powerup.Color;
-                _powerUpController.UnlockPowerUp(powerup.PowerupType);
+                _powerUpController.UnlockPowerUp(powerup.GetPowerUpType());
                 powerup.Collect();
+            }
+            else if(other.TryGetComponent<Collectible>(out Collectible collectible))
+            {
+                switch (collectible.CollectibleType)
+                {
+                    case CollectibleType.Ball_of_Wool:
+                        Model.BallOfWool++;
+                        break;
+                    case CollectibleType.Catnip:
+                        Model.HealthPoints++;
+                        break;
+                }
             }
 
             _stateMachine.OnTriggerEnter(other);

@@ -109,8 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35ab61fde6670a04b832d53d9712e77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _type: 3
   _powerupColor: {r: 0, g: 0.108670235, b: 1, a: 1}
-  _powerupType: 2
 --- !u!135 &7759120818324993027
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -66,7 +66,7 @@ namespace Player
                         collectible.Collect();
                         break;
                     case CollectibleType.Catnip:
-                        if(Model.HealthPoints <= _playerSO.HealthPoints)
+                        if(Model.HealthPoints < _playerSO.HealthPoints)
                         {
                             Model.HealthPoints++;
                             collectible.Collect();

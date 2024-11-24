@@ -12,13 +12,13 @@ namespace Player.Model
         private PowerUpModel _powerUpModel;
         private PlayerState _playerState;
 
-        private int _playerHealtPoints;
+        private int _healtPoints;
         private int _ballsOfWool;
 
         public PlayerModel(Player_SO playerSO, Rigidbody body, Transform shieldTransform)
         {
             _playerState = PlayerState.Idle;
-            _playerHealtPoints = playerSO.HealthPoints;
+            _healtPoints = playerSO.HealthPoints;
             _movementModel = new MovementModel(playerSO, body);
             _powerUpModel = new PowerUpModel(playerSO, shieldTransform);
         }
@@ -43,11 +43,11 @@ namespace Player.Model
 
         public int HealthPoints
         {
-            get => _playerHealtPoints;
+            get => _healtPoints;
             set
             {
-                _playerHealtPoints = value;
-                OnHPChanged?.Invoke(_playerHealtPoints);
+                _healtPoints = value;
+                OnHPChanged?.Invoke(_healtPoints);
             }
         }
 

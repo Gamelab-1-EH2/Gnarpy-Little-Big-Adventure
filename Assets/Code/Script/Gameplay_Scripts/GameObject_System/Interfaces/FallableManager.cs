@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class FallableManager : MonoBehaviour
+public class FallableManager
 {
     private List<IFallable> _fallableList;
 
@@ -11,12 +11,12 @@ public class FallableManager : MonoBehaviour
         _fallableList = new List<IFallable>();
     }
 
-    private void Start()
+    public void Start()
     {
-        _fallableList.AddRange(FindObjectsOfType<MonoBehaviour>(true).OfType<IFallable>().ToArray() );
+        _fallableList.AddRange(MonoBehaviour.FindObjectsOfType<MonoBehaviour>(true).OfType<IFallable>().ToArray() );
     }
 
-    private void FixedUpdate()
+    public void FixedUpdate()
     {
         for (int i = 0; i < _fallableList.Count; i++)
             _fallableList[i].UpdateFall();

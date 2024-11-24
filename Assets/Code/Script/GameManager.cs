@@ -5,10 +5,13 @@ namespace GameManagement
 {
     public class GameManager : MonoBehaviour
     {
-        public static Action<GameState> OnGameStateChange;
         private static GameManager _gameManager;
         
+        public static Action<GameState> OnGameStateChange;
         private GameState _gameState;
+
+        [SerializeField] private DroppableManager _droppableManager;
+        [SerializeField] private FallableManager _fallableManager;
         
         private void Awake()
         {
@@ -25,7 +28,19 @@ namespace GameManagement
 
         private void Start()
         {
+            _droppableManager.Start();
+            _fallableManager.Start();
+
             OnGameStateChange?.Invoke(GameState.Gameplay);
+        }
+
+
+        private void FixedUpdate()
+        {
+            if(_gameState == GameState.Gameplay)
+            {
+                _fallableManager.FixedUpdate();
+            }
         }
     }
 }

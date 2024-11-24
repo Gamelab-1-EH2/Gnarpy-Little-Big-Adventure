@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DroppableManager : MonoBehaviour
+[System.Serializable]
+public class DroppableManager
 {
     [SerializeField] private List<DropData> _dropData = new List<DropData>();
 
@@ -10,7 +11,7 @@ public class DroppableManager : MonoBehaviour
 
     private float[] _probabilityList;
 
-    private void Start()
+    public void Start()
     {
         if (_dropData.Count <= 0)
             return;
@@ -27,7 +28,7 @@ public class DroppableManager : MonoBehaviour
             _probabilityList[i] = _probabilityList[i-1] + _dropData[i].Probability;
         
         //Connect Events
-        DestroyableObject[] destroyableObjects = FindObjectsOfType<DestroyableObject>();
+        DestroyableObject[] destroyableObjects = MonoBehaviour.FindObjectsOfType<DestroyableObject>();
         for(int i = 0; i < destroyableObjects.Length; i++)
         {
             if (destroyableObjects[i].CanDrop)

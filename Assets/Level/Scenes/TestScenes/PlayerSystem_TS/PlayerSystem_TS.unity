@@ -690,6 +690,7 @@ GameObject:
   - component: {fileID: 936014250}
   - component: {fileID: 936014249}
   - component: {fileID: 936014255}
+  - component: {fileID: 936014256}
   m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
@@ -823,6 +824,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canDrop: 1
+--- !u!114 &936014256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936014248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b61a4aaf513d39545b04d61a4a1ff1b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1225818236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -965,7 +978,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.9, y: 1, z: 5}
-  m_Center: {x: 0, y: 0, z: -2}
+  m_Center: {x: 0, y: 0.27, z: -2}
 --- !u!23 &1390795463
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1039,6 +1052,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5502876747401074563, guid: 4b1adb6171ac50c4984f5e29ffce274a,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 5775139055867024522, guid: 4b1adb6171ac50c4984f5e29ffce274a,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -12,6 +12,9 @@ public class DroppableManager : MonoBehaviour
 
     private void Start()
     {
+        if (_dropData.Count <= 0)
+            return;
+
         //Initialize pooler
         for(int i = 0; i < _dropData.Count; i++)
             poolers.Add(new ObjectPooler(_dropData[i].ObjectToSpawn, 15));

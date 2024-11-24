@@ -54,9 +54,9 @@ namespace Player.Behaviour.States
 
         public override void TriggerEnter(Collider other)
         {
-            //Climb
-            if (other.gameObject.layer == 7)
-                base.OnStateExit(new PlayerClimb_State(_playerModel));
+            ////Climb
+            //if (other.gameObject.layer == 7)
+            //    base.OnStateExit(new PlayerClimb_State(_playerModel));
         }
 
         public override void TriggerExit(Collider other)

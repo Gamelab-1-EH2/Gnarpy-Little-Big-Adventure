@@ -6,14 +6,10 @@ public class FallableManager
 {
     private List<IFallable> _fallableList;
 
-    public FallableManager()
-    {
-        _fallableList = new List<IFallable>();
-    }
-
     public void Start()
     {
-        _fallableList.AddRange(MonoBehaviour.FindObjectsOfType<MonoBehaviour>(true).OfType<IFallable>().ToArray() );
+        _fallableList = new List<IFallable>();
+        _fallableList.AddRange(MonoBehaviour.FindObjectsOfType<MonoBehaviour>().OfType<IFallable>().ToArray() );
     }
 
     public void FixedUpdate()

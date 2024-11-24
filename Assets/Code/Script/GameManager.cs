@@ -1,4 +1,5 @@
 using System;
+using Turret_System;
 using UnityEngine;
 
 namespace GameManagement
@@ -11,7 +12,9 @@ namespace GameManagement
         private GameState _gameState;
 
         [SerializeField] private DroppableManager _droppableManager;
-        private FallableManager _fallableManager;
+        [SerializeField] private TurretManager _turretManager;
+
+        private FallableManager _fallableManager = null;
         
         private void Awake()
         {
@@ -23,26 +26,50 @@ namespace GameManagement
                 return;
             }
 
+            _fallableManager = new FallableManager();
+            _gameState = GameState.Menu;
+
             DontDestroyOnLoad(this.gameObject);
         }
 
         private void Start()
         {
-            _droppableManager.Start();
-
-            _fallableManager = new FallableManager();
-            _fallableManager.Start();
-
-            OnGameStateChange?.Invoke(GameState.Gameplay);
+            ChangeState(GameState.Gameplay);
         }
-
 
         private void FixedUpdate()
         {
             if(_gameState == GameState.Gameplay)
             {
                 _fallableManager.FixedUpdate();
+                _turretManager.FixedUpdate();
             }
+        }
+
+        private void ChangeState(GameState state)
+        {
+            switch (state)
+            {
+                case GameState.Gameplay:
+                    if(_gameState == GameState.Menu)
+                    {
+                        _droppableManager.Start();
+                        _fallableManager.Start();
+                        _turretManager.Start();
+                    }
+                    break;
+
+                case GameState.Menu:
+                    
+                    break;
+
+                case GameState.Pause:
+
+                    break;
+            }
+
+            _gameState = state;
+            OnGameStateChange?.Invoke(_gameState);
         }
     }
 }

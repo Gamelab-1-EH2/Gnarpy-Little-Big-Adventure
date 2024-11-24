@@ -273,11 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d497aebb8addb408cec5fd5dcafc7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dropData:
-  - ObjectToSpawn: {fileID: 1390795461}
-    Probability: 0.5
-  - ObjectToSpawn: {fileID: 34459068}
-    Probability: 0.5
+  _dropData: []
 --- !u!1 &623712727
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +530,7 @@ GameObject:
   - component: {fileID: 927374959}
   - component: {fileID: 927374958}
   - component: {fileID: 927374957}
+  - component: {fileID: 927374963}
   m_Layer: 8
   m_Name: Cube_1
   m_TagString: Untagged
@@ -667,6 +664,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &927374963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927374956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b61a4aaf513d39545b04d61a4a1ff1b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &936014248
 GameObject:
   m_ObjectHideFlags: 0

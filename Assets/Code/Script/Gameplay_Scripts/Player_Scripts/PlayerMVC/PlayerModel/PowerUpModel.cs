@@ -27,8 +27,8 @@ namespace Player.Model
         private GameObject _bluePowerUpProjectile;
         private float _projectileSpeed;
         private float _projectileDelay;
-        private Vector2 _projectileOffset;
-        private Vector2 _projectileDirectionOffset;
+        private Vector3 _projectileOffset;
+        private Vector2 _projectileDirection;
         private float _blueShootDelay;
         private float _blueDelayProgress;
 
@@ -46,7 +46,7 @@ namespace Player.Model
 
             _bluePowerUpProjectile = playerSO.BluePowerUpProjectile;
             _projectileSpeed = playerSO.ProjectileSpeed;
-            _projectileDirectionOffset = playerSO.ShootDirectionOffset;
+            _projectileDirection = playerSO.ShootDirection;
             _projectileOffset = playerSO.ShootOffset;
             _blueShootDelay = playerSO.ShootDelay;
         }
@@ -81,7 +81,7 @@ namespace Player.Model
 
         public GameObject BlueProjectile => _bluePowerUpProjectile;
         public float ProjectileSpeed => _projectileSpeed;
-        public Vector2 ProjectileDirectionOffset => _projectileDirectionOffset;
+        public Vector3 ProjectileDirection => _projectileDirection;
         public Vector2 ProjectileOffset => _projectileOffset;
         public float ProjectileDelay => _projectileDelay;
         public float ShootDelay => _blueShootDelay;

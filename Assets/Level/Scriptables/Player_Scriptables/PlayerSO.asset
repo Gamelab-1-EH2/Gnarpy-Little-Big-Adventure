@@ -54,7 +54,7 @@ MonoBehaviour:
     type: 3}
   ProjectileSpeed: 16
   ShootDelay: 1
-  ShootDirectionOffset: {x: 0, y: 0}
-  ShootOffset: {x: 0.8, y: 0.5}
+  ShootDirection: {x: 0, y: 90, z: 90}
+  ShootOffset: {x: 0.8, y: 0.8}
   _jumpSFX: {fileID: 0}
   _shootSFX: {fileID: 0}

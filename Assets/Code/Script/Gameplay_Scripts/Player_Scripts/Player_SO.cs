@@ -28,7 +28,7 @@ public class Player_SO : ScriptableObject
     [SerializeField] public GameObject BluePowerUpProjectile;
     [SerializeField] public float ProjectileSpeed = 15f;
     [SerializeField] public float ShootDelay = 1f;
-    [SerializeField] public Vector2 ShootDirectionOffset = new Vector2(0.5f, 0.25f);
+    [SerializeField] public Vector3 ShootDirection = new Vector3(0f, 0f, 90f);
     [SerializeField] public Vector2 ShootOffset = new Vector2(0.5f, 0.5f);
     [Header("SFX")]
     [SerializeField] private SFX_SO _jumpSFX;

@@ -63,9 +63,14 @@ namespace Player
                 {
                     case CollectibleType.Ball_of_Wool:
                         Model.BallOfWool++;
+                        collectible.Collect();
                         break;
                     case CollectibleType.Catnip:
-                        Model.HealthPoints++;
+                        if(Model.HealthPoints <= _playerSO.HealthPoints)
+                        {
+                            Model.HealthPoints++;
+                            collectible.Collect();
+                        }
                         break;
                 }
             }

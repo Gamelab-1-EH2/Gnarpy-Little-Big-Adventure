@@ -6,7 +6,7 @@ public class FallableManager
 {
     private List<IFallable> _fallableList;
 
-    private void Awake()
+    public FallableManager()
     {
         _fallableList = new List<IFallable>();
     }

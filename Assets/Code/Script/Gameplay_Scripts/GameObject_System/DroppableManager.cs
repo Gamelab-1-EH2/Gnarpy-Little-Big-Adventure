@@ -13,7 +13,7 @@ public class DroppableManager
 
     public void Start()
     {
-        if (_dropData.Count <= 0)
+        if (_dropData.Count == 0)
             return;
 
         //Initialize pooler
@@ -38,6 +38,9 @@ public class DroppableManager
 
     private void Drop(DestroyableObject destroyable)
     {
+        if (_dropData == null)
+            return;
+
         float randomValue = UnityEngine.Random.value;
         for(int i = 0;i < _probabilityList.Length; i++)
         {

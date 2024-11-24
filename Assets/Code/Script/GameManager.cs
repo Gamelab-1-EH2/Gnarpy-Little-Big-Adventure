@@ -11,7 +11,7 @@ namespace GameManagement
         private GameState _gameState;
 
         [SerializeField] private DroppableManager _droppableManager;
-        [SerializeField] private FallableManager _fallableManager;
+        private FallableManager _fallableManager;
         
         private void Awake()
         {
@@ -29,6 +29,8 @@ namespace GameManagement
         private void Start()
         {
             _droppableManager.Start();
+
+            _fallableManager = new FallableManager();
             _fallableManager.Start();
 
             OnGameStateChange?.Invoke(GameState.Gameplay);

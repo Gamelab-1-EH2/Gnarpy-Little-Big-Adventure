@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using Player.Model;
+
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -11,23 +13,31 @@ namespace Turret_System
     {
         public Action<Transform, float> OnShoot;
 
-        [SerializeField] private float ViewAngle = 90f;
-        [SerializeField] private float ViewDistance = 5.0f;
-    
+        [SerializeField] private float _delay = 1f; 
+        [SerializeField] private float _viewAngle = 90f;
+        [SerializeField] private float _viewDistance = 5.0f;
+
+        private float _lastTimeShoot = 0f;
         private Transform _target;
         
         public void Tick()
         {
             float dist = (transform.position - _target.position).magnitude;
-            if (dist > ViewDistance)
+            if (dist > _viewDistance)
                 return;
 
-            float angle = Vector3.Angle(transform.position - _target.position, transform.right);
+            float enlapsed = Time.time - _lastTimeShoot;
 
-            if (angle <= ViewAngle / 2)
+            if (enlapsed >= _delay)
             {
-                angle *= _target.position.y < transform.position.y ? 1 : -1;
-                OnShoot?.Invoke(transform, angle);
+                float angle = Vector3.Angle(transform.position - _target.position, transform.right);
+                if (angle <= _viewAngle / 2)
+                {
+                    angle *= _target.position.y < transform.position.y ? 1 : -1;
+                    OnShoot?.Invoke(transform, angle);
+
+                    _lastTimeShoot = Time.time;
+                }
             }
         }
 
@@ -42,7 +52,7 @@ namespace Turret_System
         private void OnDrawGizmos()
         {
             Handles.color = Color.white;
-            Handles.DrawWireDisc(transform.position, Vector3.forward, ViewDistance);
+            Handles.DrawWireDisc(transform.position, Vector3.forward, _viewDistance);
         }
         #endif
     }

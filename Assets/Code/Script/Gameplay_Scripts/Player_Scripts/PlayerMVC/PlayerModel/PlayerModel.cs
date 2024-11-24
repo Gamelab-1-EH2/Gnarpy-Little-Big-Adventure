@@ -1,16 +1,22 @@
+using System;
 using UnityEngine;
 
 namespace Player.Model
 {
     public class PlayerModel
     {
+        public Action<int> OnHPChanged;
+
         private MovementModel _movementModel;
         private PowerUpModel _powerUpModel;
         private PlayerState _playerState;
 
+        private int _playerHealtPoints;
+
         public PlayerModel(Player_SO playerSO, Rigidbody body, Transform shieldTransform)
         {
             _playerState = PlayerState.Idle;
+            _playerHealtPoints = playerSO.HealthPoints;
             _movementModel = new MovementModel(playerSO, body);
             _powerUpModel = new PowerUpModel(playerSO, shieldTransform);
         }
@@ -32,5 +38,22 @@ namespace Player.Model
             get => _playerState;
             set => _playerState = value;
         }
+
+        public int HealthPoints
+        {
+            get => _playerHealtPoints;
+            set
+            {
+                _playerHealtPoints = value;
+                OnHPChanged?.Invoke(_playerHealtPoints);
+            }
+        }
+
+        public void Disconnect()
+        {
+            OnHPChanged -= OnHPChanged;
+            PowerUp.Disconnect();
+        }
+
     }
 }

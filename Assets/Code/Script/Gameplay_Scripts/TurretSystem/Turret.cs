@@ -1,7 +1,5 @@
 using System;
 using UnityEngine;
-using System.Xml.Linq;
-
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -40,7 +38,7 @@ namespace Turret_System
             OnShoot -= OnShoot;
         }
 
-#if UNITY_EDITOR
+        #if UNITY_EDITOR
         private void OnDrawGizmos()
         {
             Handles.color = Color.white;

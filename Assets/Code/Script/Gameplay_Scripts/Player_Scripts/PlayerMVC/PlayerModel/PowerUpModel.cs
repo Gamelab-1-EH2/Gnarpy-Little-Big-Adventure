@@ -97,5 +97,10 @@ namespace Player.Model
 
         public void UnlockPowerUp(PowerUpType powerUpType) => OnPowerUpUnlock?.Invoke(powerUpType);
 
+        public void Disconnect()
+        {
+            OnPowerUpUnlock -= OnPowerUpUnlock;
+        }
+
     }
 }

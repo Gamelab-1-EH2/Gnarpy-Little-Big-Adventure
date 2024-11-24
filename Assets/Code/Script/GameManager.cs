@@ -1,3 +1,4 @@
+using Player;
 using System;
 using Turret_System;
 using UnityEngine;
@@ -53,6 +54,7 @@ namespace GameManagement
                 case GameState.Gameplay:
                     if(_gameState == GameState.Menu)
                     {
+                        FindObjectOfType<PlayerController>().OnPlayerDeath += Defeat;
                         _droppableManager.Start();
                         _fallableManager.Start();
                         _turretManager.Start();
@@ -71,5 +73,7 @@ namespace GameManagement
             _gameState = state;
             OnGameStateChange?.Invoke(_gameState);
         }
+
+        private void Defeat() => ChangeState(GameState.Defeat);
     }
 }

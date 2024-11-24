@@ -4,6 +4,7 @@ using Audio_System.SFX;
 [CreateAssetMenu(fileName = "New Player SO", menuName = "Settings/Player")]
 public class Player_SO : ScriptableObject
 {
+    [SerializeField] public int HealthPoints = 3;
     [Header("Movement")]
     [SerializeField] public float MovementSpeed = 25f;
     [Header("Jump")]

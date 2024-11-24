@@ -1,19 +1,22 @@
+using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
-using UnityEngine;
 
 using Player.View;
 using Player.Model;
 using Player.Behaviour.Machine;
 using Player.Behaviour.States;
 using Collectible_System.PowerUp;
+using System;
 
 namespace Player
 {
     [RequireComponent(typeof(Rigidbody), typeof(Animator))]
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : MonoBehaviour, IDamageable
     {
+        public Action OnPlayerDeath;
+
         [SerializeField] private Player_SO _playerSO;
         [SerializeField] private Transform _shieldTransform;
 
@@ -24,7 +27,7 @@ namespace Player
         private PowerUpController _powerUpController;
 
         //MVC
-        public PlayerModel PlayerModel { get; private set; }
+        public PlayerModel Model { get; private set; }
         private PlayerView _view;
 
         private void Awake()
@@ -33,16 +36,16 @@ namespace Player
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
             //Initialize Model
-            PlayerModel = new PlayerModel(_playerSO, _rigidbody, _shieldTransform);
+            Model = new PlayerModel(_playerSO, _rigidbody, _shieldTransform);
 
             //Initialize View
             Animator animator = GetComponent<Animator>();
             SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
             _view = new PlayerView(animator, spriteRenderer);
 
-            _stateMachine = new PlayerStateMachine(new PlayerIdle_State(PlayerModel));
+            _stateMachine = new PlayerStateMachine(new PlayerIdle_State(Model));
 
-            _powerUpController = new PowerUpController(PlayerModel);
+            _powerUpController = new PowerUpController(Model);
         }
 
         private void OnTriggerEnter(Collider other)
@@ -76,13 +79,30 @@ namespace Player
 
         private void UpdateView()
         {
-            _view.SetDirection(PlayerModel.Movement.Direction);
-            _view.PlayAnimation(PlayerModel.State);
+            _view.SetDirection(Model.Movement.Direction);
+            _view.PlayAnimation(Model.State);
         }
 
         private void HandlePowerUp()
         {
             _powerUpController.Process();
+        }
+
+        public void Damage()
+        {
+            Model.HealthPoints -= 1;
+
+            if(Model.HealthPoints <= 0 && Model.State != Player.Model.PlayerState.Dead)
+            {
+                _stateMachine.PushState(new PlayerDeath_State(Model));
+                OnPlayerDeath?.Invoke();
+            }
+        }
+
+        private void OnDestroy()
+        {
+            OnPlayerDeath -= OnPlayerDeath;
+            Model.Disconnect();
         }
 
 #if UNITY_EDITOR
@@ -94,6 +114,6 @@ namespace Player
             Handles.color = Color.green;
             Handles.DrawWireDisc(transform.position + _playerSO.GreenPowerUpOffset, Vector3.forward, _playerSO.GreenPowerUpRadius);
         }
-#endif
+        #endif
     }
 }

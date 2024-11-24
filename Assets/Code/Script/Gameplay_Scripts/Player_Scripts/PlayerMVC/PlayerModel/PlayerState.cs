@@ -8,5 +8,6 @@ namespace Player.Model
         Climb = 4,
         Shoot = 8,
         Fall = 16,
+        Dead = 32,
     }
 }

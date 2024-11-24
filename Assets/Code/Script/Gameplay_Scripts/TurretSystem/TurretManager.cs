@@ -1,6 +1,7 @@
-using Player;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
+
+using Player;
 
 namespace Turret_System
 {

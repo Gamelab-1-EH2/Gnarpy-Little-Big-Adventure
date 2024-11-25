@@ -9,24 +9,25 @@ namespace Player.Model
     {
         public Action<PowerUpType> OnPowerUpUnlock;
 
-        public Action<float> OnRedDelayProgressChanged;        
+        public Action<float> OnRedProgressChanged;        
         private float _redPowerUpRadious;
         private float _redPowerUpStrenght;
         private float _redDelay;
+        private float _redDuration;
         private float _redDelayProgress;
 
-        public Action<float> OnGreenDelayProgressChanged;
+        public Action<float> OnGreenProgressChanged;
         private float _greenPowerUpRadious;
         private float _greenPowerUpStrenght;
         private Vector3 _greenPowerUpOffset;
         private Transform _shieldTransform;
         private float _greenDelay;
+        private float _greenDuration;
         private float _greenDelayProgress;
 
-        public Action<float> OnBlueDelayProgressChanged;
+        public Action<float> OnBlueProgressChanged;
         private GameObject _bluePowerUpProjectile;
         private float _projectileSpeed;
-        private float _projectileDelay;
         private Vector3 _projectileOffset;
         private Vector2 _projectileDirection;
         private float _blueShootDelay;
@@ -37,11 +38,13 @@ namespace Player.Model
             _redPowerUpRadious = playerSO.RedPowerUpRadius;
             _redPowerUpStrenght = playerSO.RedPowerUpStrenght;
             _redDelay = playerSO.RedPowerUpDelay;
+            _redDuration = playerSO.RedPowerUpDuration;
 
             _greenPowerUpRadious = playerSO.GreenPowerUpRadius;
             _greenPowerUpStrenght = playerSO.GreenPowerUpStrenght;
             _greenPowerUpOffset = playerSO.GreenPowerUpOffset;
             _greenDelay = playerSO.GreenPowerUpDelay;
+            _greenDuration = playerSO.GreenPowerUpDuration;
             _shieldTransform = shieldTransform;
 
             _bluePowerUpProjectile = playerSO.BluePowerUpProjectile;
@@ -54,13 +57,14 @@ namespace Player.Model
         public float RedPowerUpRadious => _redPowerUpRadious;
         public float RedPowerUpStrenght => _redPowerUpStrenght;
         public float RedDelay => _redDelay;
-        public float RedDelayProgress
+        public float RedDuration => _redDuration;
+        public float RedProgress
         {
             get => _redDelayProgress;
             set
             {
                 _redDelayProgress = value;
-                OnRedDelayProgressChanged?.Invoke(value);
+                OnRedProgressChanged?.Invoke(value);
             }
         }
 
@@ -69,13 +73,14 @@ namespace Player.Model
         public Vector3 GreenPowerUpOffset => _greenPowerUpOffset;
         public Transform ShieldTransform => _shieldTransform;
         public float GreenDelay => _greenDelay;
-        public float GreenDelayProgress
+        public float GreenDuration => _greenDuration;
+        public float GreenProgress
         {
             get => _greenDelayProgress;
             set
             {
                 _greenDelayProgress = value;
-                OnGreenDelayProgressChanged?.Invoke(value);
+                OnGreenProgressChanged?.Invoke(value);
             }
         }
 
@@ -83,15 +88,14 @@ namespace Player.Model
         public float ProjectileSpeed => _projectileSpeed;
         public Vector3 ProjectileDirection => _projectileDirection;
         public Vector2 ProjectileOffset => _projectileOffset;
-        public float ProjectileDelay => _projectileDelay;
         public float ShootDelay => _blueShootDelay;
-        public float BlueDelayProgress
+        public float BlueProgress
         {
             get => _blueDelayProgress;
             set
             {
                 _blueDelayProgress = value;
-                OnBlueDelayProgressChanged?.Invoke(value);
+                OnBlueProgressChanged?.Invoke(value);
             }
         }
 

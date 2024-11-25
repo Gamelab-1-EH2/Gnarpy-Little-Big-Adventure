@@ -10,23 +10,30 @@ public static class InputManager
         GameManager.OnGameStateChange += ChangeInputScheme;
     }
     
-    private static void ChangeInputScheme(GameState gameState)
+    private static void ChangeInputScheme(GameState_Type gameState)
     {
         switch(gameState)
         {
-            case GameState.Gameplay:
+            case GameState_Type.Gameplay:
                 ActionMap.Disable();
                 ActionMap.Gameplay.Enable();
+                ActionMap.Pause.TogglePause.Enable();
                 break;
 
-            case GameState.Menu:
+            case GameState_Type.Menu:
                 ActionMap.Disable();
                 ActionMap.Menu.Enable();
                 break;
 
-            case GameState.Pause:
+            case GameState_Type.Pause:
                 ActionMap.Disable();
                 ActionMap.Pause.Enable();
+                break;
+
+            case GameState_Type.Victory:
+                break;
+
+            case GameState_Type.Defeat:
                 break;
         }
     }

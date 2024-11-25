@@ -3,16 +3,13 @@ using UnityEngine;
 
 namespace Collectible_System.PowerUp
 {
-    /*
-    La green strawberry, una volta raccolta, permette al personaggio di richiamare uno scudo circolare attorno a sé che permette di
-    Rimbalzare oggetti distruttibili: Se il boss lancia un attacco a distanza e il giocatore attiva lo scudo
-    l’oggetto lanciato dal nemico sarà rispedito al mittente e verrà riflesso sempre in modo speculare rispetto alla traiettoria verso cui è stato lanciato.
-    Lo scudo può essere richiamato con la pressione di un tasto, è cumulabile e dura per tutta la durata del livello o fino al game over.
-    */
-
     public class Green_PowerUp : PowerUp
     {
         private SphereCollider _shieldCollider;
+
+        private float _coolDownTime;
+        private float _usedFor;
+        private bool _inCooldown;
 
         public Green_PowerUp(PlayerModel model) : base(model)
         {
@@ -26,6 +23,8 @@ namespace Collectible_System.PowerUp
 
             base._isBeingUsed = true;
             base._playerModel.PowerUp.ShieldTransform.gameObject.SetActive(true);
+            _inCooldown = false;
+            _usedFor = 0f;
         }
 
         public override void Update()
@@ -33,18 +32,47 @@ namespace Collectible_System.PowerUp
             if (!base._isUnlocked || !base._isBeingUsed)
                 return;
 
-            Vector3 shieldPos = base._playerModel.Movement.RigidBody.transform.position;
-            shieldPos += base._playerModel.PowerUp.GreenPowerUpOffset;
-
-            float radious = base._playerModel.PowerUp.GreenPowerUpRadious;
-
-            Collider[] colliders = Physics.OverlapSphere(shieldPos, radious, 1 << 8);
-            for (int i = 0; i < colliders.Length; i++)
+            if (_inCooldown)
             {
-                if (colliders[i].TryGetComponent<MovableObject>(out MovableObject movable))
+                if (_playerModel.PowerUp.GreenProgress > 0f)
                 {
-                    Vector3 opposideDirection = movable.transform.position - shieldPos;
-                    movable.Deflect(opposideDirection, base._playerModel.PowerUp.GreenPowerUpStrenght);
+                    _coolDownTime -= Time.deltaTime;
+                    _playerModel.PowerUp.GreenProgress = _coolDownTime / _playerModel.PowerUp.GreenDelay;
+                }
+                else
+                { 
+                    _inCooldown = false;
+                    base._isBeingUsed = false;
+                }
+            }
+            else
+            {
+                if (_playerModel.PowerUp.GreenProgress < 1)
+                {
+                    Vector3 shieldPos = base._playerModel.Movement.RigidBody.transform.position;
+                    shieldPos += base._playerModel.PowerUp.GreenPowerUpOffset;
+
+                    float radious = base._playerModel.PowerUp.GreenPowerUpRadious;
+
+                    Collider[] colliders = Physics.OverlapSphere(shieldPos, radious, 1 << 8);
+                    for (int i = 0; i < colliders.Length; i++)
+                    {
+                        if (colliders[i].TryGetComponent<MovableObject>(out MovableObject movable))
+                        {
+                            Vector3 opposideDirection = movable.transform.position - shieldPos;
+                            movable.Deflect(opposideDirection, base._playerModel.PowerUp.GreenPowerUpStrenght);
+                        }
+                    }
+
+                    _usedFor += Time.deltaTime;
+                    _playerModel.PowerUp.GreenProgress = _usedFor / _playerModel.PowerUp.GreenDuration;
+                }
+                else
+                {
+                    _inCooldown = true;
+                    _playerModel.PowerUp.GreenProgress = 1;
+                    _coolDownTime = _playerModel.PowerUp.GreenDelay;
+                    base._playerModel.PowerUp.ShieldTransform.gameObject.SetActive(false);
                 }
             }
         }

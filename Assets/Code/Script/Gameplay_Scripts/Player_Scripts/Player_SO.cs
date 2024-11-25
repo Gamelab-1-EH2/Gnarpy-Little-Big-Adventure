@@ -16,14 +16,17 @@ public class Player_SO : ScriptableObject
     [Space(5f)]
     [SerializeField, Min(0f)] public float GroundCheckDistance = 0.1f;
     [SerializeField] public float GroundCheckOffsetY = -0.5f;
+    [Space(15f)]
     [Header("Power Ups")]
     [SerializeField] public float RedPowerUpRadius = 5f;
     [SerializeField] public float RedPowerUpStrenght = 15f;
     [SerializeField] public float RedPowerUpDelay = 15f;
+    [SerializeField] public float RedPowerUpDuration = 15f;
     [Space(10f)]
     [SerializeField] public float GreenPowerUpRadius = 7f;
     [SerializeField] public float GreenPowerUpStrenght = 7f;
     [SerializeField] public float GreenPowerUpDelay = 20f;
+    [SerializeField] public float GreenPowerUpDuration = 15f;
     [SerializeField] public Vector3 GreenPowerUpOffset = Vector3.up / 2;
     [Space(10f)]
     [SerializeField] public GameObject BluePowerUpProjectile;

@@ -27,7 +27,7 @@ namespace Collectible_System.PowerUp
             _usedFor = 0f;
         }
 
-        public override void Update()
+        public override void Process()
         {
             if (!base._isUnlocked || !base._isBeingUsed)
                 return;

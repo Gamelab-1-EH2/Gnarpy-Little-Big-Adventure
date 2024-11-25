@@ -21,7 +21,6 @@ public class Player_SO : ScriptableObject
     [SerializeField] public float RedPowerUpRadius = 5f;
     [SerializeField] public float RedPowerUpStrenght = 15f;
     [SerializeField] public float RedPowerUpDelay = 15f;
-    [SerializeField] public float RedPowerUpDuration = 15f;
     [Space(10f)]
     [SerializeField] public float GreenPowerUpRadius = 7f;
     [SerializeField] public float GreenPowerUpStrenght = 7f;

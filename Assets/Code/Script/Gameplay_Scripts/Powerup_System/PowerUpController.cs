@@ -27,9 +27,9 @@ namespace Collectible_System.PowerUp
 
         public void Process()
         {
-            _powRed.Update();
-            _powBlue.Update();
-            _powGreen.Update();
+            _powRed.Process();
+            _powBlue.Process();
+            _powGreen.Process();
         }
 
         public void UnlockPowerUp(PowerUpType type)
@@ -71,13 +71,8 @@ namespace Collectible_System.PowerUp
             }
         }
 
-        private void EnterRed(InputAction.CallbackContext _) => EnterRed();
-        private void EnterRed() => _powRed.Start();
-
-        private void EnterBlue(InputAction.CallbackContext _) => EnterBlue();
-        private void EnterBlue() => _powBlue.Start();
-
-        private void EnterGreen(InputAction.CallbackContext _) => EnterGreen();
-        private void EnterGreen() => _powGreen.Start();
+        private void EnterRed(InputAction.CallbackContext _) => _powRed.Start();
+        private void EnterBlue(InputAction.CallbackContext _) => _powBlue.Start();
+        private void EnterGreen(InputAction.CallbackContext _) => _powGreen.Start();
     }
 }

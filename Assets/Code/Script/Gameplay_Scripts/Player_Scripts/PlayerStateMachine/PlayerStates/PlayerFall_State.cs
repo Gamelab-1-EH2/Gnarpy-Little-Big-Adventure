@@ -7,7 +7,7 @@ namespace Player.Behaviour.States
 {
     public class PlayerFall_State : PlayerState
     {
-        private PlayerModel _playerModel;
+        
         private Rigidbody _rigidBody;
         public PlayerFall_State(PlayerModel playerModel) : base(playerModel)
         {
@@ -20,7 +20,7 @@ namespace Player.Behaviour.States
             _playerModel.State = Model.PlayerState.Fall;
             _rigidBody.velocity = new Vector3(_rigidBody.velocity.x, 0f, _rigidBody.velocity.z);
 
-            if(Physics.OverlapSphere(_rigidBody.transform.position, 0.5f, 1<<7).Length > 0)
+            if (Physics.OverlapSphere(_rigidBody.transform.position, 0.5f, 1<<7).Length > 0)
                 base.OnStateExit?.Invoke(new PlayerClimb_State(_playerModel));
 
             InputManager.ActionMap.Gameplay.Movement.performed += UpdateDirection;
@@ -31,6 +31,7 @@ namespace Player.Behaviour.States
         {
             InputManager.ActionMap.Gameplay.Movement.performed -= UpdateDirection;
             InputManager.ActionMap.Gameplay.Movement.canceled -= UpdateDirection;
+            _rigidBody.constraints = RigidbodyConstraints.FreezeAll;
         }
 
         public override void Process()
@@ -46,17 +47,13 @@ namespace Player.Behaviour.States
             directionForce.y = 0;
             _rigidBody.velocity += directionForce;
 
-            _rigidBody.AddForce(_playerModel.Movement.Fall.Gravity, ForceMode.Acceleration);
+            _rigidBody.AddForce(_playerModel.Movement.Fall.Gravity * -_playerModel.Rotation.y, ForceMode.Acceleration);
         }
 
         private void HandleGroundCheck()
         {
-            //Position for GroundCheck
-            Vector3 globalPos = _rigidBody.transform.position;
-            globalPos.y += _playerModel.Movement.GroundCheckOffset;
-
             //Check if is grounded
-            if(IsGrounded())
+            if(base.IsGrounded())
             {
                 //Check Input
                 Vector3 inputDir = InputManager.ActionMap.Gameplay.Movement.ReadValue<Vector3>();
@@ -65,25 +62,6 @@ namespace Player.Behaviour.States
                 else                            //To Walk
                     base.OnStateExit?.Invoke(new PlayerWalk_State(_playerModel));
             }
-        }
-
-        private bool IsGrounded()
-        {
-            bool isGrounded = false;
-
-            //Position for GroundCheck
-            Vector3 globalPos = _rigidBody.transform.position;
-            globalPos.y += _playerModel.Movement.GroundCheckOffset;
-
-            globalPos.x += 0.5f;
-            isGrounded = Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, ~(1 << 3));
-            Debug.DrawRay(globalPos, Vector3.down * _playerModel.Movement.GroundCheckDistance, Color.red, Time.deltaTime);
-
-            globalPos.x += -1f;
-            isGrounded |= Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, ~(1 << 3));
-            Debug.DrawRay(globalPos, Vector3.down * _playerModel.Movement.GroundCheckDistance, Color.red, Time.deltaTime);
-
-            return isGrounded;
         }
 
         private void UpdateDirection(InputAction.CallbackContext context)

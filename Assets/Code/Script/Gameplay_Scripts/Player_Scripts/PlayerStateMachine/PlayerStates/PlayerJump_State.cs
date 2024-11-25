@@ -7,8 +7,7 @@ namespace Player.Behaviour.States
     public class PlayerJump_State : PlayerState
     {
         private float jumpStartTime;
-
-        private PlayerModel _playerModel;
+        
         private Rigidbody _rigidbody;
 
         public PlayerJump_State(PlayerModel playerModel) : base(playerModel)
@@ -36,7 +35,8 @@ namespace Player.Behaviour.States
 
             Vector3 vel = _rigidbody.velocity;
             vel.x = _rigidbody.velocity.x + (_playerModel.Movement.Direction.x * _playerModel.Movement.Fall.FallScalar);
-            vel.y = _playerModel.Movement.Jump.JumpCurve.Evaluate(jumpProgress) * _playerModel.Movement.Jump.JumpForce;
+            vel.y = _playerModel.Movement.Jump.JumpCurve.Evaluate(jumpProgress) * _playerModel.Movement.Jump.JumpForce * _playerModel.Movement.RigidBody.transform.up.y;
+            vel.y *= -_playerModel.Rotation.y;
 
             _rigidbody.velocity = vel;
 

@@ -13,7 +13,6 @@ namespace Player.Model
         private float _redPowerUpRadious;
         private float _redPowerUpStrenght;
         private float _redDelay;
-        private float _redDuration;
         private float _redDelayProgress;
 
         public Action<float> OnGreenProgressChanged;
@@ -38,7 +37,6 @@ namespace Player.Model
             _redPowerUpRadious = playerSO.RedPowerUpRadius;
             _redPowerUpStrenght = playerSO.RedPowerUpStrenght;
             _redDelay = playerSO.RedPowerUpDelay;
-            _redDuration = playerSO.RedPowerUpDuration;
 
             _greenPowerUpRadious = playerSO.GreenPowerUpRadius;
             _greenPowerUpStrenght = playerSO.GreenPowerUpStrenght;
@@ -57,7 +55,6 @@ namespace Player.Model
         public float RedPowerUpRadious => _redPowerUpRadious;
         public float RedPowerUpStrenght => _redPowerUpStrenght;
         public float RedDelay => _redDelay;
-        public float RedDuration => _redDuration;
         public float RedProgress
         {
             get => _redDelayProgress;

@@ -1,5 +1,5 @@
 using Player.Model;
-using System.Runtime.Serialization.Formatters;
+
 using UnityEngine;
 
 namespace Collectible_System.PowerUp
@@ -43,7 +43,7 @@ namespace Collectible_System.PowerUp
             _inCooldown = true;
         }
 
-        public override void Update()
+        public override void Process()
         {
             if (_inCooldown)
             {

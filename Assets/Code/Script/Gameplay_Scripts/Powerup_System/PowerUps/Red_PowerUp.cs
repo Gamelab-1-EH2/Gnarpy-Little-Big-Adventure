@@ -7,79 +7,61 @@ namespace Collectible_System.PowerUp
     public class Red_PowerUp : PowerUp
     {
         private float _coolDownTime;
-        private float _usedFor;
-        private bool _canRevert;
 
-        bool _reverted;
+        private bool _onCoolDown;
+        private bool _reverted;
 
+        private Rigidbody _body;
         public Red_PowerUp(PlayerModel model) : base(model)
         {
-            _canRevert = true;
+            _onCoolDown = false;
             _reverted = false;
+            _coolDownTime = 0f;
         }
-        
+
         public override void Start()
         {
-            if(!base._isUnlocked || !_canRevert)
+            if (!base._isUnlocked)
                 return;
 
+            if (_onCoolDown)
+                return;
+            
             _reverted = !_reverted;
 
-            _canRevert = false;
-            _usedFor = 0f;
-        }
-
-        public override void Update()
-        {
-            if (!base._isUnlocked || !_reverted)
-                return;
+            _onCoolDown = true;
+            _coolDownTime = base._playerModel.PowerUp.RedDelay;
 
             if (_reverted)
-            {
-                Vector3 worldPos = base._playerModel.Movement.RigidBody.transform.position;
-                float radious = base._playerModel.PowerUp.RedPowerUpRadious;
-
-                Collider[] colliders = Physics.OverlapSphere(worldPos, radious, 1 << 8);
-                for (int i = 0; i < colliders.Length; i++)
-                {
-                    if (colliders[i].TryGetComponent<MovableObject>(out MovableObject movable))
-                        movable.ApplyGravity(Vector3.up, base._playerModel.PowerUp.RedPowerUpStrenght);
-                }
-            }
-
-            UpdateProgresses();
-        }
-
-        private void UpdateProgresses()
-        {
-            if (_canRevert)
-            {
-                //Decrease CoolDown
-                if (_playerModel.PowerUp.RedProgress > 0f)
-                {
-                    _coolDownTime -= Time.deltaTime;
-                    _playerModel.PowerUp.RedProgress = _coolDownTime / _playerModel.PowerUp.RedDelay;
-                }
-                else
-                    _canRevert = false;
-            }
+                _playerModel.Rotation = Vector3.up;
             else
-            {
-                //Increase Usage
-                if (_playerModel.PowerUp.RedProgress < 1)
-                {
-                    _usedFor += Time.deltaTime;
-                    _playerModel.PowerUp.RedProgress = _usedFor / _playerModel.PowerUp.RedDelay;
-                }
-                else
-                {
-                    _canRevert = true;
-                    _playerModel.PowerUp.RedProgress = 1;
-                    _coolDownTime = _playerModel.PowerUp.RedDelay;
-                    base._playerModel.PowerUp.ShieldTransform.gameObject.SetActive(false);
-                }
-            }
+                _playerModel.Rotation = Vector3.down;
         }
 
+        public override void Process()
+        {
+            if(_onCoolDown)
+            {
+                _coolDownTime -= Time.deltaTime;
+                _playerModel.PowerUp.RedProgress = _coolDownTime / _playerModel.PowerUp.RedDelay;
+                _playerModel.PowerUp.RedProgress = Mathf.Clamp01(_playerModel.PowerUp.RedProgress);
+
+                if (_coolDownTime <= 0f)
+                    _onCoolDown = false;
+            }
+
+            if(!_reverted)
+                return;
+
+            Vector3 worldPos = base._playerModel.Movement.RigidBody.transform.position;
+            float radious = base._playerModel.PowerUp.RedPowerUpRadious;
+
+            Collider[] colliders = Physics.OverlapSphere(worldPos, radious, 1 << 8);
+            for (int i = 0; i < colliders.Length; i++)
+            {
+                if (colliders[i].TryGetComponent<MovableObject>(out MovableObject movable))
+                    movable.ApplyGravity(Vector3.up, base._playerModel.PowerUp.RedPowerUpStrenght);
+            }
+        }
     }
 }

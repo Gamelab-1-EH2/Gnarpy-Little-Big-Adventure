@@ -2,7 +2,6 @@ using UnityEngine;
 
 using StateMachines;
 using Player.Behaviour.States;
-using StateMachines.States;
 
 namespace Player.Behaviour.Machine
 {

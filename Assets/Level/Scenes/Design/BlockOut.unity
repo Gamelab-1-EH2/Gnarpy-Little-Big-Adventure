@@ -1352,7 +1352,8 @@ GameObject:
   - component: {fileID: 853082678}
   - component: {fileID: 853082677}
   - component: {fileID: 853082676}
-  m_Layer: 8
+  - component: {fileID: 853082681}
+  m_Layer: 0
   m_Name: MovableCube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1484,6 +1485,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
+--- !u!114 &853082681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853082674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3e16022b73660489e078ebf7e92185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &853370754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,7 +1688,8 @@ GameObject:
   - component: {fileID: 936014250}
   - component: {fileID: 936014249}
   - component: {fileID: 936014253}
-  m_Layer: 8
+  - component: {fileID: 936014255}
+  m_Layer: 0
   m_Name: MovableCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1762,7 +1776,7 @@ Transform:
   m_GameObject: {fileID: 936014248}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.02, y: 3.54, z: 0}
+  m_LocalPosition: {x: 19.58, y: 4.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1807,6 +1821,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
+--- !u!114 &936014255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936014248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a3e16022b73660489e078ebf7e92185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &951794717
 GameObject:
   m_ObjectHideFlags: 0
@@ -4532,7 +4558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d129e9fd4a2aada44bf1f955dc8df48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BouceForce: 10
+  BouceForce: 6
 --- !u!54 &1562023475
 Rigidbody:
   m_ObjectHideFlags: 0

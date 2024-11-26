@@ -75,6 +75,9 @@ namespace Audio_System
 
         private static float GetDefaultVolume(AudioChannelType audioChannel)
         {
+            if (_audioData_List == null)
+                return 0f;
+
             for(int i = 0; i < _audioData_List.Count; i++)
                 if (_audioData_List[i].Type == audioChannel)
                     return _audioData_List[i].DefaultVolume;

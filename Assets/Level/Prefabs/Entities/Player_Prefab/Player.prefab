@@ -128,7 +128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3448824428810790151}
   - component: {fileID: 6808847102309146999}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: -5502876747401074563}
   - component: {fileID: 5478929708925650181}
   - component: {fileID: 1885706309021135440}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,10 +275,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 112
+  m_Constraints: 120
   m_CollisionDetection: 1
 --- !u!65 &5478929708925650181
 BoxCollider:

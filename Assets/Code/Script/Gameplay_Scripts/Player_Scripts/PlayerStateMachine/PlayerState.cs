@@ -7,8 +7,9 @@ namespace Player.Behaviour.States
 {
     public abstract class PlayerState : State
     {
-
         protected PlayerModel _playerModel;
+        private int _excludeLayer = (1 << 3) | (1 << 15);
+
         public PlayerState(PlayerModel playerModel) : base()
         {
             _playerModel = playerModel;
@@ -20,17 +21,16 @@ namespace Player.Behaviour.States
 
             //Position for GroundCheck
             Vector3 groundCheckPos = _playerModel.Movement.RigidBody.transform.position;
-            groundCheckPos.y += _playerModel.Rotation.y > 0f ? 0.8f: 0.2f;
+            groundCheckPos.y += _playerModel.Rotation.y > 0f ? 0.8f : 0.2f;
 
             groundCheckPos.x += 0.5f;
-            isGrounded = Physics.Raycast(groundCheckPos, _playerModel.Rotation, _playerModel.Movement.GroundCheckDistance, ~(1<<3) | 1<<6);
+            isGrounded = Physics.Raycast(groundCheckPos, _playerModel.Rotation, _playerModel.Movement.GroundCheckDistance, ~ _excludeLayer);
             Debug.DrawRay(groundCheckPos, _playerModel.Rotation * _playerModel.Movement.GroundCheckDistance, Color.magenta, Time.deltaTime);
 
             groundCheckPos.x += -1f;
-            isGrounded |= Physics.Raycast(groundCheckPos, _playerModel.Rotation, _playerModel.Movement.GroundCheckDistance, ~(1<<3) | 1<<6);
+            isGrounded |= Physics.Raycast(groundCheckPos, _playerModel.Rotation, _playerModel.Movement.GroundCheckDistance, ~ _excludeLayer);
             Debug.DrawRay(groundCheckPos, _playerModel.Rotation * _playerModel.Movement.GroundCheckDistance, Color.magenta, Time.deltaTime);
-
-            Debug.Log(isGrounded);
+            
             return isGrounded;
         }
 

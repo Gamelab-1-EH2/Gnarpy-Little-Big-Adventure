@@ -1,6 +1,7 @@
 using UnityEngine;
 
 using StateMachines;
+using StateMachines.States;
 using Player.Behaviour.States;
 
 namespace Player.Behaviour.Machine

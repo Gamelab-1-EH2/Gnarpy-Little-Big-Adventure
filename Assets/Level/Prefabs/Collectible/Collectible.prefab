@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6190898904136397797}
   - component: {fileID: 1897920776064884606}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8217370881583680733}
   - component: {fileID: 2482940515399268262}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Collectible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6698360765879883192}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: -- ART --
   m_TagString: Untagged
   m_Icon: {fileID: 0}

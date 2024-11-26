@@ -20,9 +20,6 @@ namespace Player.Behaviour.States
             _playerModel.State = Model.PlayerState.Fall;
             _rigidBody.velocity = new Vector3(_rigidBody.velocity.x, 0f, _rigidBody.velocity.z);
 
-            if (Physics.OverlapSphere(_rigidBody.transform.position, 0.5f, 1<<7).Length > 0)
-                base.OnStateExit?.Invoke(new PlayerClimb_State(_playerModel));
-
             InputManager.ActionMap.Gameplay.Movement.performed += UpdateDirection;
             InputManager.ActionMap.Gameplay.Movement.canceled += UpdateDirection;
         }
@@ -31,7 +28,6 @@ namespace Player.Behaviour.States
         {
             InputManager.ActionMap.Gameplay.Movement.performed -= UpdateDirection;
             InputManager.ActionMap.Gameplay.Movement.canceled -= UpdateDirection;
-            _rigidBody.constraints = RigidbodyConstraints.FreezeAll;
         }
 
         public override void Process()

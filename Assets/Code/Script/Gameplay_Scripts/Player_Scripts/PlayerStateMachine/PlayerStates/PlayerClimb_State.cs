@@ -9,7 +9,6 @@ namespace Player.Behaviour.States
 {
     public class PlayerClimb_State : PlayerState
     {
-        private PlayerModel _playerModel;
         private Rigidbody _rigidBody;
         public PlayerClimb_State(PlayerModel playerModel) : base(playerModel)
         {
@@ -20,8 +19,7 @@ namespace Player.Behaviour.States
         public override void Enter()
         {
             _playerModel.State = Model.PlayerState.Climb;
-
-            _rigidBody.useGravity = false;
+            
             _rigidBody.velocity = new Vector3(_rigidBody.velocity.x, 0f, _rigidBody.velocity.z);
 
             InputManager.ActionMap.Gameplay.Movement.performed += UpdateDirection;
@@ -36,8 +34,6 @@ namespace Player.Behaviour.States
 
         public override void Exit()
         {
-            _rigidBody.useGravity = true;
-
             InputManager.ActionMap.Gameplay.Movement.performed -= UpdateDirection;
             InputManager.ActionMap.Gameplay.Movement.canceled -= UpdateDirection;
         }

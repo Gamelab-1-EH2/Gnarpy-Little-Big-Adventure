@@ -20,7 +20,7 @@ namespace GameManagement.Behaviour
                 MonoBehaviour.FindObjectOfType<PlayerController>().OnPlayerDeath += DefeatExit;
                 _model.DroppableManager.Start();
                 _model.FallableManager.Start();
-                _model.TurretManager.Start();
+                _model.TurretManager.Start(base._model.ManagerTransform);
             }
 
             base._model.GameState = GameState_Type.Gameplay;

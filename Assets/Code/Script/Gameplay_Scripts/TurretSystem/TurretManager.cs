@@ -16,9 +16,9 @@ namespace Turret_System
 
         private Transform _turretCommonTarget;
 
-        public void Start()
+        public void Start(Transform spawnParent)
         {
-            _projectilePooler = new ObjectPooler(_turretProjectile, 25);
+            _projectilePooler = new ObjectPooler(_turretProjectile, 25, spawnParent);
 
             _turretList = new List<Turret>();
             _turretList.AddRange(MonoBehaviour.FindObjectsOfType<Turret>());

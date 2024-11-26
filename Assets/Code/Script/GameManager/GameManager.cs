@@ -20,6 +20,7 @@ namespace GameManagement
         private void Awake()
         {
             _model = new GameManager_Model(_droppableManager, _turretManager);
+            _model.SetManagerTransform(this.transform);
             _model.GameState = GameState_Type.Menu;
             _model.OnStateChanged += GameStateChanged;
         }

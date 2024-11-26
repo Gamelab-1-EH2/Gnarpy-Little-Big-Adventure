@@ -18,6 +18,18 @@ public class ObjectPooler
         }
     }
 
+    public ObjectPooler(GameObject objectToPool, int initialPool, Transform parent)
+    {
+        _objectToPool = objectToPool;
+        _objectPool = new List<GameObject>();
+
+        for (int i = 0; i < initialPool; i++)
+        {
+            _objectPool.Add(MonoBehaviour.Instantiate(_objectToPool, parent));
+            _objectPool[^1].gameObject.SetActive(false);
+        }
+    }
+    
     public GameObject PoolObject()
     {
         for (int i = 0; i < _objectPool.Count; i++)

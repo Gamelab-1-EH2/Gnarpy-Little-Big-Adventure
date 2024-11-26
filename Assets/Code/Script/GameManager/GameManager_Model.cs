@@ -1,5 +1,6 @@
 using Turret_System;
 using System;
+using UnityEngine;
 
 namespace GameManagement.Model
 {
@@ -7,6 +8,7 @@ namespace GameManagement.Model
     {
         public Action<GameState_Type> OnStateChanged;
 
+        private Transform _gmTransform;
         private DroppableManager _droppableManager;
         private TurretManager _turretManager;
         private FallableManager _fallableManager;
@@ -36,6 +38,9 @@ namespace GameManagement.Model
             get => _turretManager;
             set => _turretManager = value;
         }
+
+        public Transform ManagerTransform => _gmTransform;
+        public void SetManagerTransform(Transform tr) => _gmTransform = tr;
 
         public GameState_Type GameState
         {

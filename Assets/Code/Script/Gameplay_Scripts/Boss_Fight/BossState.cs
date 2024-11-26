@@ -9,5 +9,4 @@ public abstract class BossState : State
     }
 
     public abstract void TriggerEnter(Collider other);
-    public abstract void TriggerExit(Collider other);
 }

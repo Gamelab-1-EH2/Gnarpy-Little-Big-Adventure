@@ -21,6 +21,7 @@ public class BossIdle_State : BossState
 
     public override void Exit()
     {
+
     }
 
     public override void TriggerEnter(Collider other)
@@ -28,10 +29,6 @@ public class BossIdle_State : BossState
 
     }
 
-    public override void TriggerExit(Collider other)
-    {
-
-    }
     public override string ToString() => "Idle";
 
 

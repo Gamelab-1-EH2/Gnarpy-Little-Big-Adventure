@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class BossStateMachine : StateMachine
 {
-    private static BossState initialState;
-
-    public BossStateMachine() : base(initialState)
+    public BossStateMachine(BossState initialState) : base(initialState)
     {
 
     }
@@ -19,13 +17,8 @@ public class BossStateMachine : StateMachine
 
     public void OnTriggerEnter(Collider collider)
     {
-        BossState playerState = (BossState)base._currentState;
-        playerState.TriggerEnter(collider);
+        BossState bossState = (BossState)base._currentState;
+        bossState.TriggerEnter(collider);
     }
 
-    public void OnTriggerExit(Collider collider)
-    {
-        BossState bossState = (BossState)base._currentState;
-        bossState.TriggerExit(collider);
-    }
 }

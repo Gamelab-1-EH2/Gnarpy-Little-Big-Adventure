@@ -28,9 +28,5 @@ public class BossAttack1_State : BossState
 
     }
 
-    public override void TriggerExit(Collider other)
-    {
-
-    }
     public override string ToString() => "Attack1_State";
 }

@@ -2,17 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossIdle_State : MonoBehaviour
+public class BossIdle_State : BossState
 {
-    // Start is called before the first frame update
-    void Start()
+    public BossIdle_State() : base()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Enter()
     {
-        
+
     }
+
+    public override void Process()
+    {
+
+    }
+
+    public override void Exit()
+    {
+    }
+
+    public override void TriggerEnter(Collider other)
+    {
+
+    }
+
+    public override void TriggerExit(Collider other)
+    {
+
+    }
+    public override string ToString() => "Idle";
+
+
 }

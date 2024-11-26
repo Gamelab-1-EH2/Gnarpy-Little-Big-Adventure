@@ -15,10 +15,12 @@ public class BossDamage_State : BossState
 
     public override void Process()
     {
+
     }
 
     public override void Exit()
     {
+
     }
 
     public override void TriggerEnter(Collider other)
@@ -32,6 +34,5 @@ public class BossDamage_State : BossState
     }
 
     public override string ToString() => "Damage";
-
 
 }

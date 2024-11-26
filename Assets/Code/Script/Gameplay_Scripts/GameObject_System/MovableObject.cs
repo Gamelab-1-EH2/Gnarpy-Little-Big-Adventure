@@ -34,6 +34,8 @@ public class MovableObject : MonoBehaviour, IFallable
 
     public void UpdateFall() => _isFalling = _rigidBody.velocity.y < -0.1f;
 
+    public bool IsDeflected => _canBreak;
+
     private void OnCollisionEnter(Collision collision)
     {
         if(_canBreak && _isFalling)

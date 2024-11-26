@@ -17,15 +17,15 @@ namespace GameManagement.Behaviour
         {
             if (base._model.GameState == GameState_Type.Menu)
             {
-                MonoBehaviour.FindObjectOfType<PlayerController>().OnPlayerDeath += DefeatExit;
                 _model.DroppableManager.Start();
                 _model.FallableManager.Start();
                 _model.TurretManager.Start(base._model.ManagerTransform);
             }
 
-            base._model.GameState = GameState_Type.Gameplay;
-
+            MonoBehaviour.FindObjectOfType<PlayerController>().OnPlayerDeath += DefeatExit;
             InputManager.ActionMap.Pause.TogglePause.started += PauseGame;
+
+            base._model.GameState = GameState_Type.Gameplay;
         }
 
         public override void Exit()

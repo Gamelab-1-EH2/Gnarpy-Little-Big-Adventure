@@ -1,3 +1,4 @@
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 using GameManagement.Model;
@@ -6,6 +7,9 @@ namespace GameManagement.Behaviour
 {
     public class GameState_Pause : GameState
     {
+
+        bool _canExit;
+
         public GameState_Pause(GameManager_Model model) : base(model)
         {
 
@@ -13,13 +17,15 @@ namespace GameManagement.Behaviour
 
         public override void Enter()
         {
+            InputManager.ActionMap.Pause.TogglePause.performed += ResumeGame;
             base._model.GameState = GameState_Type.Pause;
-            InputManager.ActionMap.Pause.TogglePause.started += ResumeGame;
+            _canExit = false;
+            Time.timeScale = 0f;
         }
 
         public override void Exit()
         {
-            InputManager.ActionMap.Pause.TogglePause.started -= ResumeGame;
+            InputManager.ActionMap.Pause.TogglePause.performed -= ResumeGame;
         }
 
         public override void Process()
@@ -27,7 +33,15 @@ namespace GameManagement.Behaviour
             
         }
 
-        private void ResumeGame(InputAction.CallbackContext _) => base.OnStateExit(new GameState_Gameplay(base._model));
+        private void ResumeGame(InputAction.CallbackContext _)
+        {
+            if(_canExit)
+            {
+                base.OnStateExit(new GameState_Gameplay(base._model));
+                Time.timeScale = 1f;
+            }
+            _canExit = true;
+        }
 
 
         public override string ToString() => "Pause";

@@ -12,7 +12,7 @@ public class FallableManager
         _fallableList.AddRange(MonoBehaviour.FindObjectsOfType<MonoBehaviour>().OfType<IFallable>().ToArray() );
     }
 
-    public void FixedUpdate()
+    public void Process()
     {
         for (int i = 0; i < _fallableList.Count; i++)
             _fallableList[i].UpdateFall();

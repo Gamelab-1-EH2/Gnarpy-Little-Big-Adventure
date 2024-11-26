@@ -98,6 +98,7 @@ namespace Player
         private void UpdateView()
         {
             _view.SetDirection(Model.Movement.Direction);
+            _view.SetRotation(Model.Rotation);
             _view.PlayAnimation(Model.State);
         }
 

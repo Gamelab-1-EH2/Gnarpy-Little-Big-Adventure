@@ -6,7 +6,6 @@ namespace Player.Behaviour.States
 {
     public class PlayerIdle_State : PlayerState
     {
-        private PlayerModel _playerModel;
         private Rigidbody _rigidBody;
         public PlayerIdle_State(PlayerModel playerModel) : base(playerModel)
         {
@@ -37,36 +36,20 @@ namespace Player.Behaviour.States
         public override void Process()
         {
             HandleGroundCheck();
+            HandleMovement();
         }
 
         private void HandleGroundCheck()
         {
-            //Position for GroundCheck
-            Vector3 globalPos = _rigidBody.transform.position;
-            globalPos.y += _playerModel.Movement.GroundCheckOffset;
-
             //Check if is grounded
-            if (!IsGrounded())
+            if (!base.IsGrounded())
                 base.OnStateExit?.Invoke(new PlayerFall_State(_playerModel));
         }
 
-        private bool IsGrounded()
+        private void HandleMovement()
         {
-            bool isGrounded = false;
-
-            //Position for GroundCheck
-            Vector3 globalPos = _rigidBody.transform.position;
-            globalPos.y += _playerModel.Movement.GroundCheckOffset;
-
-            globalPos.x += 0.5f;
-            isGrounded = Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, ~(1 << 3));
-            Debug.DrawRay(globalPos, Vector3.down * _playerModel.Movement.GroundCheckDistance, Color.red, Time.deltaTime);
-
-            globalPos.x += -1f;
-            isGrounded |= Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, ~(1 << 3));
-            Debug.DrawRay(globalPos, Vector3.down * _playerModel.Movement.GroundCheckDistance, Color.red, Time.deltaTime);
-
-            return isGrounded;
+            //Apply fall movement control
+            _rigidBody.AddForce(_playerModel.Movement.Fall.Gravity * -_playerModel.Rotation.y, ForceMode.Acceleration);
         }
 
         private void ExitToWalk(InputAction.CallbackContext context)

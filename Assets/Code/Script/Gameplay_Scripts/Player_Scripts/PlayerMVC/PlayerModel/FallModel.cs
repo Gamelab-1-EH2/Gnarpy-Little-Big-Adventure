@@ -14,6 +14,11 @@ namespace Player.Model
         }
 
         public float FallScalar => _fallSpeedScalar;
-        public Vector3 Gravity => _gravity;
+        
+        public Vector3 Gravity
+        {
+            get => _gravity;
+            set => _gravity = value;
+        }
     }
 }

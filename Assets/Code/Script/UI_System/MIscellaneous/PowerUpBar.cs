@@ -66,5 +66,5 @@ public class PowerUpUIData
 
     public void LockPowerUp() => _powerUpImage.sprite = _lockedPowerUp;
     public void UnlockPowerUp() => _powerUpImage.sprite = _unlockedPowerUp;
-    public void SetCoolDown(float progress) => _powerUpCooldowImage.fillAmount = (1f - progress);
+    public void SetCoolDown(float progress) => _powerUpCooldowImage.fillAmount = progress;
 }

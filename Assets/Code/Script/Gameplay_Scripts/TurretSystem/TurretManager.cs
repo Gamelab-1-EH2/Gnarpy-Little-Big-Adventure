@@ -32,7 +32,7 @@ namespace Turret_System
             }
         }
 
-        public void FixedUpdate()
+        public void Process()
         {
             for(int i = 0; i < _turretList.Count; i++)
                 _turretList[i].Tick();

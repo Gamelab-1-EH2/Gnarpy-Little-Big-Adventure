@@ -1,6 +1,6 @@
 namespace GameManagement
 {
-    public enum GameState
+    public enum GameState_Type
     {
         Gameplay = 0,
         Pause = 1,

@@ -15,12 +15,15 @@ namespace Player.Model
         private int _healtPoints;
         private int _ballsOfWool;
 
+        private Vector3 _rotation;
+
         public PlayerModel(Player_SO playerSO, Rigidbody body, Transform shieldTransform)
         {
             _playerState = PlayerState.Idle;
             _healtPoints = playerSO.HealthPoints;
             _movementModel = new MovementModel(playerSO, body);
             _powerUpModel = new PowerUpModel(playerSO, shieldTransform);
+            _rotation = Vector3.down;
         }
 
         public MovementModel Movement
@@ -59,6 +62,12 @@ namespace Player.Model
                 _ballsOfWool = value;
                 OnBallOfWoolCollected?.Invoke(_ballsOfWool);
             }
+        }
+
+        public Vector3 Rotation
+        {
+            get => _rotation;
+            set => _rotation = value;
         }
 
         public void Disconnect()

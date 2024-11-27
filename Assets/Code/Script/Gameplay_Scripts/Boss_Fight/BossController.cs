@@ -1,18 +1,20 @@
 using Player.Behaviour.Machine;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BossController : MonoBehaviour, IDamageable
 {
-
-    Animator _animator;
-    [SerializeField] private Phase_So _phaseSo;
-    [SerializeField]int _currentHp;
-    private BossStateMachine _stateMachine;
+    public int i;
+    public Animator _animator;
+    public List<Phase_So> phase_So=new List<Phase_So>();
+    public int _hp;
+    public BossStateMachine _stateMachine;
+    int attack = 0;
 
     void Awake()
     {
         _animator = GetComponent<Animator>();
-        //_currentHp = _phaseSo;
         _stateMachine= new BossStateMachine(new BossIdle_State());
     }
 
@@ -26,22 +28,28 @@ public class BossController : MonoBehaviour, IDamageable
 
     public void Damage()
     {
-        _currentHp--;
+        _hp--;
         _animator.SetTrigger("Damage");
     }
 
     private void OnEnable()
     {
-        ///lista di scriptable per gestire le varie fasi del boss
-        int attack = Random.Range(0, 1);
-        if (attack == 1)
+        StartCoroutine(Cooldown());
+    }
+
+    public IEnumerator Cooldown()
+    {
+        attack = Random.Range(0, 2);
+        if (attack == 0)
         {
-            _stateMachine = new BossStateMachine(new BossAttack1_State());
+            _stateMachine = new BossStateMachine(new BossAttack1_State(this));
         }
         else
         {
-
+            _stateMachine = new BossStateMachine(new BossAttack2_State(this));
         }
+        yield return new WaitForSeconds(phase_So[i].DelayBetweenAttacks);
+        _stateMachine.Process();
     }
 
 }

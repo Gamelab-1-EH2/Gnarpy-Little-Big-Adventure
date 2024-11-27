@@ -12,3 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31fd60e7ee529374eb85dc88c252d2e1, type: 3}
   m_Name: Phase 1
   m_EditorClassIdentifier: 
+  PhaseNumber: 0
+  Trigger: 0
+  TentacleWidth: 0
+  WarningDelay: 0
+  ProjectileSpeed: 0
+  DelayBetweenAttacks: 5
+  Attack1Percentage: 0

@@ -1,8 +1,8 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 using Player;
 using GameManagement.Model;
-using UnityEngine.InputSystem;
 
 namespace GameManagement.Behaviour
 {

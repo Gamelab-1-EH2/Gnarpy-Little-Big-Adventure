@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18130097, g: 0.22285655, b: 0.2838732, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -391,6 +391,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7480665548889719195, guid: 9cd296bd63aab7649825b2a000d13f8a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7643025638368795603, guid: 9cd296bd63aab7649825b2a000d13f8a,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -597,11 +602,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _droppableManager:
-    _dropData: []
+    _dropData:
+    - ObjectToSpawn: {fileID: 0}
+      Probability: 0
+    - ObjectToSpawn: {fileID: 0}
+      Probability: 0
   _turretManager:
     _turretProjectile: {fileID: 8592442538128691829, guid: 04d1449a439c4bb49a5df1772598e3d4,
       type: 3}
     _projectileSpeed: 15
+  _gameSceneManager:
+    _gameScenes:
+    - PlayerSystem_TS
+  _initialState: 2
 --- !u!1 &1249601104
 GameObject:
   m_ObjectHideFlags: 0

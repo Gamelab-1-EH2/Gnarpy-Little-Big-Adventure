@@ -17,6 +17,8 @@ namespace GameManagement
         [SerializeField] private GameSceneManager _gameSceneManager;
         [SerializeField] private GameState_Type _initialState = GameState_Type.Menu;
 
+        [SerializeField] private bool _debug = false;
+
         private GameManager_Model _model;
         private GameManager_StateMachine _stateMachine;
 
@@ -27,7 +29,8 @@ namespace GameManagement
             _model.GameState = GameState_Type.Menu;
             _model.OnStateChanged += GameStateChanged;
 
-            _model.SceneManager.LoadGameScene(0);
+            if(!_debug)
+                _model.SceneManager.LoadGameScene(0);
         }
 
         private void Start()

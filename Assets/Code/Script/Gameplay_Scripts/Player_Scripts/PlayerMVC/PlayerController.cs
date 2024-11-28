@@ -53,7 +53,7 @@ namespace Player
         {
             if(other.TryGetComponent<PowerUp_Collectible>(out PowerUp_Collectible powerup))
             {
-                _spriteRenderer.color = powerup.Color;
+                //_spriteRenderer.color = powerup.Color; (Removed ColorChange ByEma)
                 _powerUpController.UnlockPowerUp(powerup.GetPowerUpType());
                 powerup.Collect();
             }

@@ -9,12 +9,21 @@ namespace Player.Behaviour.States
         private float jumpStartTime;
         
         private Rigidbody _rigidBody;
+        private bool _isForced;
 
         public PlayerJump_State(PlayerModel playerModel) : base(playerModel)
         {
             _playerModel = playerModel;
             _rigidBody = _playerModel.Movement.RigidBody;
-            
+            _isForced = false;
+            jumpStartTime = 0;
+        }
+
+        public PlayerJump_State(PlayerModel playerModel, bool forced) : base(playerModel)
+        {
+            _playerModel = playerModel;
+            _rigidBody = _playerModel.Movement.RigidBody;
+            _isForced = forced;
             jumpStartTime = 0;
         }
 
@@ -23,7 +32,9 @@ namespace Player.Behaviour.States
             _playerModel.State = Model.PlayerState.Jump;
             jumpStartTime = Time.time;
 
-            InputManager.ActionMap.Gameplay.Jump.canceled += EndJump;
+            if(!_isForced)
+                InputManager.ActionMap.Gameplay.Jump.canceled += EndJump;
+
             InputManager.ActionMap.Gameplay.Movement.performed += UpdateDirection;
             InputManager.ActionMap.Gameplay.Movement.canceled += UpdateDirection;
         }
@@ -52,7 +63,9 @@ namespace Player.Behaviour.States
 
         public override void Exit()
         {
-            InputManager.ActionMap.Gameplay.Jump.canceled -= EndJump;
+            if (!_isForced)
+                InputManager.ActionMap.Gameplay.Jump.canceled -= EndJump;
+
             InputManager.ActionMap.Gameplay.Movement.performed -= UpdateDirection;
             InputManager.ActionMap.Gameplay.Movement.canceled -= UpdateDirection;
         }

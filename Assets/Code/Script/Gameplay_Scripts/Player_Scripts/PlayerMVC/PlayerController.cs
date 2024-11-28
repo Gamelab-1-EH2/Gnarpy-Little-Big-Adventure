@@ -75,6 +75,10 @@ namespace Player
                         break;
                 }
             }
+            else if(other.TryGetComponent<SpiderWeb>(out SpiderWeb spiderWeb))
+            {
+                _stateMachine.PushState(new PlayerJump_State(Model, true));
+            }
 
             _stateMachine.OnTriggerEnter(other);
         }

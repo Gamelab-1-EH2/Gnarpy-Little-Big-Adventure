@@ -7,14 +7,13 @@ namespace Player.Behaviour.States
     public class PlayerJump_State : PlayerState
     {
         private float jumpStartTime;
-
-        private PlayerModel _playerModel;
-        private Rigidbody _rigidbody;
+        
+        private Rigidbody _rigidBody;
 
         public PlayerJump_State(PlayerModel playerModel) : base(playerModel)
         {
             _playerModel = playerModel;
-            _rigidbody = _playerModel.Movement.RigidBody;
+            _rigidBody = _playerModel.Movement.RigidBody;
             
             jumpStartTime = 0;
         }
@@ -34,15 +33,21 @@ namespace Player.Behaviour.States
             float enlapsedTime = Time.time - jumpStartTime;
             float jumpProgress =  enlapsedTime / _playerModel.Movement.Jump.JumpTime;
 
-            Vector3 vel = _rigidbody.velocity;
-            vel.x = _rigidbody.velocity.x + (_playerModel.Movement.Direction.x * _playerModel.Movement.Fall.FallScalar);
-            vel.y = _playerModel.Movement.Jump.JumpCurve.Evaluate(jumpProgress) * _playerModel.Movement.Jump.JumpForce;
+            Vector3 vel = _rigidBody.velocity;
+            vel.x = _rigidBody.velocity.x + (_playerModel.Movement.Direction.x * _playerModel.Movement.Fall.FallScalar);
+            vel.y = _playerModel.Movement.Jump.JumpCurve.Evaluate(jumpProgress) * _playerModel.Movement.Jump.JumpForce * _playerModel.Movement.RigidBody.transform.up.y;
+            vel.y *= -_playerModel.Rotation.y;
 
-            _rigidbody.velocity = vel;
+            _rigidBody.velocity = vel;
 
             //Exit state condition
             if (jumpProgress >= 1f)
-                base.OnStateExit?.Invoke(new PlayerFall_State(_playerModel));
+            {
+                if (Physics.OverlapSphere(_rigidBody.transform.position, 0.5f, 1 << 7).Length > 0)
+                    base.OnStateExit?.Invoke(new PlayerClimb_State(_playerModel));
+                else
+                    base.OnStateExit?.Invoke(new PlayerFall_State(_playerModel));
+            }
         }
 
         public override void Exit()
@@ -54,9 +59,7 @@ namespace Player.Behaviour.States
 
         public override void TriggerEnter(Collider other)
         {
-            ////Climb
-            //if (other.gameObject.layer == 7)
-            //    base.OnStateExit(new PlayerClimb_State(_playerModel));
+
         }
 
         public override void TriggerExit(Collider other)

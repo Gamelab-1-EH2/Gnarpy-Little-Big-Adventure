@@ -1,8 +1,8 @@
 using UnityEngine;
 
 using StateMachines;
-using Player.Behaviour.States;
 using StateMachines.States;
+using Player.Behaviour.States;
 
 namespace Player.Behaviour.Machine
 {

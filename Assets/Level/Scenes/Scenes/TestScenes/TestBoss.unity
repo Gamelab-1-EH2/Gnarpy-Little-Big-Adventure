@@ -158,7 +158,7 @@ Transform:
   m_GameObject: {fileID: 270167630}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 120, y: -2.54, z: -0.110000014}
+  m_LocalPosition: {x: 0, y: -2.23, z: 4.45}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -275,6 +275,10 @@ MonoBehaviour:
   phase_So:
   - {fileID: 11400000, guid: 8af1ff285f96253408a7d7938db49fc1, type: 2}
   _hp: 10
+  _gameObject:
+  - {fileID: 1328550763}
+  objectThrown: {fileID: 914872943}
+  playerTransform: {x: 0, y: 0, z: 0}
 --- !u!4 &304757507 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2725721882897192009, guid: 0e2791beaffe56145bafd7fbe4870fb8,
@@ -3113,7 +3117,7 @@ PrefabInstance:
     - target: {fileID: 5775139055867024522, guid: 4b1adb6171ac50c4984f5e29ffce274a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 109.2
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5775139055867024522, guid: 4b1adb6171ac50c4984f5e29ffce274a,
         type: 3}

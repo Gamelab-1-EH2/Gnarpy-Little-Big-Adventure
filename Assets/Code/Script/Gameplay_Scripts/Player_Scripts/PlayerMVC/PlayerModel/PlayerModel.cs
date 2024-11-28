@@ -15,12 +15,22 @@ namespace Player.Model
         private int _healtPoints;
         private int _ballsOfWool;
 
+        private Vector3 _rotation;
+
+        private float _maxY;
+        private float _minY;
+
         public PlayerModel(Player_SO playerSO, Rigidbody body, Transform shieldTransform)
         {
             _playerState = PlayerState.Idle;
             _healtPoints = playerSO.HealthPoints;
+
+            _maxY = playerSO.MaxY;
+            _minY = playerSO.MinY;
+
             _movementModel = new MovementModel(playerSO, body);
             _powerUpModel = new PowerUpModel(playerSO, shieldTransform);
+            _rotation = Vector3.down;
         }
 
         public MovementModel Movement
@@ -51,6 +61,9 @@ namespace Player.Model
             }
         }
 
+        public float MaxY => _maxY;
+        public float MinY => _minY;
+
         public int BallOfWool
         {
             get => _ballsOfWool;
@@ -59,6 +72,12 @@ namespace Player.Model
                 _ballsOfWool = value;
                 OnBallOfWoolCollected?.Invoke(_ballsOfWool);
             }
+        }
+
+        public Vector3 Rotation
+        {
+            get => _rotation;
+            set => _rotation = value;
         }
 
         public void Disconnect()

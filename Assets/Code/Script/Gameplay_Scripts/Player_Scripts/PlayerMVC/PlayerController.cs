@@ -23,21 +23,21 @@ namespace Player
 
         private PlayerStateMachine _stateMachine;
         private SpriteRenderer _spriteRenderer;
-        private Rigidbody _rigidbody;
+        private Rigidbody _rigidBody;
 
         private PowerUpController _powerUpController;
-
+        
         //MVC
         public PlayerModel Model { get; private set; }
         private PlayerView _view;
 
         private void Awake()
         {
-            _rigidbody = GetComponent<Rigidbody>();
+            _rigidBody = GetComponent<Rigidbody>();
             _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
             //Initialize Model
-            Model = new PlayerModel(_playerSO, _rigidbody, _shieldTransform);
+            Model = new PlayerModel(_playerSO, _rigidBody, _shieldTransform);
 
             //Initialize View
             Animator animator = GetComponent<Animator>();
@@ -47,13 +47,14 @@ namespace Player
             _stateMachine = new PlayerStateMachine(new PlayerIdle_State(Model));
 
             _powerUpController = new PowerUpController(Model);
+            Model.OnHPChanged += HealthDecreased;
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if(other.TryGetComponent<PowerUp_Collectible>(out PowerUp_Collectible powerup))
             {
-                _spriteRenderer.color = powerup.Color;
+                //_spriteRenderer.color = powerup.Color; (Removed ColorChange ByEma)
                 _powerUpController.UnlockPowerUp(powerup.GetPowerUpType());
                 powerup.Collect();
             }
@@ -98,6 +99,7 @@ namespace Player
         private void UpdateView()
         {
             _view.SetDirection(Model.Movement.Direction);
+            _view.SetRotation(Model.Rotation);
             _view.PlayAnimation(Model.State);
         }
 
@@ -106,11 +108,11 @@ namespace Player
             _powerUpController.Process();
         }
 
-        public void Damage()
-        {
-            Model.HealthPoints -= 1;
+        public void Damage() => Model.HealthPoints -= 1;
 
-            if(Model.HealthPoints <= 0 && Model.State != Player.Model.PlayerState.Dead)
+        private void HealthDecreased(int hp)
+        {
+            if (hp <= 0 && Model.State != Player.Model.PlayerState.Dead)
             {
                 _stateMachine.PushState(new PlayerDeath_State(Model));
                 OnPlayerDeath?.Invoke();
@@ -131,6 +133,12 @@ namespace Player
 
             Handles.color = Color.green;
             Handles.DrawWireDisc(transform.position + _playerSO.GreenPowerUpOffset, Vector3.forward, _playerSO.GreenPowerUpRadius);
+
+            if(Model != null)
+            {
+                Gizmos.color = Color.yellow;
+                Gizmos.DrawSphere(Model.Movement.LastAllowedPosition, 0.5f);
+            }
         }
         #endif
     }

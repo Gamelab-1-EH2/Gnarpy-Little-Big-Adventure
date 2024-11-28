@@ -17,6 +17,8 @@ public class BossAttack1_State : BossState
     {
         Debug.Log("Attack1");
         controller._animator.SetTrigger("Attack");
+
+
         controller.StartCoroutine(controller.Cooldown());
     }
 

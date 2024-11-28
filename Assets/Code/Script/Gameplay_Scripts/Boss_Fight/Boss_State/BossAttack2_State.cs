@@ -20,6 +20,8 @@ public class BossAttack2_State : BossState
     {
         Debug.Log("Attack2");
         controller._animator.SetTrigger("Attack");
+        controller.objectThrown= controller.SpawnObject();
+        controller.objectThrown.GetComponent<Rigidbody>().velocity =controller.playerTransform*Time.deltaTime*1f;
         controller.StartCoroutine(controller.Cooldown());
 
 

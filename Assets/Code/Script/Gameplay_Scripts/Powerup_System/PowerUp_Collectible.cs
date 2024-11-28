@@ -4,8 +4,8 @@ namespace Collectible_System.PowerUp
 {
     public class PowerUp_Collectible : Collectible
     {
-        [SerializeField] private Color _powerupColor = Color.white;
-        public Color Color => _powerupColor;
+        //[SerializeField] private Color _powerupColor = Color.white;
+        //public Color Color => _powerupColor;
         public PowerUpType GetPowerUpType()
         {
             switch (base.CollectibleType)

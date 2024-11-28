@@ -6,8 +6,9 @@ namespace Player.Behaviour.States
 {
     public class PlayerWalk_State : PlayerState
     {
-        private PlayerModel _playerModel;
         private Rigidbody _rigidBody;
+
+        private float _lastAllowPosTime = 0;
 
         public PlayerWalk_State(PlayerModel playerModel) : base(playerModel)
         {
@@ -32,6 +33,7 @@ namespace Player.Behaviour.States
                 HandleMovement();
 
             HandleGroundCheck();
+            UpdatePositonRecover();
         }
 
         private void HandleMovement()
@@ -39,38 +41,28 @@ namespace Player.Behaviour.States
             //Handle Movement
             Vector3 velocity = _playerModel.Movement.Direction * _playerModel.Movement.Speed;
             velocity.y = _playerModel.Movement.RigidBody.velocity.y;
-            _playerModel.Movement.RigidBody.velocity = velocity;
+            _rigidBody.velocity = velocity;
         }
 
         private void HandleGroundCheck()
         {
-            //Position for GroundCheck
-            Vector3 globalPos = _rigidBody.transform.position;
-            globalPos.y += _playerModel.Movement.GroundCheckOffset;
-
             //Check if is grounded
-            if(!IsGrounded())
+            if (!base.IsGrounded())
                 base.OnStateExit?.Invoke(new PlayerFall_State(_playerModel));
         }
 
-        private bool IsGrounded()
+        private void UpdatePositonRecover()
         {
-            bool isGrounded = false;
-
-            //Position for GroundCheck
-            Vector3 globalPos = _rigidBody.transform.position;
-            globalPos.y += _playerModel.Movement.GroundCheckOffset;
-
-            globalPos.x += 0.5f;
-            isGrounded = Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, ~(1 << 3));
-            Debug.DrawRay(globalPos, Vector3.down * _playerModel.Movement.GroundCheckDistance, Color.red, Time.deltaTime);
-
-            globalPos.x += -1f;
-            isGrounded |= Physics.Raycast(globalPos, Vector3.down, _playerModel.Movement.GroundCheckDistance, ~(1 << 3));
-            Debug.DrawRay(globalPos, Vector3.down * _playerModel.Movement.GroundCheckDistance, Color.red, Time.deltaTime);
-
-            return isGrounded;
+            if (_lastAllowPosTime - Time.time < 1f)
+            {
+                _lastAllowPosTime = Time.time;
+                
+                Vector3 recoverPos = _rigidBody.transform.position;
+                recoverPos.x -= _playerModel.Movement.Direction.x * 1.5f;
+                _playerModel.Movement.LastAllowedPosition = recoverPos;
+            }
         }
+
 
         public override void Exit()
         {

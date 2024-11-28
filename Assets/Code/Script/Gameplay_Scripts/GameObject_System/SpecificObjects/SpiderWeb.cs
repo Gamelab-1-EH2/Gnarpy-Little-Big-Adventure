@@ -16,8 +16,8 @@ public class SpiderWeb : MonoBehaviour
 
         if(collision.gameObject.TryGetComponent<PlayerController>(out PlayerController player))
         {
-            Vector3 dir = player.transform.position - transform.position;
-            player.GetComponent<Rigidbody>().AddForce(dir * BouceForce, ForceMode.Impulse);
+            Rigidbody rb = player.GetComponent<Rigidbody>();
+            rb.AddForce(rb.transform.up * BouceForce, ForceMode.Impulse);
         }
     }
 }

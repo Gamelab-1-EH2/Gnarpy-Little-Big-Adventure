@@ -5,6 +5,8 @@ using Audio_System.SFX;
 public class Player_SO : ScriptableObject
 {
     [SerializeField] public int HealthPoints = 3;
+    [SerializeField] public float MaxY = 25f;
+    [SerializeField] public float MinY = -10f;
     [Header("Movement")]
     [SerializeField] public float MovementSpeed = 25f;
     [Header("Jump")]
@@ -16,6 +18,7 @@ public class Player_SO : ScriptableObject
     [Space(5f)]
     [SerializeField, Min(0f)] public float GroundCheckDistance = 0.1f;
     [SerializeField] public float GroundCheckOffsetY = -0.5f;
+    [Space(15f)]
     [Header("Power Ups")]
     [SerializeField] public float RedPowerUpRadius = 5f;
     [SerializeField] public float RedPowerUpStrenght = 15f;
@@ -24,6 +27,7 @@ public class Player_SO : ScriptableObject
     [SerializeField] public float GreenPowerUpRadius = 7f;
     [SerializeField] public float GreenPowerUpStrenght = 7f;
     [SerializeField] public float GreenPowerUpDelay = 20f;
+    [SerializeField] public float GreenPowerUpDuration = 15f;
     [SerializeField] public Vector3 GreenPowerUpOffset = Vector3.up / 2;
     [Space(10f)]
     [SerializeField] public GameObject BluePowerUpProjectile;

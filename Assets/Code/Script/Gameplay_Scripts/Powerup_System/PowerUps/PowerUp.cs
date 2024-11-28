@@ -13,7 +13,7 @@ namespace Collectible_System.PowerUp
             _playerModel = model;
         }
 
-        public abstract void Update();
+        public abstract void Process();
         public abstract void Start();
 
         public bool Unlocked

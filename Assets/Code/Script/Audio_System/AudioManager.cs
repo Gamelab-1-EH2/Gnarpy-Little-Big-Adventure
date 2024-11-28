@@ -15,7 +15,7 @@ namespace Audio_System
         [Header("Audio Settings")]
         [SerializeField] private AudioManager_SO _settings;
 
-        private List<AudioChannel> _audioData_List;
+        private static List<AudioChannel> _audioData_List;
         private static AudioMixer _mixer;
 
         private void Awake()
@@ -28,10 +28,13 @@ namespace Audio_System
             }
             else
                 Instance = this;
+        }
 
+        private void Start()
+        {
             SetUpAudio();
         }
-        
+
         private void SetUpAudio()
         {
             _mixer = _settings.Mixer;
@@ -40,28 +43,17 @@ namespace Audio_System
             float volume = 0f;
             for (int i = 0; i < _audioData_List.Count; i++)
             {
-                volume = _audioData_List[i].DefaultVolume;
-                //Player Prefs
-                if (!PlayerPrefs.HasKey(_audioData_List[i].Type.ToString() + "Volume"))
-                    PlayerPrefs.SetFloat(_audioData_List[i].Type.ToString() + "Volume", _audioData_List[i].DefaultVolume);
-                else
-                    volume = PlayerPrefs.GetFloat(_audioData_List[i].Type.ToString() + "Volume");
-
-                //Convert audio volume
-                volume = 20 * Mathf.Log10(volume);
-                if (volume < -80f)
-                    volume = -80f;
-                //Set Mixer volume
-                _mixer.SetFloat(_audioData_List[i].Type.ToString() + "Volume", volume);
+                volume = GetVolume(_audioData_List[i].Type);
+                SetVolume(_audioData_List[i].Type, volume);
             }
         }
-
+        
         /// <summary>
         /// Change audio volume and save it into prefs
         /// </summary>
         /// <param name="channel"></param>
         /// <param name="volume"></param>
-        public static void ChangeVolume(AudioChannelType channel, float volume)
+        public static void SetVolume(AudioChannelType channel, float volume)
         {
             //Update Player Prefs
             PlayerPrefs.SetFloat(channel.ToString() + "Volume", volume);
@@ -72,6 +64,24 @@ namespace Audio_System
                 volume = -80f;
             //Set Mixer volume
             _mixer.SetFloat(channel.ToString() + "Volume", volume);
+        }
+
+        /// <summary>
+        /// Get audio volume from a specified Channel
+        /// </summary>
+        /// <param name="channel"></param>
+        public static float GetVolume(AudioChannelType channel) => PlayerPrefs.GetFloat(channel.ToString() + "Volume", GetDefaultVolume(channel));
+
+        private static float GetDefaultVolume(AudioChannelType audioChannel)
+        {
+            if (_audioData_List == null)
+                return 0f;
+
+            for(int i = 0; i < _audioData_List.Count; i++)
+                if (_audioData_List[i].Type == audioChannel)
+                    return _audioData_List[i].DefaultVolume;
+               
+            return 0f;
         }
     }
 }

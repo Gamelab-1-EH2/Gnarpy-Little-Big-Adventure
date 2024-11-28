@@ -15,6 +15,7 @@ namespace Player.Model
         private float _groundCheckOffset;
 
         private Vector3 _direction;
+        private Vector3 _lastAllowedPos;
         private Rigidbody _rigidbody;
 
         private bool _lookingRight;
@@ -66,6 +67,12 @@ namespace Player.Model
 
                 _direction = value;
             }
+        }
+
+        public Vector3 LastAllowedPosition
+        {
+            get => _lastAllowedPos;
+            set => _lastAllowedPos = value;
         }
 
         public Rigidbody RigidBody

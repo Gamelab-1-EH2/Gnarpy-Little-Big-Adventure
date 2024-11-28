@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3a963405b28204488cc17cf0ce7fb99, type: 3}
   m_Name: PlayerSO
   m_EditorClassIdentifier: 
+  HealthPoints: 3
   MovementSpeed: 13
-  JumpForce: 50
+  JumpForce: 30
   JumpSpeedCurve:
     serializedVersion: 2
     m_Curve:
@@ -41,14 +42,15 @@ MonoBehaviour:
   JumpTime: 0.3
   FallScalar: 0.25
   Gravity: {x: -0, y: -75.5, z: -0}
-  GroundCheckDistance: 0.05
-  GroundCheckOffsetY: 0.02
+  GroundCheckDistance: 0.3
+  GroundCheckOffsetY: 0.5
   RedPowerUpRadius: 6
   RedPowerUpStrenght: 30
-  RedPowerUpDelay: 15
+  RedPowerUpDelay: 0.25
   GreenPowerUpRadius: 1
   GreenPowerUpStrenght: 7
   GreenPowerUpDelay: 20
+  GreenPowerUpDuration: 1
   GreenPowerUpOffset: {x: 0, y: 0.5, z: 0}
   BluePowerUpProjectile: {fileID: 8592442538128691829, guid: 04d1449a439c4bb49a5df1772598e3d4,
     type: 3}

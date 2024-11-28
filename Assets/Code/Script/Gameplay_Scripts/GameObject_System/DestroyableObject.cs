@@ -25,8 +25,7 @@ public class DestroyableObject : MonoBehaviour, IDestroyable, IFallable, IDamage
         OnDestroy -= OnDestroy;
         this.gameObject.SetActive(false);
     }
-
-
+    
     public void UpdateFall()
     {
         _isFalling = _rigidBody.velocity.y > 0.1f;

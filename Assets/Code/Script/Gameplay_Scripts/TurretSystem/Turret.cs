@@ -1,7 +1,5 @@
 using System;
 using UnityEngine;
-using Player.Model;
-
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -9,13 +7,15 @@ using UnityEditor;
 
 namespace Turret_System
 {
-    public class Turret: MonoBehaviour
+    public class Turret: DestroyableObject
     {
         public Action<Transform, float> OnShoot;
 
         [SerializeField] private float _delay = 1f; 
         [SerializeField] private float _viewAngle = 90f;
         [SerializeField] private float _viewDistance = 5.0f;
+
+        [HideInInspector] public int Index;
 
         private float _lastTimeShoot = 0f;
         private Transform _target;
@@ -43,7 +43,7 @@ namespace Turret_System
 
         public void SetTarget(Transform target) => _target = target;
 
-        private void OnDestroy()
+        private void OnDisable()
         {
             OnShoot -= OnShoot;
         }

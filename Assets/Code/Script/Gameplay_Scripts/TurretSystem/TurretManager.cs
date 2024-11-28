@@ -28,7 +28,9 @@ namespace Turret_System
             for (int i = 0; i < _turretList.Count; i++)
             {
                 _turretList[i].SetTarget(_turretCommonTarget);
+                _turretList[i].OnDestroy += RemoveTurret;
                 _turretList[i].OnShoot += Shoot;
+                _turretList[i].Index = i;
             }
         }
 
@@ -36,6 +38,16 @@ namespace Turret_System
         {
             for(int i = 0; i < _turretList.Count; i++)
                 _turretList[i].Tick();
+        }
+
+        public void RemoveTurret(DestroyableObject destroyable)
+        {
+            Turret turretToRemove = (Turret)destroyable;
+            _turretList.RemoveAt(turretToRemove.Index);
+
+            //Update all Indexes
+            for (int i = 0; i < _turretList.Count; i++)
+                _turretList[i].Index = i;
         }
 
         private void Shoot(Transform turretTransform, float shootAngle)

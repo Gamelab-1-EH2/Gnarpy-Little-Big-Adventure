@@ -1,8 +1,8 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 using Player;
 using GameManagement.Model;
-using UnityEngine.InputSystem;
 
 namespace GameManagement.Behaviour
 {
@@ -15,15 +15,16 @@ namespace GameManagement.Behaviour
 
         public override void Enter()
         {
-            if (base._model.GameState == GameState_Type.Menu)
+            if(base._model.GameState != GameState_Type.Pause)
             {
                 _model.DroppableManager.Start();
                 _model.FallableManager.Start();
                 _model.TurretManager.Start(base._model.ManagerTransform);
             }
-
+            
             MonoBehaviour.FindObjectOfType<PlayerController>().OnPlayerDeath += DefeatExit;
             InputManager.ActionMap.Pause.TogglePause.started += PauseGame;
+            Time.timeScale = 1f;
 
             base._model.GameState = GameState_Type.Gameplay;
         }

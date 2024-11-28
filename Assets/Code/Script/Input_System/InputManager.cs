@@ -31,9 +31,15 @@ public static class InputManager
                 break;
 
             case GameState_Type.Victory:
+                ActionMap.Disable();
                 break;
 
             case GameState_Type.Defeat:
+                ActionMap.Disable();
+                break;
+
+            case GameState_Type.Loading:
+                ActionMap.Disable();
                 break;
         }
     }

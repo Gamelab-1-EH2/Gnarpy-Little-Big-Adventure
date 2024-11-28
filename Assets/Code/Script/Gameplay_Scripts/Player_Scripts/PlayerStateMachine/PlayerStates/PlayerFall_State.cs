@@ -7,7 +7,6 @@ namespace Player.Behaviour.States
 {
     public class PlayerFall_State : PlayerState
     {
-        
         private Rigidbody _rigidBody;
         public PlayerFall_State(PlayerModel playerModel) : base(playerModel)
         {
@@ -44,6 +43,14 @@ namespace Player.Behaviour.States
             _rigidBody.velocity += directionForce;
 
             _rigidBody.AddForce(_playerModel.Movement.Fall.Gravity * -_playerModel.Rotation.y, ForceMode.Acceleration);
+
+            if (_rigidBody.transform.position.y > _playerModel.MaxY || _rigidBody.transform.position.y < _playerModel.MinY)
+            {
+                _rigidBody.transform.position = _playerModel.Movement.LastAllowedPosition;
+                _rigidBody.velocity = Vector3.zero;
+
+                _playerModel.HealthPoints -= 1;
+            }
         }
 
         private void HandleGroundCheck()

@@ -5,6 +5,8 @@ using Audio_System.SFX;
 public class Player_SO : ScriptableObject
 {
     [SerializeField] public int HealthPoints = 3;
+    [SerializeField] public float MaxY = 25f;
+    [SerializeField] public float MinY = -10f;
     [Header("Movement")]
     [SerializeField] public float MovementSpeed = 25f;
     [Header("Jump")]

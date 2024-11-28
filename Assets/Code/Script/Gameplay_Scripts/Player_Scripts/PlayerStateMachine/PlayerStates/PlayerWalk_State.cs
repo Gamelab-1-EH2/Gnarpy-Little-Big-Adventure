@@ -8,6 +8,8 @@ namespace Player.Behaviour.States
     {
         private Rigidbody _rigidBody;
 
+        private float _lastAllowPosTime = 0;
+
         public PlayerWalk_State(PlayerModel playerModel) : base(playerModel)
         {
             _playerModel = playerModel;
@@ -31,6 +33,7 @@ namespace Player.Behaviour.States
                 HandleMovement();
 
             HandleGroundCheck();
+            UpdatePositonRecover();
         }
 
         private void HandleMovement()
@@ -38,15 +41,28 @@ namespace Player.Behaviour.States
             //Handle Movement
             Vector3 velocity = _playerModel.Movement.Direction * _playerModel.Movement.Speed;
             velocity.y = _playerModel.Movement.RigidBody.velocity.y;
-            _playerModel.Movement.RigidBody.velocity = velocity;
+            _rigidBody.velocity = velocity;
         }
 
         private void HandleGroundCheck()
         {
             //Check if is grounded
-            if(!base.IsGrounded())
+            if (!base.IsGrounded())
                 base.OnStateExit?.Invoke(new PlayerFall_State(_playerModel));
         }
+
+        private void UpdatePositonRecover()
+        {
+            if (_lastAllowPosTime - Time.time < 1f)
+            {
+                _lastAllowPosTime = Time.time;
+                
+                Vector3 recoverPos = _rigidBody.transform.position;
+                recoverPos.x -= _playerModel.Movement.Direction.x * 1.5f;
+                _playerModel.Movement.LastAllowedPosition = recoverPos;
+            }
+        }
+
 
         public override void Exit()
         {

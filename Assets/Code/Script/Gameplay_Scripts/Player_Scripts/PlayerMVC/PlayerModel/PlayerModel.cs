@@ -17,10 +17,17 @@ namespace Player.Model
 
         private Vector3 _rotation;
 
+        private float _maxY;
+        private float _minY;
+
         public PlayerModel(Player_SO playerSO, Rigidbody body, Transform shieldTransform)
         {
             _playerState = PlayerState.Idle;
             _healtPoints = playerSO.HealthPoints;
+
+            _maxY = playerSO.MaxY;
+            _minY = playerSO.MinY;
+
             _movementModel = new MovementModel(playerSO, body);
             _powerUpModel = new PowerUpModel(playerSO, shieldTransform);
             _rotation = Vector3.down;
@@ -53,6 +60,9 @@ namespace Player.Model
                 OnHPChanged?.Invoke(_healtPoints);
             }
         }
+
+        public float MaxY => _maxY;
+        public float MinY => _minY;
 
         public int BallOfWool
         {

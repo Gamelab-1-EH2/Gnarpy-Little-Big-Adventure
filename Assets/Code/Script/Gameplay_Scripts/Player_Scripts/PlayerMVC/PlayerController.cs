@@ -52,13 +52,13 @@ namespace Player
 
         private void OnTriggerEnter(Collider other)
         {
-            if(other.TryGetComponent<PowerUp_Collectible>(out PowerUp_Collectible powerup))
+            if (other.TryGetComponent<PowerUp_Collectible>(out PowerUp_Collectible powerup))
             {
                 //_spriteRenderer.color = powerup.Color; (Removed ColorChange ByEma)
                 _powerUpController.UnlockPowerUp(powerup.GetPowerUpType());
                 powerup.Collect();
             }
-            else if(other.TryGetComponent<Collectible>(out Collectible collectible))
+            else if (other.TryGetComponent<Collectible>(out Collectible collectible))
             {
                 switch (collectible.CollectibleType)
                 {
@@ -67,17 +67,13 @@ namespace Player
                         collectible.Collect();
                         break;
                     case CollectibleType.Catnip:
-                        if(Model.HealthPoints < _playerSO.HealthPoints)
+                        if (Model.HealthPoints < _playerSO.HealthPoints)
                         {
                             Model.HealthPoints++;
                             collectible.Collect();
                         }
                         break;
                 }
-            }
-            else if(other.TryGetComponent<SpiderWeb>(out SpiderWeb spiderWeb))
-            {
-                _stateMachine.PushState(new PlayerJump_State(Model, true));
             }
 
             _stateMachine.OnTriggerEnter(other);
@@ -86,6 +82,15 @@ namespace Player
         private void OnTriggerExit(Collider other)
         {
             _stateMachine.OnTriggerExit(other);
+        }
+
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.TryGetComponent<SpiderWeb>(out SpiderWeb spiderWeb))
+            {
+                _stateMachine.PushState(new PlayerJump_State(Model, true));
+            }
         }
 
         private void FixedUpdate()

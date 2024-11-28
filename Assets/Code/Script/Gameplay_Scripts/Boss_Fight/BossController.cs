@@ -14,6 +14,7 @@ public class BossController : MonoBehaviour, IDamageable
     public List<GameObject> _gameObject;
     public GameObject objectThrown;
     public Vector3 playerTransform;
+    public Transform Test;
     int attack = 0;
 
     void Awake()
@@ -24,7 +25,7 @@ public class BossController : MonoBehaviour, IDamageable
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 8)
+        if (other.gameObject.layer == 8&& other.gameObject.GetComponent<MovableObject>().IsDeflected)
         {
             Damage();
         }
@@ -44,7 +45,7 @@ public class BossController : MonoBehaviour, IDamageable
     public GameObject SpawnObject()
     {
         playerTransform = FindObjectOfType<PlayerController>().transform.position;
-        return Instantiate(_gameObject[_gameObject.Count-1], this.transform.position+Vector3.back,Quaternion.identity);
+        return Instantiate(_gameObject[_gameObject.Count-1], Test.position,Quaternion.identity);
 
     }
 

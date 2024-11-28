@@ -21,11 +21,9 @@ public class BossAttack2_State : BossState
         Debug.Log("Attack2");
         controller._animator.SetTrigger("Attack");
         controller.objectThrown= controller.SpawnObject();
-        controller.objectThrown.GetComponent<Rigidbody>().velocity =controller.playerTransform*Time.deltaTime*1f;
+        Vector3 direction= controller.playerTransform- controller.Test.position;
+        controller.objectThrown.GetComponent<Rigidbody>().velocity = direction*Time.deltaTime*controller.phase_So[controller.i].ProjectileSpeed;
         controller.StartCoroutine(controller.Cooldown());
-
-
-
     }
 
     public override void Exit()

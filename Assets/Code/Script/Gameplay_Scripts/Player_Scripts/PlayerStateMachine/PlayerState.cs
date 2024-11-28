@@ -23,11 +23,11 @@ namespace Player.Behaviour.States
             Vector3 groundCheckPos = _playerModel.Movement.RigidBody.transform.position;
             groundCheckPos.y += _playerModel.Rotation.y > 0f ? 0.8f : 0.2f;
 
-            groundCheckPos.x += 0.5f;
+            groundCheckPos.x += 0.48f;
             isGrounded = Physics.Raycast(groundCheckPos, _playerModel.Rotation, _playerModel.Movement.GroundCheckDistance, ~ _excludeLayer);
             Debug.DrawRay(groundCheckPos, _playerModel.Rotation * _playerModel.Movement.GroundCheckDistance, Color.magenta, Time.deltaTime);
 
-            groundCheckPos.x += -1f;
+            groundCheckPos.x += -0.98f;
             isGrounded |= Physics.Raycast(groundCheckPos, _playerModel.Rotation, _playerModel.Movement.GroundCheckDistance, ~ _excludeLayer);
             Debug.DrawRay(groundCheckPos, _playerModel.Rotation * _playerModel.Movement.GroundCheckDistance, Color.magenta, Time.deltaTime);
             

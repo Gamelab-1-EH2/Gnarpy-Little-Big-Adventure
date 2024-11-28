@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
-  m_Name: StoneToGrass
+  m_Name: Grass2
   m_EditorClassIdentifier: 
   m_DefaultSprite: {fileID: 1162799714, guid: 2c00256b257cc42439a4464a5af6cb68, type: 3}
-  m_DefaultGameObject: {fileID: 3763140425283887922, guid: f30731a429394f445852a2d417219864,
+  m_DefaultGameObject: {fileID: 3469997283910571564, guid: bc2969034fc9558498c6b294af4e4310,
     type: 3}
   m_DefaultColliderType: 2
   m_TilingRules:
   - m_Id: 13
     m_Sprites:
     - {fileID: 0}
-    m_GameObject: {fileID: 3763140425283887922, guid: f30731a429394f445852a2d417219864,
+    m_GameObject: {fileID: 3469997283910571564, guid: bc2969034fc9558498c6b294af4e4310,
       type: 3}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1

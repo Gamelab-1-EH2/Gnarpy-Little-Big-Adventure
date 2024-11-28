@@ -30,6 +30,6 @@ MonoBehaviour:
     m_RandomTransform: 0
     m_Neighbors: 0100000001000000
     m_NeighborPositions:
-    - {x: -1, y: 0, z: 0}
     - {x: 1, y: 0, z: 0}
+    - {x: -1, y: 0, z: 0}
     m_RuleTransform: 0

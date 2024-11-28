@@ -20,7 +20,7 @@ namespace Player.Behaviour.Machine
         //}
 
         public void PushState(PlayerState state) => base.ChangeState(state);
-        
+
         public void OnTriggerEnter(Collider collider)
         {
             PlayerState playerState = (PlayerState)base._currentState;

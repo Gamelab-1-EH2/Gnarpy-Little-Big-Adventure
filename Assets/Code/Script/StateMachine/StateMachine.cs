@@ -22,9 +22,12 @@ namespace StateMachines
             _currentState.OnStateExit -= ChangeState;
 
             //Update State
-            _currentState = state;
-            _currentState.OnStateExit += ChangeState;
-            _currentState.Enter();
+            if(state != null)
+            {
+                _currentState = state;
+                _currentState.OnStateExit += ChangeState;
+                _currentState.Enter();
+            }
         }
         
     }

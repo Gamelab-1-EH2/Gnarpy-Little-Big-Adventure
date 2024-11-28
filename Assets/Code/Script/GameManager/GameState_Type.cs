@@ -7,5 +7,6 @@ namespace GameManagement
         Menu = 2,
         Defeat = 4,
         Victory = 8,
+        Loading = 16,
     }
 }

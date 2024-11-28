@@ -16,6 +16,8 @@ namespace GameManagement.Model
         private FallableManager _fallableManager;
         private GameSceneManager _sceneManager;
 
+        private bool _isDebug;
+
         private GameState_Type _gameState;
         public GameManager_Model(DroppableManager droppableManager, TurretManager turretManager, GameSceneManager sceneManager)
         {
@@ -60,6 +62,12 @@ namespace GameManagement.Model
                 _gameState = value;
                 OnStateChanged?.Invoke(_gameState);
             }
+        }
+
+        public bool IsDebug
+        {
+            get => _isDebug;
+            set => _isDebug = value;
         }
     }
 }

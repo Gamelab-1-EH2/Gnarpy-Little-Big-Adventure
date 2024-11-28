@@ -8,14 +8,14 @@ public class BossController : MonoBehaviour, IDamageable
 {
     public int i;
     public Animator _animator;
-    public List<Phase_So> phase_So=new List<Phase_So>();
     public int _hp;
     public BossStateMachine _stateMachine;
     public List<GameObject> _gameObject;
     public GameObject objectThrown;
     public Vector3 playerTransform;
     public Transform Test;
-    int attack = 0;
+    int attack;
+    public List<Phase_So> phase_So = new List<Phase_So>();
 
     void Awake()
     {
@@ -46,13 +46,13 @@ public class BossController : MonoBehaviour, IDamageable
     {
         playerTransform = FindObjectOfType<PlayerController>().transform.position;
         return Instantiate(_gameObject[_gameObject.Count-1], Test.position,Quaternion.identity);
-
     }
 
 
 
     public IEnumerator Cooldown()
     {
+        int i = 0;
         attack = Random.Range(0, 2);
         if (attack == 0)
         {

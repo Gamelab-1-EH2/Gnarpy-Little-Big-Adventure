@@ -16,6 +16,6 @@ MonoBehaviour:
   Trigger: 0
   TentacleWidth: 0
   WarningDelay: 0
-  ProjectileSpeed: 20
+  ProjectileSpeed: 300
   DelayBetweenAttacks: 5
-  Attack1Percentage: 0
+  Attack1Percentage: 50

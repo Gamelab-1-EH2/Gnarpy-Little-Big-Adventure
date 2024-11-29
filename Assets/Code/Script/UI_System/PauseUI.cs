@@ -1,16 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using System.Linq;
-using UI_System;
 using UnityEngine;
+
+using UI_System;
+using UnityEngine.UI;
 
 public class PauseUI : MonoBehaviour
 {
+    public static Action OnMainMenuRequest;
     private UI_AudioController audioController;
+
+    [SerializeField] private Button _mainMenuRequest;
 
     private void Awake()
     {
         audioController = new UI_AudioController();
+        _mainMenuRequest.onClick.AddListener(CallMainMenuRequest);
     }
 
     private void Start()
@@ -18,8 +23,5 @@ public class PauseUI : MonoBehaviour
         audioController.AddSliders(GetComponentsInChildren<UIAudioSlider>().ToList());
     }
 
-    private void OnDestroy()
-    {
-        audioController.Disconnect();
-    }
+    private void CallMainMenuRequest() => OnMainMenuRequest?.Invoke();
 }

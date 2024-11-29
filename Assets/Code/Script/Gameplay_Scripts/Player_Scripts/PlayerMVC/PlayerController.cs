@@ -131,6 +131,8 @@ namespace Player
         private void OnDestroy()
         {
             OnPlayerDeath -= OnPlayerDeath;
+            //Disconnect State Machine
+            _stateMachine.PushState(null);
             Model.Disconnect();
         }
 

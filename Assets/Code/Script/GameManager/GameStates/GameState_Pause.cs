@@ -18,6 +18,7 @@ namespace GameManagement.Behaviour
         public override void Enter()
         {
             InputManager.ActionMap.Pause.TogglePause.performed += ResumeGame;
+            PauseUI.OnMainMenuRequest += ExitOnMenu;
             base._model.GameState = GameState_Type.Pause;
             _canExit = false;
             Time.timeScale = 0f;
@@ -26,6 +27,7 @@ namespace GameManagement.Behaviour
         public override void Exit()
         {
             InputManager.ActionMap.Pause.TogglePause.performed -= ResumeGame;
+            PauseUI.OnMainMenuRequest -= ExitOnMenu;
         }
 
         public override void Process()
@@ -43,6 +45,11 @@ namespace GameManagement.Behaviour
             _canExit = true;
         }
 
+        private void ExitOnMenu()
+        {
+            string gameScene = _model.SceneManager.GameScenes[0];
+            base.OnStateExit?.Invoke(new GameState_Loading(base._model, new GameState_Menu(base._model), gameScene, true));
+        }
 
         public override string ToString() => "Pause";
     }

@@ -7,7 +7,7 @@ public class DroppableManager
 {
     [SerializeField] private List<DropData> _dropData = new List<DropData>();
 
-    private List<ObjectPooler> poolers = new List<ObjectPooler>();
+    private List<ObjectPooler> poolers;
 
     private float[] _probabilityList;
 
@@ -16,8 +16,10 @@ public class DroppableManager
         if (_dropData.Count == 0)
             return;
 
+        poolers = new List<ObjectPooler>();
+
         //Initialize pooler
-        for(int i = 0; i < _dropData.Count; i++)
+        for (int i = 0; i < _dropData.Count; i++)
             poolers.Add(new ObjectPooler(_dropData[i].ObjectToSpawn, 15));
 
         //Weighted random Data

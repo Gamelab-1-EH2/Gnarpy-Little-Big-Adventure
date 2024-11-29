@@ -21,9 +21,8 @@ namespace Turret_System
             _projectilePooler = new ObjectPooler(_turretProjectile, 25, spawnParent);
 
             _turretList = new List<Turret>();
-            _turretList.AddRange(MonoBehaviour.FindObjectsOfType<Turret>());
-
-            _turretCommonTarget = MonoBehaviour.FindObjectOfType<PlayerController>().transform;
+            _turretList.AddRange(MonoBehaviour.FindObjectsOfType<Turret>(true));
+            _turretCommonTarget = MonoBehaviour.FindObjectOfType<PlayerController>(true).transform;
 
             for (int i = 0; i < _turretList.Count; i++)
             {

@@ -14,9 +14,11 @@ namespace UI_System
         [Space(15)]
         [SerializeField] private HealthBar _bossHealthBar;
 
-        private void Start()
+        private void OnEnable()
         {
-            PlayerModel playerModel = FindObjectOfType<PlayerController>().Model;
+            PlayerModel playerModel = FindObjectOfType<PlayerController>()?.Model;
+            if (playerModel == null)
+                return;
 
             //Player HP
             _playerHealthBar.SetHealth(playerModel.HealthPoints);
@@ -34,6 +36,19 @@ namespace UI_System
 
             //Boss HP
             HideBossHP();
+        }
+
+        private void OnDisable()
+        {
+            PlayerModel playerModel = FindObjectOfType<PlayerController>()?.Model;
+            if (playerModel == null)
+                return;
+
+            playerModel.OnHPChanged += _playerHealthBar.SetHealth;
+            playerModel.PowerUp.OnPowerUpUnlock -= _playerPowerUpBar.UnlockPowerUp;
+            playerModel.PowerUp.OnRedProgressChanged -= _playerPowerUpBar.UpdateRedCooldown;
+            playerModel.PowerUp.OnBlueProgressChanged -= _playerPowerUpBar.UpdateBlueCooldown;
+            playerModel.PowerUp.OnGreenProgressChanged -= _playerPowerUpBar.UpdateGreenCooldown;
         }
 
         private void ShowBossHP() => _bossHealthBar.gameObject.SetActive(true);

@@ -30,11 +30,5 @@ namespace UI_System
                 _audioSliders[i].SetVolume(AudioManager.GetVolume(channelType));
             }
         }
-
-        public void Disconnect()
-        {
-            for (int i = 0; i < _audioSliders.Count; i++)
-                _audioSliders[i].OnVolumeChanged -= AudioManager.SetVolume;
-        }
     }
 }

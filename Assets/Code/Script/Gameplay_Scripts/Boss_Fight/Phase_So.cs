@@ -2,8 +2,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Phase So", menuName = "Settings/Phase")]
 public class Phase_So : ScriptableObject
 {
-    public int PhaseNumber;
     public int Trigger;
+
 
     public int TentacleWidth;
     public float WarningDelay;

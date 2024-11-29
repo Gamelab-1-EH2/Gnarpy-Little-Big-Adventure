@@ -5,9 +5,11 @@ using UnityEngine;
 public class BossAttack2_State : BossState
 {
     BossController controller;
-    public BossAttack2_State(BossController boss) : base()
+    int i;
+    public BossAttack2_State(BossController boss,int i) : base()
     {
         this.controller = boss;
+        this.i = i;
     }
 
 
@@ -22,7 +24,7 @@ public class BossAttack2_State : BossState
         controller._animator.SetTrigger("Attack");
         controller.objectThrown= controller.SpawnObject();
         Vector3 direction= controller.playerTransform- controller.Test.position;
-        controller.objectThrown.GetComponent<Rigidbody>().velocity = direction*Time.deltaTime*controller.phase_So[controller.i].ProjectileSpeed;
+        controller.objectThrown.GetComponent<Rigidbody>().velocity = direction*Time.deltaTime*controller.phase_So[i].ProjectileSpeed;
         controller.StartCoroutine(controller.Cooldown());
     }
 

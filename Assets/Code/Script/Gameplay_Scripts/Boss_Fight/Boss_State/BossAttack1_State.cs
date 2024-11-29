@@ -1,11 +1,14 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BossAttack1_State : BossState
 {
     BossController controller;
-    public BossAttack1_State(BossController boss) : base()
+    int i;
+    public BossAttack1_State(BossController boss, int i) : base()
     {
         this.controller = boss;
+        this.i= i;
     }
 
     public override void Enter()

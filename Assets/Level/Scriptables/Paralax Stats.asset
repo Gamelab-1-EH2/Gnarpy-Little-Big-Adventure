@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a3bcb205a7f263499247fcb35ea0892, type: 3}
   m_Name: Paralax Stats
   m_EditorClassIdentifier: 
-  BackgroundSize: 40
+  BackgroundSize: 60
   Offset: 1

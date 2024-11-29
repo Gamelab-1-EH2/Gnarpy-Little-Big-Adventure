@@ -377,7 +377,7 @@ PrefabInstance:
     - target: {fileID: 3143661007846420392, guid: 9cd296bd63aab7649825b2a000d13f8a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -12.6
+      value: -12.599976
       objectReference: {fileID: 0}
     - target: {fileID: 3475796662338512501, guid: 9cd296bd63aab7649825b2a000d13f8a,
         type: 3}
@@ -1327,7 +1327,7 @@ MonoBehaviour:
     _projectileSpeed: 15
   _gameSceneManager:
     _gameScenes:
-    - BlockOut
+    - BlockOut _Simo
   _initialState: 0
   _isDebug: 1
 --- !u!1 &1249601104

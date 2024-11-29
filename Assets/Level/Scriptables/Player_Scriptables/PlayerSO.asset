@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: PlayerSO
   m_EditorClassIdentifier: 
   HealthPoints: 3
-  MaxY: 25
-  MinY: -10
+  MaxY: 12
+  MinY: -12
   MovementSpeed: 13
-  JumpForce: 30
+  JumpForce: 40
   JumpSpeedCurve:
     serializedVersion: 2
     m_Curve:

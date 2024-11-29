@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7541616317771030781}
+  - component: {fileID: 4173834781401688269}
   m_Layer: 0
   m_Name: SpiderWeb2x1x1_Prefab
   m_TagString: Untagged
@@ -32,6 +33,27 @@ Transform:
   - {fileID: 1918944212713910777}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4173834781401688269
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107848146851911441}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 1.0476878, z: 1}
+  m_Center: {x: 0.4985869, y: -0.08659041, z: 0}
 --- !u!1 &7375667509323492297
 GameObject:
   m_ObjectHideFlags: 0

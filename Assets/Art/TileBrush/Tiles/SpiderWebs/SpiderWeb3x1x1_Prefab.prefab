@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9161121143294127304}
   - component: {fileID: 4238175726488557131}
+  - component: {fileID: 3159548362366296030}
   m_Layer: 0
   m_Name: SpiderWeb3x1x1_Prefab
   m_TagString: Untagged
@@ -54,6 +55,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 0.7477731, z: 1}
   m_Center: {x: 1.0001497, y: 0.12611344, z: 0}
+--- !u!114 &3159548362366296030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588320424513812305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d129e9fd4a2aada44bf1f955dc8df48d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1760120486536599019
 GameObject:
   m_ObjectHideFlags: 0

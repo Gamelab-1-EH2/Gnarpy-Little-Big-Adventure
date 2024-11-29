@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: SpiderWeb2
   m_EditorClassIdentifier: 
   m_DefaultSprite: {fileID: -1905005006, guid: 2c00256b257cc42439a4464a5af6cb68, type: 3}
-  m_DefaultGameObject: {fileID: 4102794622215153350, guid: 3d0cb4f29a6ede24c8d994f811a27f41,
+  m_DefaultGameObject: {fileID: 2107848146851911441, guid: fb8892ca21aa8eb409091d11ffb79b76,
     type: 3}
   m_DefaultColliderType: 2
   m_TilingRules:
   - m_Id: 13
     m_Sprites:
     - {fileID: 0}
-    m_GameObject: {fileID: 4102794622215153350, guid: 3d0cb4f29a6ede24c8d994f811a27f41,
+    m_GameObject: {fileID: 2107848146851911441, guid: fb8892ca21aa8eb409091d11ffb79b76,
       type: 3}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
@@ -28,8 +28,7 @@ MonoBehaviour:
     m_Output: 0
     m_ColliderType: 2
     m_RandomTransform: 0
-    m_Neighbors: 0100000001000000
+    m_Neighbors: 01000000
     m_NeighborPositions:
-    - {x: 1, y: 0, z: 0}
-    - {x: -1, y: 0, z: 0}
+    - {x: 0, y: 1, z: 0}
     m_RuleTransform: 0

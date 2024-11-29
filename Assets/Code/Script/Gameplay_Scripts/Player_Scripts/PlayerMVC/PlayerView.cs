@@ -1,5 +1,5 @@
 using Player.Model;
-
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Player.View
@@ -44,7 +44,22 @@ namespace Player.View
         public void PlayAnimation(PlayerState state)
         {
             UpdateRenderer(state);
+            
+            ResetAnimator();
+            _currentState = state;
+
             _animator.SetTrigger(_currentState.ToString());
+            Debug.Log($"Trigger: {_currentState}");
+        }
+
+        //Work aroudn
+        private void ResetAnimator()
+        {
+            _animator.ResetTrigger(PlayerState.Idle.ToString());
+            _animator.ResetTrigger(PlayerState.Move.ToString());
+            _animator.ResetTrigger(PlayerState.Jump.ToString());
+            _animator.ResetTrigger(PlayerState.Climb.ToString());
+            _animator.ResetTrigger(PlayerState.Fall.ToString());
         }
 
         private void UpdateRenderer(PlayerState state)
@@ -62,6 +77,7 @@ namespace Player.View
                         _climbRenderer.flipX = _currentSpriteRenderer.flipX;
                     _currentSpriteRenderer = _climbRenderer;
                     break;
+
                 default:
                     _defaultRenderer.gameObject.SetActive(true);
                     _climbRenderer.gameObject.SetActive(false);
@@ -71,8 +87,6 @@ namespace Player.View
                     _currentSpriteRenderer = _defaultRenderer;
                     break;
             }
-
-            _currentState = state;
         }
     }
 }

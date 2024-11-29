@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9161121143294127304}
   - component: {fileID: 4238175726488557131}
   - component: {fileID: 3159548362366296030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpiderWeb3x1x1_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 7106734573133234484}
   - component: {fileID: 119042315725580296}
   - component: {fileID: 2150659085588602405}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpiderWeb3x1x1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5344691077819053590}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: --MESH--
   m_TagString: Untagged
   m_Icon: {fileID: 0}

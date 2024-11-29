@@ -19,35 +19,28 @@ namespace Player
         public Action OnPlayerDeath;
 
         [SerializeField] private Player_SO _playerSO;
+        [SerializeField] private PlayerView _view = new PlayerView();
         [SerializeField] private Transform _shieldTransform;
 
         private PlayerStateMachine _stateMachine;
-        private SpriteRenderer _spriteRenderer;
         private Rigidbody _rigidBody;
 
         private PowerUpController _powerUpController;
         
         //MVC
         public PlayerModel Model { get; private set; }
-        private PlayerView _view;
 
         private void Awake()
         {
             _rigidBody = GetComponent<Rigidbody>();
-            _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-
-            //Initialize Model
+            
             Model = new PlayerModel(_playerSO, _rigidBody, _shieldTransform);
-
-            //Initialize View
-            Animator animator = GetComponent<Animator>();
-            SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-            _view = new PlayerView(animator, spriteRenderer);
-
             _stateMachine = new PlayerStateMachine(new PlayerIdle_State(Model));
-
             _powerUpController = new PowerUpController(Model);
+
+            _view.PlayAnimation(Player.Model.PlayerState.Idle);
             Model.OnHPChanged += HealthDecreased;
+            Model.OnStateChanged += _view.PlayAnimation;
         }
 
         private void OnTriggerEnter(Collider other)
@@ -109,7 +102,6 @@ namespace Player
         {
             _view.SetDirection(Model.Movement.Direction);
             _view.SetRotation(Model.Rotation);
-            _view.PlayAnimation(Model.State);
         }
 
         private void HandlePowerUp()

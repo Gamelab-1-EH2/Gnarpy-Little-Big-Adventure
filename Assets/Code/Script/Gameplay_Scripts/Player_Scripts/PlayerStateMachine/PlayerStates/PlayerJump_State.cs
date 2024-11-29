@@ -49,6 +49,9 @@ namespace Player.Behaviour.States
             vel.y = _playerModel.Movement.Jump.JumpCurve.Evaluate(jumpProgress) * _playerModel.Movement.Jump.JumpForce * _playerModel.Movement.RigidBody.transform.up.y;
             vel.y *= -_playerModel.Rotation.y;
 
+            if (_isForced)
+                vel.y *= 2f;
+
             _rigidBody.velocity = vel;
 
             //Exit state condition

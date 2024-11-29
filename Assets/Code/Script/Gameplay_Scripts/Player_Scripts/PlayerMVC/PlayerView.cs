@@ -4,36 +4,75 @@ using UnityEngine;
 
 namespace Player.View
 {
+    [System.Serializable]
     public class PlayerView
     {
-        private Animator _animator;
-        private SpriteRenderer _spriteRenderer;
+        [SerializeField] private Animator _animator;
+        [SerializeField] private SpriteRenderer _defaultRenderer;
+        [SerializeField] private SpriteRenderer _climbRenderer;
 
-        public PlayerView(Animator animator, SpriteRenderer spriteRenderer)
-        {
-            _animator = animator;
-            _spriteRenderer = spriteRenderer;
-        }
+        private SpriteRenderer _currentSpriteRenderer;
+        private PlayerState _currentState = PlayerState.None;
 
         public void SetDirection(Vector2 direction)
         {
             _animator.SetFloat("X", direction.x);
             _animator.SetFloat("Y", direction.y);
-
+            
             if (direction.x == 0f)
                 return;
 
             if (direction.x > 0)
-                _spriteRenderer.flipX = true;
+                _currentSpriteRenderer.flipX = true;
             else
-                _spriteRenderer.flipX = false;
+                _currentSpriteRenderer.flipX = false;
         }
 
-        public void SetRotation(Vector3 rotation)
+        public void SetRotation(Vector3 direction)
         {
-            _spriteRenderer.flipY = rotation.y > 0;
+            _defaultRenderer.flipY = direction.y > 0f;
+            Vector3 newPos = _defaultRenderer.transform.localPosition;
+
+            if (direction.y > 0f)
+                newPos.y = 0.27f;
+            else
+                newPos.y = 1.78f;
+
+            _defaultRenderer.transform.localPosition = newPos;
         }
 
-        public void PlayAnimation(PlayerState state) => _animator.SetTrigger(state.ToString());
+        public void PlayAnimation(PlayerState state)
+        {
+            UpdateRenderer(state);
+            _animator.SetTrigger(_currentState.ToString());
+        }
+
+        private void UpdateRenderer(PlayerState state)
+        {
+            if (_currentState == state)
+                return;
+
+            switch (state)
+            {
+                case PlayerState.Climb:
+                    _defaultRenderer.gameObject.SetActive(false);
+                    _climbRenderer.gameObject.SetActive(true);
+
+                    if(_currentSpriteRenderer != null)
+                        _climbRenderer.flipX = _currentSpriteRenderer.flipX;
+                    _currentSpriteRenderer = _climbRenderer;
+                    break;
+                default:
+                    _defaultRenderer.gameObject.SetActive(true);
+                    _climbRenderer.gameObject.SetActive(false);
+
+                    if (_currentSpriteRenderer != null)
+                        _defaultRenderer.flipX = _currentSpriteRenderer.flipX;
+                    _currentSpriteRenderer = _defaultRenderer;
+                    break;
+            }
+
+            _currentState = state;
+        }
     }
 }

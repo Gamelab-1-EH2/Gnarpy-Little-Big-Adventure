@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 1
@@ -93,19 +93,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprites_Player_animations_0
+      name: Sprites_Player_walking_0
       rect:
         serializedVersion: 2
         x: 0
         y: 2048
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -118,15 +131,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_1
+      name: Sprites_Player_walking_1
       rect:
         serializedVersion: 2
         x: 512
         y: 2048
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,15 +152,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_2
+      name: Sprites_Player_walking_2
       rect:
         serializedVersion: 2
         x: 1024
         y: 2048
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,15 +173,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_3
+      name: Sprites_Player_walking_3
       rect:
         serializedVersion: 2
         x: 1536
         y: 2048
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,15 +194,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_4
+      name: Sprites_Player_walking_4
       rect:
         serializedVersion: 2
         x: 2048
         y: 2048
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,15 +215,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_5
+      name: Sprites_Player_walking_5
       rect:
         serializedVersion: 2
         x: 0
         y: 1536
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,15 +236,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_6
+      name: Sprites_Player_walking_6
       rect:
         serializedVersion: 2
         x: 512
         y: 1536
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,15 +257,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_7
+      name: Sprites_Player_walking_7
       rect:
         serializedVersion: 2
         x: 1024
         y: 1536
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,15 +278,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_8
+      name: Sprites_Player_walking_8
       rect:
         serializedVersion: 2
         x: 1536
         y: 1536
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,15 +299,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_9
+      name: Sprites_Player_walking_9
       rect:
         serializedVersion: 2
         x: 2048
         y: 1536
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -307,15 +320,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_10
+      name: Sprites_Player_walking_10
       rect:
         serializedVersion: 2
         x: 0
         y: 1024
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,15 +341,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_11
+      name: Sprites_Player_idle
       rect:
         serializedVersion: 2
         x: 512
         y: 1024
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -349,15 +362,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_12
+      name: Sprites_Player_Jump_0
       rect:
         serializedVersion: 2
         x: 1024
         y: 1024
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -370,15 +383,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_13
+      name: Sprites_Player_Jump_1
       rect:
         serializedVersion: 2
         x: 1536
         y: 1024
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -391,15 +404,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_14
+      name: Sprites_Player_Jump_2
       rect:
         serializedVersion: 2
         x: 2048
         y: 1024
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -412,15 +425,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_15
+      name: Sprites_Player_Jump_3
       rect:
         serializedVersion: 2
         x: 0
         y: 512
         width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 350
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -433,15 +446,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_16
+      name: Sprites_Player_Jump_4
       rect:
         serializedVersion: 2
         x: 512
         y: 512
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -454,15 +467,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_17
+      name: Sprites_Player_Jump_5
       rect:
         serializedVersion: 2
         x: 1024
         y: 512
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -475,15 +488,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_18
+      name: Sprites_Player_Jump_6
       rect:
         serializedVersion: 2
         x: 1536
         y: 512
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -496,15 +509,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_19
+      name: Sprites_Player_Jump_7
       rect:
         serializedVersion: 2
         x: 2048
         y: 512
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -517,15 +530,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_20
+      name: Sprites_Player_Jump_8
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -538,15 +551,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_21
+      name: Sprites_Player_Jump_9
       rect:
         serializedVersion: 2
         x: 512
         y: 0
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -559,15 +572,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_22
+      name: Sprites_Player_Jump_10
       rect:
         serializedVersion: 2
         x: 1024
         y: 0
         width: 512
-        height: 512
+        height: 350
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -580,7 +593,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprites_Player_animations_23
+      name: Sprites_Player_Death
       rect:
         serializedVersion: 2
         x: 1536
@@ -588,28 +601,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d84e1eb390573a4e882583002ae6d83
-      internalID: 239664973
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprites_Player_animations_24
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -617,6 +609,27 @@ TextureImporter:
       bones: []
       spriteID: 32c618ab08068424181f4f31f78a612a
       internalID: 1507959597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites_Player_Climb_Body
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0, y: -0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c9c4dfdca9233241a2a07a37b70bd1a
+      internalID: -1165151659
       vertices: []
       indices: 
       edges: []
@@ -632,31 +645,32 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprites_Player_animations_0: -528444363
-      Sprites_Player_animations_1: -499252637
-      Sprites_Player_animations_10: 1929006398
-      Sprites_Player_animations_11: -1977285944
-      Sprites_Player_animations_12: 302428287
-      Sprites_Player_animations_13: 1523841145
-      Sprites_Player_animations_14: 405042288
-      Sprites_Player_animations_15: 1158749666
-      Sprites_Player_animations_16: -1218827
-      Sprites_Player_animations_17: 258198716
-      Sprites_Player_animations_18: 1927526626
-      Sprites_Player_animations_19: -366827494
-      Sprites_Player_animations_2: 474024149
-      Sprites_Player_animations_20: -409279706
-      Sprites_Player_animations_21: -1237831291
-      Sprites_Player_animations_22: 215619850
+      Sprites_Player_Climb_Body: -1165151659
+      Sprites_Player_Death: 1507959597
+      Sprites_Player_Jump_0: 302428287
+      Sprites_Player_Jump_1: 1523841145
+      Sprites_Player_Jump_10: 215619850
+      Sprites_Player_Jump_2: 405042288
+      Sprites_Player_Jump_3: 1158749666
+      Sprites_Player_Jump_4: -1218827
+      Sprites_Player_Jump_5: 258198716
+      Sprites_Player_Jump_6: 1927526626
+      Sprites_Player_Jump_7: -366827494
+      Sprites_Player_Jump_8: -409279706
+      Sprites_Player_Jump_9: -1237831291
       Sprites_Player_animations_23: 239664973
-      Sprites_Player_animations_24: 1507959597
-      Sprites_Player_animations_3: 1114268837
-      Sprites_Player_animations_4: 625168599
-      Sprites_Player_animations_5: -286633329
-      Sprites_Player_animations_6: -2130208136
-      Sprites_Player_animations_7: 1285932687
-      Sprites_Player_animations_8: -491320697
-      Sprites_Player_animations_9: -1541497788
+      Sprites_Player_idle: -1977285944
+      Sprites_Player_walking_0: -528444363
+      Sprites_Player_walking_1: -499252637
+      Sprites_Player_walking_10: 1929006398
+      Sprites_Player_walking_2: 474024149
+      Sprites_Player_walking_3: 1114268837
+      Sprites_Player_walking_4: 625168599
+      Sprites_Player_walking_5: -286633329
+      Sprites_Player_walking_6: -2130208136
+      Sprites_Player_walking_7: 1285932687
+      Sprites_Player_walking_8: -491320697
+      Sprites_Player_walking_9: -1541497788
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

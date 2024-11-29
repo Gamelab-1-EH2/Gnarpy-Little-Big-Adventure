@@ -58,8 +58,9 @@ namespace Player.Behaviour.States
             //Check if is grounded
             if(base.IsGrounded())
             {
+                _playerModel.State = Model.PlayerState.Landed;
                 //Check Input
-                 Vector3 inputDir = InputManager.ActionMap.Gameplay.Movement.ReadValue<Vector3>();
+                Vector3 inputDir = InputManager.ActionMap.Gameplay.Movement.ReadValue<Vector3>();
                 if (inputDir == Vector3.zero)    //To Idle
                     base.OnStateExit?.Invoke(new PlayerIdle_State(_playerModel));
                 else                            //To Walk

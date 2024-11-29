@@ -1327,9 +1327,9 @@ MonoBehaviour:
     _projectileSpeed: 15
   _gameSceneManager:
     _gameScenes:
-    - PlayerSystem_TS
-  _initialState: 0
-  _isDebug: 1
+    - BlockOut
+  _initialState: 2
+  _isDebug: 0
 --- !u!1 &1249601104
 GameObject:
   m_ObjectHideFlags: 0

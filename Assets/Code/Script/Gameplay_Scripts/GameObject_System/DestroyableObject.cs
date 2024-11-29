@@ -31,4 +31,8 @@ public class DestroyableObject : MonoBehaviour, IDestroyable, IFallable, IDamage
         _isFalling = _rigidBody.velocity.y > 0.1f;
     }
 
+    public void StartObject()
+    {
+        
+    }
 }

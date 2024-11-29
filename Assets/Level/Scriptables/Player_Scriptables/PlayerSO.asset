@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: PlayerSO
   m_EditorClassIdentifier: 
   HealthPoints: 3
+  MaxY: 25
+  MinY: -10
   MovementSpeed: 13
   JumpForce: 30
   JumpSpeedCurve:
@@ -46,7 +48,7 @@ MonoBehaviour:
   GroundCheckOffsetY: 0.5
   RedPowerUpRadius: 6
   RedPowerUpStrenght: 30
-  RedPowerUpDelay: 0.25
+  RedPowerUpDelay: 5
   GreenPowerUpRadius: 1
   GreenPowerUpStrenght: 7
   GreenPowerUpDelay: 20

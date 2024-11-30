@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using static UnityEngine.CullingGroup;
 
 namespace Player.Model
 {
@@ -7,6 +8,7 @@ namespace Player.Model
     {
         public Action<int> OnHPChanged;
         public Action<int> OnBallOfWoolCollected;
+        public Action<PlayerState> OnStateChanged;
 
         private MovementModel _movementModel;
         private PowerUpModel _powerUpModel;
@@ -48,7 +50,11 @@ namespace Player.Model
         public PlayerState State
         {
             get => _playerState;
-            set => _playerState = value;
+            set
+            {
+                _playerState = value;
+                OnStateChanged?.Invoke(value);
+            }
         }
 
         public int HealthPoints

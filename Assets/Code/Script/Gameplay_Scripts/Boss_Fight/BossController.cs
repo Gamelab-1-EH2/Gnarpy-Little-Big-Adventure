@@ -13,6 +13,7 @@ public class BossController : MonoBehaviour, IDamageable
     private int _phaseHp;
     [SerializeField] private int _hp = 0;
 
+    public List<ObjectPooler> Pooler;
     public BossView BossView;
     public BossStateMachine StateMachine;
     public List<GameObject> GameObject;
@@ -21,6 +22,10 @@ public class BossController : MonoBehaviour, IDamageable
 
     void Awake()
     {
+        //for (int i=0;i<GameObject.Count;i++)
+        //{
+        //    Pooler.Add(new ObjectPooler(GameObject[i],1));
+        //}
         for (int i = 0; i < PhaseSo.Count; i++)
         {
             _hp = _hp + PhaseSo[i].Trigger;
@@ -65,13 +70,12 @@ public class BossController : MonoBehaviour, IDamageable
         return Instantiate(GameObject[GameObject.Count - 1], transform.position, Quaternion.identity);
     }
 
-    public IEnumerator Attack1()
+    public IEnumerator DisplayWarning()
     {
         BossView.WarningSprite.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1 / 2f);
         yield return new WaitForSeconds(PhaseSo[i].WarningDelay);
         BossView.WarningSprite.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0);
     }
-
 
     public IEnumerator Attack()
     {        

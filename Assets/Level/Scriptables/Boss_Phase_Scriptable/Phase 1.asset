@@ -17,4 +17,4 @@ MonoBehaviour:
   WarningDelay: 1
   ProjectileSpeed: 200
   DelayBetweenAttacks: 10
-  Attack1Percentage: 50
+  Attack1Percentage: 90

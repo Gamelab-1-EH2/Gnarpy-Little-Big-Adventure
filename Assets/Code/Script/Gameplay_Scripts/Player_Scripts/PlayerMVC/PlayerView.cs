@@ -49,7 +49,7 @@ namespace Player.View
             _currentState = state;
 
             _animator.SetTrigger(_currentState.ToString());
-            Debug.Log($"Trigger: {_currentState}");
+            //Debug.Log($"Trigger: {_currentState}");
         }
 
         //Work aroudn

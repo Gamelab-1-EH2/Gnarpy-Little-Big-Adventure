@@ -4,7 +4,6 @@ public class Phase_So : ScriptableObject
 {
     public int Trigger;
 
-
     public int TentacleWidth;
     public float WarningDelay;
 

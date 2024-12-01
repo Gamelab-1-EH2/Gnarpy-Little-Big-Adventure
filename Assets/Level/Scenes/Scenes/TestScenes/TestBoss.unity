@@ -1210,7 +1210,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1030921618}
   - component: {fileID: 1030921619}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WarningSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2825,7 +2825,7 @@ GameObject:
   - component: {fileID: 1328550766}
   - component: {fileID: 1328550764}
   - component: {fileID: 1328550765}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: DestoyableCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2982,13 +2982,14 @@ GameObject:
   - component: {fileID: 1358014013}
   - component: {fileID: 1358014014}
   - component: {fileID: 1358014015}
-  m_Layer: 0
+  - component: {fileID: 1358014016}
+  m_Layer: 10
   m_Name: Tentacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1358014012
 Transform:
   m_ObjectHideFlags: 0
@@ -3069,7 +3070,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -3104,6 +3105,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!114 &1358014016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358014011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6226e0e7221ab8d4d99fea386ddd72b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1386561214
 GameObject:
   m_ObjectHideFlags: 0
@@ -3245,7 +3258,7 @@ GameObject:
   - component: {fileID: 1514907111}
   - component: {fileID: 1514907110}
   - component: {fileID: 1514907113}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BossSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3282,7 +3295,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3664,7 +3677,7 @@ GameObject:
   - component: {fileID: 1931729557}
   - component: {fileID: 1931729556}
   - component: {fileID: 1931729558}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}

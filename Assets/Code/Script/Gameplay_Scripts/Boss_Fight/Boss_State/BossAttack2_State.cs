@@ -24,9 +24,9 @@ public class BossAttack2_State : BossState
     {
         Debug.Log("Attack2");
         controller.BossView.Animator.SetTrigger("Attack");
-        controller.ObjectThrown= controller.SpawnObject();
         Vector3 direction= controller.PlayerPos() - controller.transform.position;
-        controller.ObjectThrown.GetComponent<Rigidbody>().velocity = direction*Time.deltaTime*controller.PhaseSo[i].ProjectileSpeed;
+        controller.SpawnObject().SetActive(true);
+        controller.SpawnObject().GetComponent<Rigidbody>().velocity = direction * Time.deltaTime * controller.PhaseSo[i].ProjectileSpeed;
         controller.StartCoroutine(controller.Attack());
     }
 

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Trigger: 2
   TentacleWidth: 1
-  WarningDelay: 1
+  WarningDelay: 3
+  TentacleSpeed: 10
   ProjectileSpeed: 200
-  DelayBetweenAttacks: 10
-  Attack1Percentage: 90
+  DelayBetweenAttacks: 2
+  Attack1Percentage: 10

@@ -13,24 +13,12 @@ public class BossController : MonoBehaviour, IDamageable
     private int _phaseHp;
     [SerializeField] private int _hp = 0;
 
-    public List<ObjectPooler> Pooler;
+    public List<ObjectPooler> Pooler=new List<ObjectPooler>();
     public BossView BossView;
     public BossStateMachine StateMachine;
     public List<GameObject> GameObject;
     public GameObject ObjectThrown;
     public List<Phase_So> PhaseSo = new List<Phase_So>();
-
-    void Awake()
-    {
-        //for (int i=0;i<GameObject.Count;i++)
-        //{
-        //    Pooler.Add(new ObjectPooler(GameObject[i],1));
-        //}
-        for (int i = 0; i < PhaseSo.Count; i++)
-        {
-            _hp = _hp + PhaseSo[i].Trigger;
-        }
-    }
 
     public void Damage()
     {
@@ -43,7 +31,7 @@ public class BossController : MonoBehaviour, IDamageable
         }
         else
         {
-            StateMachine = new BossStateMachine(new BossDeath_State());
+            StateMachine = new BossStateMachine(new BossDeath_State(this, i, BossView));
         }
         BossView.Animator.SetTrigger("Damage");
     }
@@ -52,12 +40,21 @@ public class BossController : MonoBehaviour, IDamageable
     {
         if (other.gameObject.layer == 8 && other.gameObject.GetComponent<MovableObject>().IsDeflected)
         {
+            //other.
             Damage();
         }
     }
 
     private void OnEnable()
     {
+        for (int i = 0; i < GameObject.Count; i++)
+        {
+            Pooler.Add(new ObjectPooler(GameObject[i], 2));
+        }
+        for (int i = 0; i < PhaseSo.Count; i++)
+        {
+            _hp = _hp + PhaseSo[i].Trigger;
+        }
         _phaseHp = PhaseSo[i].Trigger;
         StartCoroutine(Attack());
     }
@@ -67,14 +64,18 @@ public class BossController : MonoBehaviour, IDamageable
     }
     public GameObject SpawnObject()
     {
-        return Instantiate(GameObject[GameObject.Count - 1], transform.position, Quaternion.identity);
+        Pooler[i].PoolObject().transform.position=transform.position;
+        return Pooler[i].PoolObject();
     }
 
     public IEnumerator DisplayWarning()
     {
         BossView.WarningSprite.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1 / 2f);
+        BossView.Tentacle.transform.position = PlayerPos() + Vector3.up * 10;
         yield return new WaitForSeconds(PhaseSo[i].WarningDelay);
         BossView.WarningSprite.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0);
+        BossView.Tentacle.transform.GetComponent<Rigidbody>().velocity = Vector3.down*PhaseSo[i].TentacleSpeed;
+        BossView.Tentacle.SetActive(true);
     }
 
     public IEnumerator Attack()

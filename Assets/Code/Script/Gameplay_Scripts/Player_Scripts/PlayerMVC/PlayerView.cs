@@ -49,7 +49,7 @@ namespace Player.View
             _currentState = state;
 
             _animator.SetTrigger(_currentState.ToString());
-            //Debug.Log($"Trigger: {_currentState}");
+            Debug.Log($"Trigger: {_currentState}");
         }
 
         //Work aroudn
@@ -60,6 +60,7 @@ namespace Player.View
             _animator.ResetTrigger(PlayerState.Jump.ToString());
             _animator.ResetTrigger(PlayerState.Climb.ToString());
             _animator.ResetTrigger(PlayerState.Fall.ToString());
+            _animator.ResetTrigger(PlayerState.Dead.ToString());
         }
 
         private void UpdateRenderer(PlayerState state)

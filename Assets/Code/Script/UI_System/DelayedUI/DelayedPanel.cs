@@ -1,10 +1,10 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine;
-using System;
+
 using UI_System;
 
-public class DefeatUI : MonoBehaviour
+public class DelayedPanel : MonoBehaviour
 {
     [SerializeField] private float ShowDelay = 5f;
     [SerializeField] private Image _panel;
@@ -15,14 +15,14 @@ public class DefeatUI : MonoBehaviour
 
     private void Awake()
     {
-        _retryLevelButton.onClick.AddListener(RetryLevel);
-        _quitToMainMenu.onClick.AddListener(GoToMainMenu);
+        _retryLevelButton?.onClick.AddListener(RetryLevel);
+        _quitToMainMenu?.onClick.AddListener(GoToMainMenu);
     }
 
     private void OnDestroy()
     {
-        _retryLevelButton.onClick.RemoveListener(RetryLevel);
-        _quitToMainMenu.onClick.RemoveListener(GoToMainMenu);
+        _retryLevelButton?.onClick.RemoveListener(RetryLevel);
+        _quitToMainMenu?.onClick.RemoveListener(GoToMainMenu);
     }
 
     private void OnDisable()
@@ -50,6 +50,4 @@ public class DefeatUI : MonoBehaviour
 
     private void GoToMainMenu() => GameplayUI.OnMainMenuRequest?.Invoke();
     private void RetryLevel() => GameplayUI.OnReloadLevelRequest?.Invoke();
-
-    
 }

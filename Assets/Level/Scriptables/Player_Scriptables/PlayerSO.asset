@@ -49,11 +49,9 @@ MonoBehaviour:
   RedPowerUpRadius: 6
   RedPowerUpStrenght: 30
   RedPowerUpDelay: 2
-  GreenPowerUpRadius: 1
-  GreenPowerUpStrenght: 7
+  GreenPowerUpStrenght: 30
   GreenPowerUpDelay: 6
-  GreenPowerUpDuration: 1
-  GreenPowerUpOffset: {x: 0, y: 0.5, z: 0}
+  GreenPowerUpDuration: 600
   BluePowerUpProjectile: {fileID: 8592442538128691829, guid: 04d1449a439c4bb49a5df1772598e3d4,
     type: 3}
   ProjectileSpeed: 16

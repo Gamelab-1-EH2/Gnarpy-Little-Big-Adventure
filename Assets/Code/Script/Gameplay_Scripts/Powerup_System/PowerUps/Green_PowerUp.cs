@@ -22,7 +22,7 @@ namespace Collectible_System.PowerUp
                 return;
 
             base._isBeingUsed = true;
-            base._playerModel.PowerUp.ShieldTransform.gameObject.SetActive(true);
+            base._playerModel.PowerUp.Shield.gameObject.SetActive(true);
             _inCooldown = false;
             _usedFor = 0f;
         }
@@ -49,20 +49,7 @@ namespace Collectible_System.PowerUp
             {
                 if (_playerModel.PowerUp.GreenProgress < 1)
                 {
-                    Vector3 shieldPos = base._playerModel.Movement.RigidBody.transform.position;
-                    shieldPos += base._playerModel.PowerUp.GreenPowerUpOffset;
-
-                    float radious = base._playerModel.PowerUp.GreenPowerUpRadious;
-
-                    Collider[] colliders = Physics.OverlapSphere(shieldPos, radious, 1 << 8);
-                    for (int i = 0; i < colliders.Length; i++)
-                    {
-                        if (colliders[i].TryGetComponent<MovableObject>(out MovableObject movable))
-                        {
-                            Vector3 opposideDirection = movable.transform.position - shieldPos;
-                            movable.Deflect(opposideDirection, base._playerModel.PowerUp.GreenPowerUpStrenght);
-                        }
-                    }
+                    _playerModel.PowerUp.Shield.gameObject.SetActive(true);
 
                     _usedFor += Time.deltaTime;
                     _playerModel.PowerUp.GreenProgress = _usedFor / _playerModel.PowerUp.GreenDuration;
@@ -72,7 +59,7 @@ namespace Collectible_System.PowerUp
                     _inCooldown = true;
                     _playerModel.PowerUp.GreenProgress = 1;
                     _coolDownTime = _playerModel.PowerUp.GreenDelay;
-                    base._playerModel.PowerUp.ShieldTransform.gameObject.SetActive(false);
+                    base._playerModel.PowerUp.Shield.gameObject.SetActive(false);
                 }
             }
         }

@@ -24,11 +24,9 @@ public class Player_SO : ScriptableObject
     [SerializeField] public float RedPowerUpStrenght = 15f;
     [SerializeField] public float RedPowerUpDelay = 15f;
     [Space(10f)]
-    [SerializeField] public float GreenPowerUpRadius = 7f;
     [SerializeField] public float GreenPowerUpStrenght = 7f;
     [SerializeField] public float GreenPowerUpDelay = 20f;
     [SerializeField] public float GreenPowerUpDuration = 15f;
-    [SerializeField] public Vector3 GreenPowerUpOffset = Vector3.up / 2;
     [Space(10f)]
     [SerializeField] public GameObject BluePowerUpProjectile;
     [SerializeField] public float ProjectileSpeed = 15f;

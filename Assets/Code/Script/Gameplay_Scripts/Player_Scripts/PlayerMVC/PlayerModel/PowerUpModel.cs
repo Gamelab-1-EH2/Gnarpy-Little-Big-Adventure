@@ -16,13 +16,11 @@ namespace Player.Model
         private float _redDelayProgress;
 
         public Action<float> OnGreenProgressChanged;
-        private float _greenPowerUpRadious;
         private float _greenPowerUpStrenght;
-        private Vector3 _greenPowerUpOffset;
-        private Transform _shieldTransform;
         private float _greenDelay;
         private float _greenDuration;
         private float _greenDelayProgress;
+        private Shield _shield;
 
         public Action<float> OnBlueProgressChanged;
         private GameObject _bluePowerUpProjectile;
@@ -32,18 +30,16 @@ namespace Player.Model
         private float _blueShootDelay;
         private float _blueDelayProgress;
 
-        public PowerUpModel(Player_SO playerSO, Transform shieldTransform)
+        public PowerUpModel(Player_SO playerSO, Shield shield)
         {
             _redPowerUpRadious = playerSO.RedPowerUpRadius;
             _redPowerUpStrenght = playerSO.RedPowerUpStrenght;
             _redDelay = playerSO.RedPowerUpDelay;
 
-            _greenPowerUpRadious = playerSO.GreenPowerUpRadius;
             _greenPowerUpStrenght = playerSO.GreenPowerUpStrenght;
-            _greenPowerUpOffset = playerSO.GreenPowerUpOffset;
             _greenDelay = playerSO.GreenPowerUpDelay;
             _greenDuration = playerSO.GreenPowerUpDuration;
-            _shieldTransform = shieldTransform;
+            _shield = shield;
 
             _bluePowerUpProjectile = playerSO.BluePowerUpProjectile;
             _projectileSpeed = playerSO.ProjectileSpeed;
@@ -65,10 +61,8 @@ namespace Player.Model
             }
         }
 
-        public float GreenPowerUpRadious => _greenPowerUpRadious;
         public float GreenPowerUpStrenght => _greenPowerUpStrenght;
-        public Vector3 GreenPowerUpOffset => _greenPowerUpOffset;
-        public Transform ShieldTransform => _shieldTransform;
+        public Shield Shield => _shield;
         public float GreenDelay => _greenDelay;
         public float GreenDuration => _greenDuration;
         public float GreenProgress

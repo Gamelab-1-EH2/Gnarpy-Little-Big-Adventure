@@ -1,6 +1,5 @@
-using Player.Model;
-using Unity.VisualScripting;
 using UnityEngine;
+using Player.Model;
 
 namespace Player.View
 {
@@ -13,6 +12,8 @@ namespace Player.View
 
         private SpriteRenderer _currentSpriteRenderer;
         private PlayerState _currentState = PlayerState.None;
+
+        private bool _canUpdate = true;
 
         public void SetDirection(Vector2 direction)
         {
@@ -30,29 +31,31 @@ namespace Player.View
 
         public void SetRotation(Vector3 direction)
         {
-            _defaultRenderer.flipY = direction.y > 0f;
-            Vector3 newPos = _defaultRenderer.transform.localPosition;
+            if(!_canUpdate) 
+                return;
 
-            if (direction.y > 0f)
-                newPos.y = 0.27f;
-            else
-                newPos.y = 1.78f;
+            _currentSpriteRenderer.flipY = direction.y > 0f;
 
-            _defaultRenderer.transform.localPosition = newPos;
+            float yPos = !_defaultRenderer.flipY ? 0.27f: 1.78f;
+            Debug.Log(yPos);
+
+            _defaultRenderer.gameObject.transform.position = Vector3.zero;
         }
 
         public void PlayAnimation(PlayerState state)
         {
+            if(!_canUpdate)
+                return;
+
             UpdateRenderer(state);
             
             ResetAnimator();
             _currentState = state;
 
             _animator.SetTrigger(_currentState.ToString());
-            Debug.Log($"Trigger: {_currentState}");
         }
 
-        //Work aroudn
+        //Work around
         private void ResetAnimator()
         {
             _animator.ResetTrigger(PlayerState.Idle.ToString());
@@ -78,13 +81,26 @@ namespace Player.View
                         _climbRenderer.flipX = _currentSpriteRenderer.flipX;
                     _currentSpriteRenderer = _climbRenderer;
                     break;
+                    
+                case PlayerState.Dead:
+                    _defaultRenderer.gameObject.SetActive(true);
+                    _climbRenderer.gameObject.SetActive(false);
+                    _defaultRenderer.flipX = false;
+                    _defaultRenderer.flipY = false;
+                    _currentSpriteRenderer = _defaultRenderer;
+                    _canUpdate = false;
+                    break;
 
                 default:
                     _defaultRenderer.gameObject.SetActive(true);
                     _climbRenderer.gameObject.SetActive(false);
 
                     if (_currentSpriteRenderer != null)
+                    {
                         _defaultRenderer.flipX = _currentSpriteRenderer.flipX;
+                        _defaultRenderer.flipY = _currentSpriteRenderer.flipY;
+                    }
+
                     _currentSpriteRenderer = _defaultRenderer;
                     break;
             }

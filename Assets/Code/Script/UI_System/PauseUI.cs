@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class PauseUI : MonoBehaviour
 {
-    public static Action OnMainMenuRequest;
     private UI_AudioController audioController;
 
     [SerializeField] private Button _mainMenuRequest;
@@ -23,5 +22,5 @@ public class PauseUI : MonoBehaviour
         audioController.AddSliders(GetComponentsInChildren<UIAudioSlider>().ToList());
     }
 
-    private void CallMainMenuRequest() => OnMainMenuRequest?.Invoke();
+    private void CallMainMenuRequest() => GameplayUI.OnMainMenuRequest?.Invoke();
 }

@@ -2,12 +2,12 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 using GameManagement.Model;
+using UI_System;
 
 namespace GameManagement.Behaviour
 {
     public class GameState_Pause : GameState
     {
-
         bool _canExit;
 
         public GameState_Pause(GameManager_Model model) : base(model)
@@ -18,7 +18,7 @@ namespace GameManagement.Behaviour
         public override void Enter()
         {
             InputManager.ActionMap.Pause.TogglePause.performed += ResumeGame;
-            PauseUI.OnMainMenuRequest += ExitOnMenu;
+            GameplayUI.OnMainMenuRequest += ExitOnMenu;
             base._model.GameState = GameState_Type.Pause;
             _canExit = false;
             Time.timeScale = 0f;
@@ -27,7 +27,7 @@ namespace GameManagement.Behaviour
         public override void Exit()
         {
             InputManager.ActionMap.Pause.TogglePause.performed -= ResumeGame;
-            PauseUI.OnMainMenuRequest -= ExitOnMenu;
+            GameplayUI.OnMainMenuRequest -= ExitOnMenu;
         }
 
         public override void Process()

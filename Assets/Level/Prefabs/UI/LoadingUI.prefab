@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4161734163477983926}
   - component: {fileID: 5566669449098240801}
   m_Layer: 0
-  m_Name: Loadingbar_Backrgoud
+  m_Name: LoadingBar_Backrgoud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 349916050835450510}
   - component: {fileID: 984746596606196898}
   m_Layer: 0
-  m_Name: Loadingbar_Foreground
+  m_Name: LoadingBar_Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

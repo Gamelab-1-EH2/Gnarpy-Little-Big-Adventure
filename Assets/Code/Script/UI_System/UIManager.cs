@@ -52,7 +52,8 @@ namespace UI_System
                     break;
 
                 case GameState_Type.Defeat:
-                    _gameUI.gameObject.SetActive(false);
+                    _gameUI.gameObject.SetActive(true);
+                    _gameUI.SetToDefeat();
                     _menuUI.gameObject.SetActive(false);
                     _loadingUI.gameObject.SetActive(false);
                     break;

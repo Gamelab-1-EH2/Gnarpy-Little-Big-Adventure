@@ -10,8 +10,6 @@ namespace Collectible_System.PowerUp
 
         private bool _onCoolDown;
         private bool _reverted;
-
-        private Rigidbody _body;
         public Red_PowerUp(PlayerModel model) : base(model)
         {
             _onCoolDown = false;

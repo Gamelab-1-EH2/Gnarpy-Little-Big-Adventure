@@ -42,6 +42,7 @@ namespace Player
             _view.PlayAnimation(Player.Model.PlayerState.Idle);
             Model.OnHPChanged += HealthDecreased;
             Model.OnStateChanged += _view.PlayAnimation;
+            Model.OnRotationChanged += _view.SetRotation;
         }
 
         private void Start()
@@ -107,7 +108,6 @@ namespace Player
         private void UpdateView()
         {
             _view.SetDirection(Model.Movement.Direction);
-            _view.SetRotation(Model.Rotation);
         }
 
         private void HandlePowerUp()

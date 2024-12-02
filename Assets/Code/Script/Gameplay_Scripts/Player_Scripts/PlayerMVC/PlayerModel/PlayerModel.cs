@@ -9,6 +9,7 @@ namespace Player.Model
         public Action<int> OnHPChanged;
         public Action<int> OnBallOfWoolCollected;
         public Action<PlayerState> OnStateChanged;
+        public Action<Vector3> OnRotationChanged;
 
         private MovementModel _movementModel;
         private PowerUpModel _powerUpModel;
@@ -83,7 +84,11 @@ namespace Player.Model
         public Vector3 Rotation
         {
             get => _rotation;
-            set => _rotation = value;
+            set
+            {
+                _rotation = value;
+                OnRotationChanged?.Invoke(_rotation);
+            }
         }
 
         public void Disconnect()

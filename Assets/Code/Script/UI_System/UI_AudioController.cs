@@ -30,5 +30,7 @@ namespace UI_System
                 _audioSliders[i].SetVolume(AudioManager.GetVolume(channelType));
             }
         }
+
+        public void UpdateVolumeValues() => LoadVolumeValues();
     }
 }

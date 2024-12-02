@@ -3,12 +3,12 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class MovableObject : MonoBehaviour, IFallable, IDeflectable
 {
-    private Rigidbody _rigidBody;
+    protected Rigidbody _rigidBody;
 
     private bool _canBreak = false;
     private bool _isFalling = false;
     
-    private void Awake()
+    protected virtual void Awake()
     {
         _rigidBody = GetComponent<Rigidbody>();
     }

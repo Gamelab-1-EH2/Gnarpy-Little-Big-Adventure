@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -7,10 +8,8 @@ using Player.View;
 using Player.Model;
 using Player.Behaviour.Machine;
 using Player.Behaviour.States;
-using Collectible_System.PowerUp;
-using System;
 using Collectible_System;
-using static UnityEngine.Rendering.DebugUI;
+using Collectible_System.PowerUp;
 
 namespace Player
 {

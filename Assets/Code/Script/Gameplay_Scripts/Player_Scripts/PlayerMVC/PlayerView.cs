@@ -9,6 +9,7 @@ namespace Player.View
         [SerializeField] private Animator _animator;
         [SerializeField] private SpriteRenderer _defaultRenderer;
         [SerializeField] private SpriteRenderer _climbRenderer;
+        [SerializeField] private SpriteRenderer _deathRenderer;
 
         private SpriteRenderer _currentSpriteRenderer;
         private PlayerState _currentState = PlayerState.None;
@@ -36,10 +37,8 @@ namespace Player.View
 
             _currentSpriteRenderer.flipY = direction.y > 0f;
 
-            float yPos = !_defaultRenderer.flipY ? 0.27f: 1.78f;
-            Debug.Log(yPos);
-
-            _defaultRenderer.gameObject.transform.position = Vector3.zero;
+            float yPos = _defaultRenderer.flipY ? 0.27f: 1.78f;
+            _defaultRenderer.transform.localPosition = new Vector3(_defaultRenderer.transform.localPosition.x, yPos, 0f);
         }
 
         public void PlayAnimation(PlayerState state)
@@ -83,11 +82,11 @@ namespace Player.View
                     break;
                     
                 case PlayerState.Dead:
-                    _defaultRenderer.gameObject.SetActive(true);
+                    _defaultRenderer.gameObject.SetActive(false);
                     _climbRenderer.gameObject.SetActive(false);
-                    _defaultRenderer.flipX = false;
-                    _defaultRenderer.flipY = false;
-                    _currentSpriteRenderer = _defaultRenderer;
+                    _deathRenderer.gameObject.SetActive(true);
+
+                    _currentSpriteRenderer = _deathRenderer;
                     _canUpdate = false;
                     break;
 

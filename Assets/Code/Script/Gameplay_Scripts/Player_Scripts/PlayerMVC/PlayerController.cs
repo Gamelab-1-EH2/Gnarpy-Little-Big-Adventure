@@ -10,6 +10,7 @@ using Player.Behaviour.States;
 using Collectible_System.PowerUp;
 using System;
 using Collectible_System;
+using static UnityEngine.Rendering.DebugUI;
 
 namespace Player
 {
@@ -20,7 +21,6 @@ namespace Player
 
         [SerializeField] private Player_SO _playerSO;
         [SerializeField] private PlayerView _view = new PlayerView();
-        [SerializeField] private Transform _shieldTransform;
 
         private PlayerStateMachine _stateMachine;
         private Rigidbody _rigidBody;
@@ -34,13 +34,19 @@ namespace Player
         {
             _rigidBody = GetComponent<Rigidbody>();
             
-            Model = new PlayerModel(_playerSO, _rigidBody, _shieldTransform);
+            Shield shield = _rigidBody.GetComponentInChildren<Shield>(true);
+            Model = new PlayerModel(_playerSO, _rigidBody, shield);
             _stateMachine = new PlayerStateMachine(new PlayerIdle_State(Model));
             _powerUpController = new PowerUpController(Model);
 
             _view.PlayAnimation(Player.Model.PlayerState.Idle);
             Model.OnHPChanged += HealthDecreased;
             Model.OnStateChanged += _view.PlayAnimation;
+        }
+
+        private void Start()
+        {
+            Model.PowerUp.Shield.DeflectionForce = Model.PowerUp.GreenPowerUpStrenght;
         }
 
         private void OnTriggerEnter(Collider other)
@@ -133,9 +139,6 @@ namespace Player
         {
             Handles.color = Color.red;
             Handles.DrawWireDisc(transform.position, Vector3.forward, _playerSO.RedPowerUpRadius);
-
-            Handles.color = Color.green;
-            Handles.DrawWireDisc(transform.position + _playerSO.GreenPowerUpOffset, Vector3.forward, _playerSO.GreenPowerUpRadius);
 
             if(Model != null)
             {

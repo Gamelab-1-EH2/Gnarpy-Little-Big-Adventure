@@ -1,10 +1,9 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class MovableObject : MonoBehaviour, IFallable
+public class MovableObject : MonoBehaviour, IFallable, IDeflectable
 {
     private Rigidbody _rigidBody;
-    private RigidbodyConstraints _constraints;
 
     private bool _canBreak = false;
     private bool _isFalling = false;
@@ -12,8 +11,6 @@ public class MovableObject : MonoBehaviour, IFallable
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody>();
-        _constraints = _rigidBody.constraints;
-        _rigidBody.constraints = RigidbodyConstraints.FreezeAll; 
     }
 
     public virtual void ApplyGravity(Vector3 dir, float strenght)
@@ -33,11 +30,6 @@ public class MovableObject : MonoBehaviour, IFallable
         
         dir.z = 0;
         _rigidBody.AddForce(dir * strenght, ForceMode.Impulse);
-    }
-
-    public virtual void StartObject()
-    {
-        _rigidBody.constraints = _constraints;
     }
 
     public void UpdateFall() => _isFalling = _rigidBody.velocity.y < -0.1f;

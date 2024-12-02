@@ -10,9 +10,6 @@ public class FallableManager
     {
         _fallableList = new List<IFallable>();
         _fallableList.AddRange(MonoBehaviour.FindObjectsOfType<MonoBehaviour>().OfType<IFallable>().ToArray());
-
-        for (int i = 0; i < _fallableList.Count; i++)
-            _fallableList[i].StartObject();
     }
 
     public void Process()

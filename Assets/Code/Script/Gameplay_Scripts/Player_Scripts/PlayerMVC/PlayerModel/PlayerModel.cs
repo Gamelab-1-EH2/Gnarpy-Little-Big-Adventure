@@ -22,7 +22,7 @@ namespace Player.Model
         private float _maxY;
         private float _minY;
 
-        public PlayerModel(Player_SO playerSO, Rigidbody body, Transform shieldTransform)
+        public PlayerModel(Player_SO playerSO, Rigidbody body, Shield shield)
         {
             _playerState = PlayerState.Idle;
             _healtPoints = playerSO.HealthPoints;
@@ -31,7 +31,7 @@ namespace Player.Model
             _minY = playerSO.MinY;
 
             _movementModel = new MovementModel(playerSO, body);
-            _powerUpModel = new PowerUpModel(playerSO, shieldTransform);
+            _powerUpModel = new PowerUpModel(playerSO, shield);
             _rotation = Vector3.down;
         }
 

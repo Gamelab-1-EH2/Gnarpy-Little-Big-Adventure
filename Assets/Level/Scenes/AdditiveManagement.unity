@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -593,7 +593,7 @@ MonoBehaviour:
   _droppableManager:
     _dropData: []
   _turretManager:
-    _turretProjectile: {fileID: 8592442538128691829, guid: 04d1449a439c4bb49a5df1772598e3d4,
+    _turretProjectile: {fileID: 8592442538128691829, guid: 218f1fd4695dcb34fbb2c89421e85cb0,
       type: 3}
     _projectileSpeed: 15
   _gameSceneManager:

@@ -31,6 +31,7 @@ public class BossController : MonoBehaviour, IDamageable
         }
         else
         {
+            BossView.Animator.SetTrigger("Death");
             StateMachine = new BossStateMachine(new BossDeath_State(this, i, BossView));
         }
         BossView.Animator.SetTrigger("Damage");
@@ -40,7 +41,7 @@ public class BossController : MonoBehaviour, IDamageable
     {
         if (other.gameObject.layer == 8 && other.gameObject.GetComponent<MovableObject>().IsDeflected)
         {
-            //other.
+            other.gameObject.SetActive(false);
             Damage();
         }
     }

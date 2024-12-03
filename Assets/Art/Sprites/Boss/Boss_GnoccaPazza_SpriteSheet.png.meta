@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 3
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,11 +93,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_0
+      name: Boss_GnoccaPazza_Idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,7 +131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_1
+      name: Boss_GnoccaPazza_Idle_1
       rect:
         serializedVersion: 2
         x: 1024
@@ -139,7 +152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_2
+      name: Boss_GnoccaPazza_Idle_2
       rect:
         serializedVersion: 2
         x: 2048
@@ -160,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_3
+      name: Boss_GnoccaPazza_Idle_3
       rect:
         serializedVersion: 2
         x: 3072
@@ -181,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_4
+      name: Boss_GnoccaPazza_Idle_4
       rect:
         serializedVersion: 2
         x: 4096
@@ -202,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_5
+      name: Boss_GnoccaPazza_Idle_5
       rect:
         serializedVersion: 2
         x: 5120
@@ -223,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_6
+      name: Boss_GnoccaPazza_Idle_6
       rect:
         serializedVersion: 2
         x: 6144
@@ -244,7 +257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_7
+      name: Boss_GnoccaPazza_Idle_7
       rect:
         serializedVersion: 2
         x: 0
@@ -265,7 +278,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_8
+      name: Boss_GnoccaPazza_Idle_8
       rect:
         serializedVersion: 2
         x: 1024
@@ -286,7 +299,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_9
+      name: Boss_GnoccaPazza_Idle_9
       rect:
         serializedVersion: 2
         x: 2048
@@ -307,7 +320,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_10
+      name: Boss_GnoccaPazza_Idle_10
       rect:
         serializedVersion: 2
         x: 3072
@@ -328,7 +341,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_11
+      name: Boss_GnoccaPazza_Idle_11
       rect:
         serializedVersion: 2
         x: 4096
@@ -349,7 +362,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_12
+      name: Boss_GnoccaPazza_Idle_12
       rect:
         serializedVersion: 2
         x: 5120
@@ -370,7 +383,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_13
+      name: Boss_GnoccaPazza_Idle_13
       rect:
         serializedVersion: 2
         x: 6144
@@ -391,7 +404,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_14
+      name: Boss_GnoccaPazza_Idle_14
       rect:
         serializedVersion: 2
         x: 0
@@ -412,7 +425,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_15
+      name: Boss_GnoccaPazza_Idle_15
       rect:
         serializedVersion: 2
         x: 1024
@@ -433,7 +446,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_16
+      name: Boss_GnoccaPazza_Idle_16
       rect:
         serializedVersion: 2
         x: 2048
@@ -454,7 +467,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_17
+      name: Boss_GnoccaPazza_Idle_17
       rect:
         serializedVersion: 2
         x: 3072
@@ -475,7 +488,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_18
+      name: Boss_GnoccaPazza_Idle_18
       rect:
         serializedVersion: 2
         x: 4096
@@ -496,7 +509,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_19
+      name: Boss_GnoccaPazza_Idle_19
       rect:
         serializedVersion: 2
         x: 5120
@@ -517,7 +530,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_20
+      name: Boss_GnoccaPazza_Idle_20
       rect:
         serializedVersion: 2
         x: 6144
@@ -538,7 +551,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_21
+      name: Boss_GnoccaPazza_Attack_0
       rect:
         serializedVersion: 2
         x: 0
@@ -559,7 +572,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_22
+      name: Boss_GnoccaPazza_Attack_1
       rect:
         serializedVersion: 2
         x: 1024
@@ -580,7 +593,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_23
+      name: Boss_GnoccaPazza_Attack_2
       rect:
         serializedVersion: 2
         x: 2048
@@ -601,7 +614,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_24
+      name: Boss_GnoccaPazza_Attack_3
       rect:
         serializedVersion: 2
         x: 3072
@@ -622,7 +635,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_25
+      name: Boss_GnoccaPazza_Attack_4
       rect:
         serializedVersion: 2
         x: 4096
@@ -643,7 +656,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_26
+      name: Boss_GnoccaPazza_Attack_5
       rect:
         serializedVersion: 2
         x: 5120
@@ -664,7 +677,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_27
+      name: Boss_GnoccaPazza_Attack_6
       rect:
         serializedVersion: 2
         x: 6144
@@ -685,7 +698,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_28
+      name: Boss_GnoccaPazza_Attack_7
       rect:
         serializedVersion: 2
         x: 0
@@ -706,7 +719,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_29
+      name: Boss_GnoccaPazza_Attack_8
       rect:
         serializedVersion: 2
         x: 1024
@@ -727,7 +740,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_30
+      name: Boss_GnoccaPazza_Attack_9
       rect:
         serializedVersion: 2
         x: 2048
@@ -748,7 +761,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_31
+      name: Boss_GnoccaPazza_Attack_10
       rect:
         serializedVersion: 2
         x: 3072
@@ -769,7 +782,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_32
+      name: Boss_GnoccaPazza_Attack_11
       rect:
         serializedVersion: 2
         x: 4096
@@ -790,7 +803,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_33
+      name: Boss_GnoccaPazza_Attack_12
       rect:
         serializedVersion: 2
         x: 5120
@@ -811,7 +824,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_34
+      name: Boss_GnoccaPazza_Attack_13
       rect:
         serializedVersion: 2
         x: 6144
@@ -832,7 +845,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_35
+      name: Boss_GnoccaPazza_Attack_14
       rect:
         serializedVersion: 2
         x: 0
@@ -853,7 +866,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_36
+      name: Boss_GnoccaPazza_Attack_15
       rect:
         serializedVersion: 2
         x: 1024
@@ -874,7 +887,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_37
+      name: Boss_GnoccaPazza_Attack_16
       rect:
         serializedVersion: 2
         x: 2048
@@ -895,7 +908,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_38
+      name: Boss_GnoccaPazza_Attack_17
       rect:
         serializedVersion: 2
         x: 3072
@@ -916,7 +929,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_39
+      name: Boss_GnoccaPazza_Attack_18
       rect:
         serializedVersion: 2
         x: 4096
@@ -937,7 +950,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_40
+      name: Boss_GnoccaPazza_Damaged_0
       rect:
         serializedVersion: 2
         x: 5120
@@ -958,7 +971,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_41
+      name: Boss_GnoccaPazza_Damaged_1
       rect:
         serializedVersion: 2
         x: 6144
@@ -979,7 +992,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_42
+      name: Boss_GnoccaPazza_Damaged_3
       rect:
         serializedVersion: 2
         x: 0
@@ -1000,7 +1013,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_43
+      name: Boss_GnoccaPazza_Damaged_4
       rect:
         serializedVersion: 2
         x: 1024
@@ -1021,7 +1034,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_44
+      name: Boss_GnoccaPazza_Damaged_5
       rect:
         serializedVersion: 2
         x: 2048
@@ -1042,7 +1055,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_45
+      name: Boss_GnoccaPazza_Damaged_6
       rect:
         serializedVersion: 2
         x: 3072
@@ -1063,7 +1076,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_46
+      name: Boss_GnoccaPazza_Damaged_7
       rect:
         serializedVersion: 2
         x: 4096
@@ -1084,7 +1097,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_47
+      name: Boss_GnoccaPazza_Damaged_8
       rect:
         serializedVersion: 2
         x: 5120
@@ -1105,7 +1118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_48
+      name: Boss_GnoccaPazza_Damaged_9
       rect:
         serializedVersion: 2
         x: 6144
@@ -1126,7 +1139,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_49
+      name: Boss_GnoccaPazza_Damaged_10
       rect:
         serializedVersion: 2
         x: 0
@@ -1147,7 +1160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Boss_GnoccaPazza_spritesheet_50
+      name: Boss_GnoccaPazza_Damaged_11
       rect:
         serializedVersion: 2
         x: 1024
@@ -1178,57 +1191,57 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite_Boss_GnoccaPazza_spritesheet_0: -1714863566
-      Sprite_Boss_GnoccaPazza_spritesheet_1: -1280753951
-      Sprite_Boss_GnoccaPazza_spritesheet_10: -1211278816
-      Sprite_Boss_GnoccaPazza_spritesheet_11: 353359201
-      Sprite_Boss_GnoccaPazza_spritesheet_12: 2124202102
-      Sprite_Boss_GnoccaPazza_spritesheet_13: -543318329
-      Sprite_Boss_GnoccaPazza_spritesheet_14: 675317990
-      Sprite_Boss_GnoccaPazza_spritesheet_15: -1645237651
-      Sprite_Boss_GnoccaPazza_spritesheet_16: -496262998
-      Sprite_Boss_GnoccaPazza_spritesheet_17: 87360012
-      Sprite_Boss_GnoccaPazza_spritesheet_18: -1366226330
-      Sprite_Boss_GnoccaPazza_spritesheet_19: 302485949
-      Sprite_Boss_GnoccaPazza_spritesheet_2: -109672422
-      Sprite_Boss_GnoccaPazza_spritesheet_20: -874722189
-      Sprite_Boss_GnoccaPazza_spritesheet_21: -347996549
-      Sprite_Boss_GnoccaPazza_spritesheet_22: -1951609738
-      Sprite_Boss_GnoccaPazza_spritesheet_23: -159499720
-      Sprite_Boss_GnoccaPazza_spritesheet_24: 1143124430
-      Sprite_Boss_GnoccaPazza_spritesheet_25: 1644747647
-      Sprite_Boss_GnoccaPazza_spritesheet_26: -630973667
-      Sprite_Boss_GnoccaPazza_spritesheet_27: 1394848466
-      Sprite_Boss_GnoccaPazza_spritesheet_28: 1853050911
-      Sprite_Boss_GnoccaPazza_spritesheet_29: -1474818590
-      Sprite_Boss_GnoccaPazza_spritesheet_3: 739222508
-      Sprite_Boss_GnoccaPazza_spritesheet_30: -1000351553
-      Sprite_Boss_GnoccaPazza_spritesheet_31: 1239729893
-      Sprite_Boss_GnoccaPazza_spritesheet_32: 627248268
-      Sprite_Boss_GnoccaPazza_spritesheet_33: -1116885662
-      Sprite_Boss_GnoccaPazza_spritesheet_34: -1432772184
-      Sprite_Boss_GnoccaPazza_spritesheet_35: 883884679
-      Sprite_Boss_GnoccaPazza_spritesheet_36: 1003028584
-      Sprite_Boss_GnoccaPazza_spritesheet_37: 630449622
-      Sprite_Boss_GnoccaPazza_spritesheet_38: 680119056
-      Sprite_Boss_GnoccaPazza_spritesheet_39: -528689495
-      Sprite_Boss_GnoccaPazza_spritesheet_4: 1732647359
-      Sprite_Boss_GnoccaPazza_spritesheet_40: -70663576
-      Sprite_Boss_GnoccaPazza_spritesheet_41: 1882452269
-      Sprite_Boss_GnoccaPazza_spritesheet_42: -1298576585
-      Sprite_Boss_GnoccaPazza_spritesheet_43: -202563729
-      Sprite_Boss_GnoccaPazza_spritesheet_44: -188934606
-      Sprite_Boss_GnoccaPazza_spritesheet_45: 40971708
-      Sprite_Boss_GnoccaPazza_spritesheet_46: 2010080073
-      Sprite_Boss_GnoccaPazza_spritesheet_47: -1548119829
-      Sprite_Boss_GnoccaPazza_spritesheet_48: 7464494
-      Sprite_Boss_GnoccaPazza_spritesheet_49: 428920818
-      Sprite_Boss_GnoccaPazza_spritesheet_5: 1491387083
-      Sprite_Boss_GnoccaPazza_spritesheet_50: -1892944156
-      Sprite_Boss_GnoccaPazza_spritesheet_6: -218083399
-      Sprite_Boss_GnoccaPazza_spritesheet_7: 1836429080
-      Sprite_Boss_GnoccaPazza_spritesheet_8: -1720581769
-      Sprite_Boss_GnoccaPazza_spritesheet_9: 756942666
+      Boss_GnoccaPazza_Attack_0: -1951609738
+      Boss_GnoccaPazza_Attack_1: -159499720
+      Boss_GnoccaPazza_Attack_10: 1239729893
+      Boss_GnoccaPazza_Attack_11: 1239729893
+      Boss_GnoccaPazza_Attack_12: 627248268
+      Boss_GnoccaPazza_Attack_13: -1116885662
+      Boss_GnoccaPazza_Attack_14: -1432772184
+      Boss_GnoccaPazza_Attack_15: 1003028584
+      Boss_GnoccaPazza_Attack_16: 1003028584
+      Boss_GnoccaPazza_Attack_17: 630449622
+      Boss_GnoccaPazza_Attack_18: 680119056
+      Boss_GnoccaPazza_Attack_2: 1143124430
+      Boss_GnoccaPazza_Attack_3: 1644747647
+      Boss_GnoccaPazza_Attack_4: -630973667
+      Boss_GnoccaPazza_Attack_5: 1394848466
+      Boss_GnoccaPazza_Attack_6: 1853050911
+      Boss_GnoccaPazza_Attack_7: -1474818590
+      Boss_GnoccaPazza_Attack_8: -1000351553
+      Boss_GnoccaPazza_Attack_9: 1239729893
+      Boss_GnoccaPazza_Damaged_0: -70663576
+      Boss_GnoccaPazza_Damaged_1: 1882452269
+      Boss_GnoccaPazza_Damaged_10: 428920818
+      Boss_GnoccaPazza_Damaged_11: -1892944156
+      Boss_GnoccaPazza_Damaged_3: -1298576585
+      Boss_GnoccaPazza_Damaged_4: -202563729
+      Boss_GnoccaPazza_Damaged_5: -188934606
+      Boss_GnoccaPazza_Damaged_6: 40971708
+      Boss_GnoccaPazza_Damaged_7: 2010080073
+      Boss_GnoccaPazza_Damaged_8: -1548119829
+      Boss_GnoccaPazza_Damaged_9: 7464494
+      Boss_GnoccaPazza_Idle_0: -1280753951
+      Boss_GnoccaPazza_Idle_1: -109672422
+      Boss_GnoccaPazza_Idle_10: 353359201
+      Boss_GnoccaPazza_Idle_11: 2124202102
+      Boss_GnoccaPazza_Idle_12: -543318329
+      Boss_GnoccaPazza_Idle_13: 675317990
+      Boss_GnoccaPazza_Idle_14: -1645237651
+      Boss_GnoccaPazza_Idle_15: -496262998
+      Boss_GnoccaPazza_Idle_16: 87360012
+      Boss_GnoccaPazza_Idle_17: -1366226330
+      Boss_GnoccaPazza_Idle_18: 302485949
+      Boss_GnoccaPazza_Idle_19: -874722189
+      Boss_GnoccaPazza_Idle_2: 739222508
+      Boss_GnoccaPazza_Idle_20: -347996549
+      Boss_GnoccaPazza_Idle_3: 1732647359
+      Boss_GnoccaPazza_Idle_4: 1491387083
+      Boss_GnoccaPazza_Idle_5: -218083399
+      Boss_GnoccaPazza_Idle_6: 1836429080
+      Boss_GnoccaPazza_Idle_7: -1720581769
+      Boss_GnoccaPazza_Idle_8: 756942666
+      Boss_GnoccaPazza_Idle_9: -1211278816
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

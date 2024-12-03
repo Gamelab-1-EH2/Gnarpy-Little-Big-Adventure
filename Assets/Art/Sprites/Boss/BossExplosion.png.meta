@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8677baa4ad932174abc94bb61b461d1c
+guid: d4805bf006ba3da4f8c128b45cdb678a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -93,17 +93,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_0
+      name: BossExplosion_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1536
-        width: 512
-        height: 512
+        y: 927
+        width: 220
+        height: 309
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bc176987c7f8ae45aeef6582fe40791
-      internalID: 1779817197
+      spriteID: 78ca8eb7ca4ea07498963a8b48f11b8e
+      internalID: -1546617570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_1
+      name: BossExplosion_1
       rect:
         serializedVersion: 2
-        x: 512
-        y: 1536
-        width: 512
-        height: 512
+        x: 220
+        y: 927
+        width: 220
+        height: 309
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77f18cc2833572043b6d271eedf3f38f
-      internalID: 441198858
+      spriteID: 16d64f1ba999e1648b0f20b3d89bc7e5
+      internalID: 1039800090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_2
+      name: BossExplosion_2
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 1536
-        width: 512
-        height: 512
+        x: 440
+        y: 927
+        width: 220
+        height: 309
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 312393f5b7ed97b42abf65a83a6d1ca3
-      internalID: -2006717819
+      spriteID: a522bb0bf04245640be8917e12f2a237
+      internalID: -1591582060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_3
+      name: BossExplosion_3
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 1536
-        width: 512
-        height: 512
+        x: 660
+        y: 927
+        width: 220
+        height: 309
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5041a00dbee84241af8b7f050404342
-      internalID: -2069735218
+      spriteID: d2cd19d6743ab9940b9c008f825f6faf
+      internalID: -2006145050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_4
+      name: BossExplosion_4
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 1536
-        width: 512
-        height: 512
+        x: 880
+        y: 927
+        width: 220
+        height: 309
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,125 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39e9e02769db8d447a334cb4e438a691
-      internalID: -1912009460
+      spriteID: 08891501250a49d49b309038b524ad7c
+      internalID: 740837164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1024
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a8d57385c4731e4b8e40ab7f9341fdd
-      internalID: -1297997620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_6
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 1024
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50f167b720a553641840f3927965018a
-      internalID: -1994695
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_7
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 1024
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 773296da977786442b3cef81caf6b3f6
-      internalID: -1645280460
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_8
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 1024
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 364c76f7124f2f84d9fc504b44680aa7
-      internalID: -302462061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_9
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 1024
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 157a4ac156cda5b45afa3db28e985e24
-      internalID: -920939407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_10
+      name: BossExplosion_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 512
-        width: 512
-        height: 512
+        y: 618
+        width: 220
+        height: 309
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6db0f7427c4a40f48b4a15b1335bd648
-      internalID: -1677787926
+      spriteID: 90114f97a8386254a87533a379c50273
+      internalID: 1186393394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_11
+      name: BossExplosion_6
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
-        width: 512
-        height: 512
+        x: 220
+        y: 618
+        width: 220
+        height: 309
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82fd2107a1bcbb7489b499b250efd4fe
-      internalID: -1626922801
+      spriteID: 7682563e103089349aca050322cb2dd3
+      internalID: -624887875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_12
+      name: BossExplosion_7
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 512
-        width: 512
-        height: 512
+        x: 440
+        y: 618
+        width: 220
+        height: 309
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d03bfb9494d467649bc208aa5270ae8b
-      internalID: -1873795296
+      spriteID: e542c55f45466694c8aae944f7690f01
+      internalID: 2075947985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_13
+      name: BossExplosion_8
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 512
-        width: 512
-        height: 512
+        x: 660
+        y: 618
+        width: 220
+        height: 309
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66e178e4e7858a444b5c802b1671b320
-      internalID: -991678411
+      spriteID: 24461dc2a190aeb40a553bf0bfddfaac
+      internalID: -1338432613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_14
+      name: BossExplosion_9
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 512
-        width: 512
-        height: 512
+        x: 880
+        y: 618
+        width: 220
+        height: 309
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -405,20 +313,125 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 210c96b3449be84479b8cf9436429083
-      internalID: 310617262
+      spriteID: 4a55ebdb8b361a54ebf629c198d8f8c6
+      internalID: 602831315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_15
+      name: BossExplosion_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 309
+        width: 220
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5466bf0e16602d84a9d0a900578218ba
+      internalID: -824117433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossExplosion_11
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 309
+        width: 220
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3b60a55c7dfa042abd20264788d4e7
+      internalID: 1500162302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossExplosion_12
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 309
+        width: 220
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5baa94283ac124a9d09dc5944de22a
+      internalID: 1932296510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossExplosion_13
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 309
+        width: 220
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d93069af2b381c4f9bd36cf7ba21408
+      internalID: -1548079859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossExplosion_14
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 309
+        width: 220
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15166b1cea1e7f4780f7d995e0791eb
+      internalID: 1116101832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossExplosion_15
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 512
+        width: 220
+        height: 309
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -426,20 +439,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7492b44cc9e01d41b6b40f31a41e05d
-      internalID: -157328625
+      spriteID: 76fd6abee6daf73458e5f80b04b71a15
+      internalID: -522234748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_16
+      name: BossExplosion_16
       rect:
         serializedVersion: 2
-        x: 512
+        x: 220
         y: 0
-        width: 512
-        height: 512
+        width: 220
+        height: 309
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,20 +460,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28a85d525ac2cd74d916713322dc4c39
-      internalID: -1336513164
+      spriteID: 37e09f38100197f4daa4069e0a21dec9
+      internalID: 501215607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_17
+      name: BossExplosion_17
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 440
         y: 0
-        width: 512
-        height: 512
+        width: 220
+        height: 309
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -468,20 +481,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 982ba4fe42263a44eaeb9ba4a7c9dd83
-      internalID: -544897427
+      spriteID: b74aa1ab68ee67841bd925851b91c31c
+      internalID: -2029243275
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animazioneidle-ezgif.com-gif-to-sprite-converter_18
+      name: BossExplosion_18
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 660
         y: 0
-        width: 512
-        height: 512
+        width: 220
+        height: 309
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -489,8 +502,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bc474742d72d5a45ac6ce29d980104e
-      internalID: -807802460
+      spriteID: 064e878b16533db4180d93c3ae4dcb95
+      internalID: 1097261814
       vertices: []
       indices: 
       edges: []
@@ -498,7 +511,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: eb6e91cf25cb48c4489466703e41bffa
+    spriteID: 95e7253c270e12b4b96f1eff0e214611
     internalID: 0
     vertices: []
     indices: 
@@ -506,25 +519,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_0: 1779817197
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_1: 441198858
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_10: -1677787926
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_11: -1626922801
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_12: -1873795296
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_13: -991678411
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_14: 310617262
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_15: -157328625
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_16: -1336513164
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_17: -544897427
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_18: -807802460
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_2: -2006717819
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_3: -2069735218
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_4: -1912009460
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_5: -1297997620
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_6: -1994695
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_7: -1645280460
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_8: -302462061
-      Animazioneidle-ezgif.com-gif-to-sprite-converter_9: -920939407
+      BossExplosion_0: -1546617570
+      BossExplosion_1: 1039800090
+      BossExplosion_10: -824117433
+      BossExplosion_11: 1500162302
+      BossExplosion_12: 1932296510
+      BossExplosion_13: -1548079859
+      BossExplosion_14: 1116101832
+      BossExplosion_15: -522234748
+      BossExplosion_16: 501215607
+      BossExplosion_17: -2029243275
+      BossExplosion_18: 1097261814
+      BossExplosion_2: -1591582060
+      BossExplosion_3: -2006145050
+      BossExplosion_4: 740837164
+      BossExplosion_5: 1186393394
+      BossExplosion_6: -624887875
+      BossExplosion_7: 2075947985
+      BossExplosion_8: -1338432613
+      BossExplosion_9: 602831315
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

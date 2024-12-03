@@ -11,6 +11,7 @@ namespace UI_System
     {
         [SerializeField] private HealthBar _playerHealthBar;
         [SerializeField] private PowerUpBar _playerPowerUpBar;
+        [SerializeField] private CollectibleBar _collectibleBar;
         [Space(15)]
         [SerializeField] private HealthBar _bossHealthBar;
 
@@ -23,7 +24,7 @@ namespace UI_System
             //Player HP
             _playerHealthBar.SetHealth(playerModel.HealthPoints);
             playerModel.OnHPChanged += _playerHealthBar.SetHealth;
-        
+            
             //Power Ups
             _playerPowerUpBar.LockPowerUp(PowerUpType.RED_STRAWBERRY);
             _playerPowerUpBar.LockPowerUp(PowerUpType.BLUE_STRAWBERRY);
@@ -33,6 +34,10 @@ namespace UI_System
             playerModel.PowerUp.OnRedProgressChanged += _playerPowerUpBar.UpdateRedCooldown;
             playerModel.PowerUp.OnBlueProgressChanged += _playerPowerUpBar.UpdateBlueCooldown;
             playerModel.PowerUp.OnGreenProgressChanged += _playerPowerUpBar.UpdateGreenCooldown;
+
+            //Collectible
+            _collectibleBar.SetCollected(0);
+            playerModel.OnBallOfWoolCollected += _collectibleBar.SetCollected;
 
             //Boss HP
             HideBossHP();
@@ -44,11 +49,13 @@ namespace UI_System
             if (playerModel == null)
                 return;
 
-            playerModel.OnHPChanged += _playerHealthBar.SetHealth;
+            playerModel.OnHPChanged -= _playerHealthBar.SetHealth;
             playerModel.PowerUp.OnPowerUpUnlock -= _playerPowerUpBar.UnlockPowerUp;
             playerModel.PowerUp.OnRedProgressChanged -= _playerPowerUpBar.UpdateRedCooldown;
             playerModel.PowerUp.OnBlueProgressChanged -= _playerPowerUpBar.UpdateBlueCooldown;
             playerModel.PowerUp.OnGreenProgressChanged -= _playerPowerUpBar.UpdateGreenCooldown;
+
+            playerModel.OnBallOfWoolCollected -= _collectibleBar.SetCollected;
         }
 
         private void ShowBossHP() => _bossHealthBar.gameObject.SetActive(true);

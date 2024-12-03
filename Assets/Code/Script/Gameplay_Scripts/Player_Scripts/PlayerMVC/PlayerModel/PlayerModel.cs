@@ -27,6 +27,7 @@ namespace Player.Model
         {
             _playerState = PlayerState.Idle;
             _healtPoints = playerSO.HealthPoints;
+            _ballsOfWool = 0;
 
             _maxY = playerSO.MaxY;
             _minY = playerSO.MinY;

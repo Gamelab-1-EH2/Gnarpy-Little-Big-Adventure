@@ -6,6 +6,7 @@ public class Phase_So : ScriptableObject
 
     public int TentacleWidth;
     public float WarningDelay;
+    public float TentacleSpeed;
 
     public float ProjectileSpeed;
 

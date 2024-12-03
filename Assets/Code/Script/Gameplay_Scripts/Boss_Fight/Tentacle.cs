@@ -13,8 +13,7 @@ public class Tentacle : MonoBehaviour
             component.Damage();
             this.gameObject.SetActive(false);
         }
-        else
-        {
+        else{
             this.gameObject.SetActive(false);    
         }
     }

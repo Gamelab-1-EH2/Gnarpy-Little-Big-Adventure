@@ -2714,6 +2714,7 @@ GameObject:
   - component: {fileID: 1328550767}
   - component: {fileID: 1328550766}
   - component: {fileID: 1328550771}
+  - component: {fileID: 1328550772}
   m_Layer: 8
   m_Name: DestoyableCube1
   m_TagString: Untagged
@@ -2844,6 +2845,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b61a4aaf513d39545b04d61a4a1ff1b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1328550772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328550763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610ca22e6c92c624494c120ea9ec8acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1386561214
@@ -3392,10 +3405,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2508131503396623231, guid: 2d7258dc26c6a6f49a4700cef3e97031,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457301646124859421, guid: 2d7258dc26c6a6f49a4700cef3e97031,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457301646124859421, guid: 2d7258dc26c6a6f49a4700cef3e97031,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457301646124859421, guid: 2d7258dc26c6a6f49a4700cef3e97031,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 338466194, guid: 34c381756f3d7fa42a65d413e23b38c8,
+        type: 3}
+    - target: {fileID: 4457301646124859421, guid: 2d7258dc26c6a6f49a4700cef3e97031,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4927562315785172608, guid: 2d7258dc26c6a6f49a4700cef3e97031,
         type: 3}
       propertyPath: m_Name
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028453972034424232, guid: 2d7258dc26c6a6f49a4700cef3e97031,
+        type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8870069456002938600, guid: 2d7258dc26c6a6f49a4700cef3e97031,
         type: 3}
@@ -3451,6 +3495,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135838566506853133, guid: 2d7258dc26c6a6f49a4700cef3e97031,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9135838566506853133, guid: 2d7258dc26c6a6f49a4700cef3e97031,
         type: 3}

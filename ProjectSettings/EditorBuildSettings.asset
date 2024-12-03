@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Level/Scenes/AdditiveManagement.unity
+    path: Assets/Level/Scenes/SceneManagement.unity
     guid: de30ae8ee219dc14d9f70603130636a6
   - enabled: 1
     path: Assets/Level/Scenes/Design/BlockOuts/Simo/BlockOut _Simo.unity

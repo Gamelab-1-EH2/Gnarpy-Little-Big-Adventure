@@ -32,7 +32,7 @@ public class BossController : MonoBehaviour, IDamageable
         else
         {
             BossView.Animator.SetTrigger("Death");
-            StateMachine = new BossStateMachine(new BossDeath_State(this, i, BossView));
+            //StateMachine = new BossStateMachine(new BossDeath_State(this, i, BossView));
         }
         BossView.Animator.SetTrigger("Damage");
     }
@@ -50,7 +50,7 @@ public class BossController : MonoBehaviour, IDamageable
     {
         for (int i = 0; i < GameObject.Count; i++)
         {
-            Pooler.Add(new ObjectPooler(GameObject[i], 2));
+            Pooler.Add(new ObjectPooler(GameObject[i], 4));
         }
         for (int i = 0; i < PhaseSo.Count; i++)
         {
@@ -65,6 +65,8 @@ public class BossController : MonoBehaviour, IDamageable
     }
     public GameObject SpawnObject()
     {
+        int i;
+        i=Random.Range(0, Pooler.Count);
         Pooler[i].PoolObject().transform.position=transform.position;
         return Pooler[i].PoolObject();
     }

@@ -6,18 +6,21 @@ namespace UI_System
 {
     public class SettingsUI : MonoBehaviour
     {
-        [SerializeField] private List<UIAudioSlider> _sliders;
         private UI_AudioController _audioController;
+        private List<UIAudioSlider> _sliders;
 
-        private void Awake()
+        private void Start()
         {
+            _sliders = new List<UIAudioSlider>();
             _sliders.AddRange(GetComponentsInChildren<UIAudioSlider>());
+
+            _audioController = new UI_AudioController();
             _audioController.AddSliders(_sliders);
         }
 
         private void OnEnable()
         {
-            _audioController.UpdateVolumeValues();
+            _audioController?.UpdateVolumeValues();
         }
     }
 }

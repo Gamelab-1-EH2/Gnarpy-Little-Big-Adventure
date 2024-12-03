@@ -15,11 +15,11 @@ namespace UI_System
         {
             _audioSliders = new List<UIAudioSlider>();
             _audioSliders.AddRange(sliders);
-            LoadVolumeValues();
 
             for (int i = 0; i < _audioSliders.Count; i++)
                 _audioSliders[i].OnVolumeChanged += AudioManager.SetVolume;
 
+            LoadVolumeValues();
         }
 
         private void LoadVolumeValues()

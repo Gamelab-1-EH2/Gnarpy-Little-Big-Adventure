@@ -2221,7 +2221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c52f68ebc7cf2a1498049a7d31d4daf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowDelay: 5
+  ShowDelay: 2.8
   _panel: {fileID: 608389647702730056}
   _retryLevelButton: {fileID: 0}
   _quitToMainMenu: {fileID: 7942944538664176551}

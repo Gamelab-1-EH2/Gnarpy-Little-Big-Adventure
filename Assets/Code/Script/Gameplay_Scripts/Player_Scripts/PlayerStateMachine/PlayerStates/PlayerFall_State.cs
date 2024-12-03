@@ -58,7 +58,7 @@ namespace Player.Behaviour.States
             //Check if is grounded
             if(base.IsGrounded())
             {
-                _playerModel.State = Model.PlayerState.Landed;
+                _playerModel.State = Model.PlayerState.Land;
                 //Check Input
                 Vector3 inputDir = InputManager.ActionMap.Gameplay.Movement.ReadValue<Vector3>();
                 if (inputDir == Vector3.zero)    //To Idle

@@ -9,7 +9,7 @@ namespace Player.Model
         Shoot = 8,
         Fall = 16,
         Dead = 32,
-        Landed = 64,
+        Land = 64,
         None = 256,
     }
 }

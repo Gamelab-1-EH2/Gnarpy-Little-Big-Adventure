@@ -18,6 +18,12 @@ namespace Player.Behaviour.States
 
         public override void Enter()
         {
+            if(InputManager.ActionMap.Gameplay.Movement.ReadValue<Vector3>().x == 0f)
+            {
+                base.OnStateExit?.Invoke(new PlayerIdle_State(_playerModel));
+                return;
+            }
+
             _playerModel.State = Model.PlayerState.Move;
             
             _playerModel.Movement.Direction = InputManager.ActionMap.Gameplay.Movement.ReadValue<Vector3>();
@@ -76,7 +82,7 @@ namespace Player.Behaviour.States
             Vector3 dir = context.ReadValue<Vector3>();
             _playerModel.Movement.Direction = dir;
 
-            if(dir == Vector3.zero)
+            if(dir.x == 0f)
                 base.OnStateExit?.Invoke(new PlayerIdle_State(_playerModel));
         }
 

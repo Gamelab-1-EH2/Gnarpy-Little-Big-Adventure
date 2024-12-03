@@ -291,6 +291,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3601564530198411554, guid: 9cd296bd63aab7649825b2a000d13f8a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 29.599976
+      objectReference: {fileID: 0}
     - target: {fileID: 3921053479422822479, guid: 9cd296bd63aab7649825b2a000d13f8a,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -471,6 +476,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8683134588623982693, guid: 9cd296bd63aab7649825b2a000d13f8a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 29.599976
+      objectReference: {fileID: 0}
     - target: {fileID: 8911478473513734297, guid: 9cd296bd63aab7649825b2a000d13f8a,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -599,8 +609,8 @@ MonoBehaviour:
   _gameSceneManager:
     _gameScenes:
     - PlayerSystem_TS
-  _initialState: 2
-  _isDebug: 0
+  _initialState: 0
+  _isDebug: 1
 --- !u!1 &1249601104
 GameObject:
   m_ObjectHideFlags: 0

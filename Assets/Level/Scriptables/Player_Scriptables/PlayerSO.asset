@@ -42,7 +42,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   JumpTime: 0.3
-  FallScalar: 0.25
+  FallScalar: 0.3
   Gravity: {x: -0, y: -75.5, z: -0}
   GroundCheckDistance: 0.3
   GroundCheckOffsetY: 0.5

@@ -44,6 +44,8 @@ namespace Player.Behaviour.States
 
         public override void Process()
         {
+            _playerModel.Movement.Direction=InputManager.ActionMap.Gameplay.Movement.ReadValue<Vector3>();
+            
             float enlapsedTime = Time.time - jumpStartTime;
             float jumpProgress =  enlapsedTime / _playerModel.Movement.Jump.JumpTime;
 

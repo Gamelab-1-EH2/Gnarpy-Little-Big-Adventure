@@ -27,6 +27,11 @@ namespace UI_System
             GameManager.OnGameStateChange -= UpdateUITab;
         }
 
+        public void QuitGame()
+        {
+            Application.Quit();
+        }
+
         private void UpdateUITab(GameState_Type gameState)
         {
             switch(gameState)

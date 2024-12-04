@@ -14,12 +14,12 @@ GameObject:
   - component: {fileID: 5013194249386714784}
   - component: {fileID: 609815089783240033}
   - component: {fileID: 863382662849508044}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Amber1x1_PlaceHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5880252610174223749
 Transform:
@@ -129,7 +129,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
@@ -204,10 +204,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5948430898964955356, guid: 3badee3d4873c9249801830be64ef118,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948430898964955356, guid: 3badee3d4873c9249801830be64ef118,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002937763994491668, guid: 3badee3d4873c9249801830be64ef118,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002937763994491668, guid: 3badee3d4873c9249801830be64ef118,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6888346120890071234, guid: 3badee3d4873c9249801830be64ef118,
         type: 3}
       propertyPath: m_Name
       value: Amber1x1x1_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888346120890071234, guid: 3badee3d4873c9249801830be64ef118,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888346120890071234, guid: 3badee3d4873c9249801830be64ef118,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

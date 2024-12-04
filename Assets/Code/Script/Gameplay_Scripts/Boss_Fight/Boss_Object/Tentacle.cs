@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Tentacle : MonoBehaviour
 {
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.TryGetComponent<IDamageable>(out IDamageable component))
@@ -13,9 +12,7 @@ public class Tentacle : MonoBehaviour
             component.Damage();
             this.gameObject.SetActive(false);
         }
-        else{
-            this.gameObject.SetActive(false);    
-        }
+        this.gameObject.SetActive(false);
     }
 
 }

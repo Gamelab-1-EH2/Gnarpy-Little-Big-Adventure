@@ -14,5 +14,8 @@ public class SpiderWeb : MonoBehaviour
     {
         if(collision.gameObject.TryGetComponent<IndestructibleObject>(out IndestructibleObject _))
             this.gameObject.SetActive(false);
+
+        if (collision.gameObject.TryGetComponent<DestroyableObject>(out DestroyableObject _))
+            this.gameObject.SetActive(false);
     }
 }

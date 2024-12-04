@@ -46,7 +46,7 @@ public class BossController : MonoBehaviour, IDamageable
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 8 && other.gameObject.GetComponent<MovableObject>().IsDeflected)
+        if (other.gameObject.layer == 10 && other.gameObject.GetComponent<BossProjectile>().Deflected)
         {
             other.gameObject.SetActive(false);
             Damage();

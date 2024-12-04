@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Projectile : MonoBehaviour, IDeflectable
 {
-    private Rigidbody _rigidBody;
+    protected Rigidbody _rigidBody;
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody>();

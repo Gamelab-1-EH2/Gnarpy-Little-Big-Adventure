@@ -19,6 +19,9 @@ namespace UI_System
         {
             BossController bossController=FindObjectOfType<BossController>();
 
+            bossController.OnBossFightStart += ShowBossHP;
+            bossController.OnBossHealthChange += _bossHealthBar.SetHealth;
+
             PlayerModel playerModel = FindObjectOfType<PlayerController>()?.Model;
             if (playerModel == null)
                 return;
@@ -49,16 +52,24 @@ namespace UI_System
         private void OnDisable()
         {
             PlayerModel playerModel = FindObjectOfType<PlayerController>()?.Model;
-            if (playerModel == null)
+            if (playerModel != null)
+            {
+                playerModel.OnHPChanged -= _playerHealthBar.SetHealth;
+                playerModel.PowerUp.OnPowerUpUnlock -= _playerPowerUpBar.UnlockPowerUp;
+                playerModel.PowerUp.OnRedProgressChanged -= _playerPowerUpBar.UpdateRedCooldown;
+                playerModel.PowerUp.OnBlueProgressChanged -= _playerPowerUpBar.UpdateBlueCooldown;
+                playerModel.PowerUp.OnGreenProgressChanged -= _playerPowerUpBar.UpdateGreenCooldown;
+
+                playerModel.OnBallOfWoolCollected -= _collectibleBar.SetCollected;
+            }
+
+
+            BossController bossController = FindObjectOfType<BossController>();
+            if(bossController == null)
                 return;
 
-            playerModel.OnHPChanged -= _playerHealthBar.SetHealth;
-            playerModel.PowerUp.OnPowerUpUnlock -= _playerPowerUpBar.UnlockPowerUp;
-            playerModel.PowerUp.OnRedProgressChanged -= _playerPowerUpBar.UpdateRedCooldown;
-            playerModel.PowerUp.OnBlueProgressChanged -= _playerPowerUpBar.UpdateBlueCooldown;
-            playerModel.PowerUp.OnGreenProgressChanged -= _playerPowerUpBar.UpdateGreenCooldown;
-
-            playerModel.OnBallOfWoolCollected -= _collectibleBar.SetCollected;
+            bossController.OnBossFightStart -= ShowBossHP;
+            bossController.OnBossHealthChange -= _bossHealthBar.SetHealth;
         }
 
         private void ShowBossHP() => _bossHealthBar.gameObject.SetActive(true);

@@ -23,7 +23,7 @@ namespace GameManagement.Behaviour
             }
             
             MonoBehaviour.FindObjectOfType<PlayerController>().OnPlayerDeath += DefeatExit;
-            //MonoBehaviour.FindObjectOfType<BossController>().OnDefeat += VictoryExit;
+            MonoBehaviour.FindObjectOfType<BossController>().OnBossDefeat += VictoryExit;
 
             InputManager.ActionMap.Pause.TogglePause.started += PauseGame;
             Time.timeScale = 1f;
@@ -34,7 +34,7 @@ namespace GameManagement.Behaviour
         public override void Exit()
         {
             MonoBehaviour.FindObjectOfType<PlayerController>().OnPlayerDeath -= DefeatExit;
-            //MonoBehaviour.FindObjectOfType<BossController>().OnDefeat -= VictoryExit;
+            MonoBehaviour.FindObjectOfType<BossController>().OnBossDefeat -= VictoryExit;
 
             InputManager.ActionMap.Pause.TogglePause.started -= PauseGame;
         }

@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 3526969644953704700}
   - component: {fileID: 1134108914474071537}
   - component: {fileID: 2667581028414132331}
-  - component: {fileID: 4519833004358565168}
-  - component: {fileID: 1215834726055962629}
-  m_Layer: 8
+  - component: {fileID: 3026140239142463665}
+  m_Layer: 10
   m_Name: Boss_Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559665033272776407}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 119.33, y: -56.2, z: 59.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -135,7 +134,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4519833004358565168
+--- !u!114 &3026140239142463665
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,18 +143,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1559665033272776407}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b61a4aaf513d39545b04d61a4a1ff1b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1215834726055962629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1559665033272776407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 610ca22e6c92c624494c120ea9ec8acb, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f8320d1b8f2bf84495a91a0040bd49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

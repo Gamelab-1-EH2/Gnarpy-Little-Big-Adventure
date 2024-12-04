@@ -51,7 +51,7 @@ MonoBehaviour:
   RedPowerUpDelay: 2
   GreenPowerUpStrenght: 30
   GreenPowerUpDelay: 10
-  GreenPowerUpDuration: 5
+  GreenPowerUpDuration: 349.98
   BluePowerUpProjectile: {fileID: 8592442538128691829, guid: 04d1449a439c4bb49a5df1772598e3d4,
     type: 3}
   ProjectileSpeed: 16

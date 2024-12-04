@@ -4,30 +4,23 @@ using UnityEngine;
 
 public class BossDeath_State : BossState
 {
-
-    BossController controller;
-    int i;
-    BossView bossView;
-    public BossDeath_State(BossController boss, int i, BossView bossView) : base()
+    public BossDeath_State() : base()
     {
-        this.controller = boss;
-        this.i = i;
-        this.bossView = bossView;
     }
 
     public override void Enter()
     {
-        throw new System.NotImplementedException();
+
     }
 
     public override void Exit()
     {
-        throw new System.NotImplementedException();
+
     }
 
     public override void Process()
     {
-        throw new System.NotImplementedException();
+
     }
 
     public override string ToString()
@@ -37,6 +30,6 @@ public class BossDeath_State : BossState
 
     public override void TriggerEnter(Collider other)
     {
-        throw new System.NotImplementedException();
+
     }
 }

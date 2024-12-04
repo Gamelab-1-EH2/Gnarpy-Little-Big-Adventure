@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using static UnityEngine.CullingGroup;
 
 namespace Player.Model
 {
@@ -13,6 +12,7 @@ namespace Player.Model
 
         private MovementModel _movementModel;
         private PowerUpModel _powerUpModel;
+        private PlayerAudioModel _playerAudioModel;
         private PlayerState _playerState;
 
         private int _healtPoints;
@@ -34,6 +34,8 @@ namespace Player.Model
 
             _movementModel = new MovementModel(playerSO, body);
             _powerUpModel = new PowerUpModel(playerSO, shield);
+            _playerAudioModel = new PlayerAudioModel(playerSO);
+
             _rotation = Vector3.down;
         }
 
@@ -47,6 +49,12 @@ namespace Player.Model
         {
             get => _powerUpModel;
             set => _powerUpModel = value;
+        }
+
+        public PlayerAudioModel AudioModel
+        {
+            get => _playerAudioModel;
+            set => _playerAudioModel = value;
         }
 
         public PlayerState State

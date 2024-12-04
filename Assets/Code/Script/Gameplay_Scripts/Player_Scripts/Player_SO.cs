@@ -34,9 +34,13 @@ public class Player_SO : ScriptableObject
     [SerializeField] public Vector3 ShootDirection = new Vector3(0f, 0f, 90f);
     [SerializeField] public Vector2 ShootOffset = new Vector2(0.5f, 0.5f);
     [Header("SFX")]
-    [SerializeField] private SFX_SO _jumpSFX;
-    [SerializeField] private SFX_SO _shootSFX;
-
-    public SFX JumpSFX => _jumpSFX.GetSFX();
-    public SFX ShootSFX => _shootSFX.GetSFX();
+    [SerializeField] public SFX_SO DamagedSFX;
+    [SerializeField] public SFX_SO DeathSFX;
+    [SerializeField] public SFX_SO JumpSFX;
+    [SerializeField] public SFX_SO ShootSFX;
+    [Header("Power up SFX")]
+    [SerializeField] public SFX_SO ShieldOnSFX;
+    [SerializeField] public SFX_SO ShieldOffSFX;
+    [SerializeField] public SFX_SO GravityOnSFX;
+    [SerializeField] public SFX_SO GravityOffSFX;
 }

@@ -1,6 +1,7 @@
 using UnityEngine;
 
 using Player.Model;
+using Audio_System.SFX;
 
 namespace Player.Behaviour.States
 {
@@ -16,6 +17,8 @@ namespace Player.Behaviour.States
             _playerModel.State = Model.PlayerState.Dead;
             _playerModel.Movement.RigidBody.velocity = Vector3.zero;
             _playerModel.Movement.RigidBody.constraints = RigidbodyConstraints.FreezeAll;
+
+            SFXManager.PlaySFX?.Invoke( _playerModel.AudioModel.DeathSFX, _playerModel.Movement.RigidBody.position);
         }
 
         public override void Exit()

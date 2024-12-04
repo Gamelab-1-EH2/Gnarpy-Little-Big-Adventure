@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 669787e9da4c7864981d9369cb957b5d
+guid: 3922618aaaf189140bfc645141c98ec5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,10 +95,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 3
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,1072 +110,1072 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_0
+      name: Boss_GnoccaPazza_Idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 7168
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e8139673ce692e46a2de1f5272b4340
-      internalID: -388218081
+      spriteID: 69604ad19f15b57429a5046c7ad74e0c
+      internalID: -1714863566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_1
+      name: Boss_GnoccaPazza_Idle_1
       rect:
         serializedVersion: 2
         x: 1024
         y: 7168
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83a5392d1705e3345aa5088860d277c7
-      internalID: -27366922
+      spriteID: 952a3682f6409a34392a7428c5db393b
+      internalID: -1280753951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_2
+      name: Boss_GnoccaPazza_Idle_2
       rect:
         serializedVersion: 2
         x: 2048
         y: 7168
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acf9e5c2d586a86438c8f082c01ad337
-      internalID: -106502564
+      spriteID: 4d3f86c2c8fde654da37aa79bdb3c163
+      internalID: -109672422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_3
+      name: Boss_GnoccaPazza_Idle_3
       rect:
         serializedVersion: 2
         x: 3072
         y: 7168
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e468b20b5c34d042b85a201ce6c3c7e
-      internalID: 1712725997
+      spriteID: f622ca398d75789498e997ec2d529b60
+      internalID: 739222508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_4
+      name: Boss_GnoccaPazza_Idle_4
       rect:
         serializedVersion: 2
         x: 4096
         y: 7168
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97ab407037bf6e94da8c338112406a41
-      internalID: -1821467786
+      spriteID: 3dc6371c0b89c404d8b2bfde163f168c
+      internalID: 1732647359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_5
+      name: Boss_GnoccaPazza_Idle_5
       rect:
         serializedVersion: 2
         x: 5120
         y: 7168
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdd74f241cd57804294f45641a14009a
-      internalID: -625396251
+      spriteID: 2116d476cd5537349b0b3a930145751c
+      internalID: 1491387083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_6
+      name: Boss_GnoccaPazza_Idle_6
       rect:
         serializedVersion: 2
         x: 6144
         y: 7168
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5d23a2bd1d0d8744a4561b5e0408e70
-      internalID: -768637813
+      spriteID: 441cb7894c0c4334db79773a0d3f26bd
+      internalID: -218083399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_7
+      name: Boss_GnoccaPazza_Idle_7
       rect:
         serializedVersion: 2
         x: 0
         y: 6144
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b99af9ea76afb0c43a55d9a5a59b337f
-      internalID: -623897627
+      spriteID: 934c6999bdbeb414e908dda80cca7c96
+      internalID: 1836429080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_8
+      name: Boss_GnoccaPazza_Idle_8
       rect:
         serializedVersion: 2
         x: 1024
         y: 6144
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56d50131385b72e4b9ee777e9b22726d
-      internalID: 993642388
+      spriteID: 4020a1911df27d44e8fd85f1415bce12
+      internalID: -1720581769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_9
+      name: Boss_GnoccaPazza_Idle_9
       rect:
         serializedVersion: 2
         x: 2048
         y: 6144
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cdb4b30a0bae8241b491606d569ce62
-      internalID: -1072133115
+      spriteID: f4e3bfceaf26f0943811c8cc4a9e7974
+      internalID: 756942666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_10
+      name: Boss_GnoccaPazza_Idle_10
       rect:
         serializedVersion: 2
         x: 3072
         y: 6144
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b539a0ce1dd0ac1469784aaaa9769e34
-      internalID: -613935622
+      spriteID: dcc8bf37171af54479c287343c1f75e5
+      internalID: -1211278816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_11
+      name: Boss_GnoccaPazza_Idle_11
       rect:
         serializedVersion: 2
         x: 4096
         y: 6144
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7928fe1013ce29c46a66b141e37ac03d
-      internalID: -1335214246
+      spriteID: 793024ad69ac3e745a26390fde4ceba5
+      internalID: 353359201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_12
+      name: Boss_GnoccaPazza_Idle_12
       rect:
         serializedVersion: 2
         x: 5120
         y: 6144
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fbaaaaa6a0df574ea525501617ae02b
-      internalID: -140350877
+      spriteID: 4ee87303d3d651249906e0fba611a533
+      internalID: 2124202102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_13
+      name: Boss_GnoccaPazza_Idle_13
       rect:
         serializedVersion: 2
         x: 6144
         y: 6144
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a40500e1e32ac154e83f8c36ebcdf782
-      internalID: -812225564
+      spriteID: bc44e8d2a84dbf64b93cf76351a24c8e
+      internalID: -543318329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_14
+      name: Boss_GnoccaPazza_Idle_14
       rect:
         serializedVersion: 2
         x: 0
         y: 5120
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6c0b25285632f44493db231d242c372
-      internalID: 1152601687
+      spriteID: 646bda25054e58442a8358cb277d1452
+      internalID: 675317990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_15
+      name: Boss_GnoccaPazza_Idle_15
       rect:
         serializedVersion: 2
         x: 1024
         y: 5120
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8eea1b2aa72f5ef498f17e43eaa3a329
-      internalID: -469300855
+      spriteID: 318b315728d7c654b90313d1f0174242
+      internalID: -1645237651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_16
+      name: Boss_GnoccaPazza_Idle_16
       rect:
         serializedVersion: 2
         x: 2048
         y: 5120
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26e05df4c752bfb49b7910c3dc9eaa3f
-      internalID: 1495322950
+      spriteID: 0b9be14974fc95a4a9a5e7c2738c7e8e
+      internalID: -496262998
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_17
+      name: Boss_GnoccaPazza_Idle_17
       rect:
         serializedVersion: 2
         x: 3072
         y: 5120
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 785b44672da249e4f8106be2030d4deb
-      internalID: -2130088830
+      spriteID: aab7fc6b274365344bb58d898d0a41e9
+      internalID: 87360012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_18
+      name: Boss_GnoccaPazza_Idle_18
       rect:
         serializedVersion: 2
         x: 4096
         y: 5120
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 605277d488ccc17428a6f7882cd0ecfa
-      internalID: 1873978846
+      spriteID: 9148430cef604ad4c95ba728160e443d
+      internalID: -1366226330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_19
+      name: Boss_GnoccaPazza_Idle_19
       rect:
         serializedVersion: 2
         x: 5120
         y: 5120
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1c4a080bbbfa3a49b51dbb108313bff
-      internalID: -2099739703
+      spriteID: e31b2fefd4a04d94687d14fb86ca7cb6
+      internalID: 302485949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_20
+      name: Boss_GnoccaPazza_Idle_20
       rect:
         serializedVersion: 2
         x: 6144
         y: 5120
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 284967135f2c2e645845174ba3bc4535
-      internalID: -1547613356
+      spriteID: ac8235bbc6f262944964b2679a7429d6
+      internalID: -874722189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_21
+      name: Boss_GnoccaPazza_Attack_0
       rect:
         serializedVersion: 2
         x: 0
         y: 4096
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e677eec36408db4dba796c035ad5009
-      internalID: -1541282456
+      spriteID: 7142678f74eb83245ae94887e78613ad
+      internalID: -347996549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_22
+      name: Boss_GnoccaPazza_Attack_1
       rect:
         serializedVersion: 2
         x: 1024
         y: 4096
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0008615e6ccc64e49835d7c6cb401b69
-      internalID: 1918532071
+      spriteID: 0c9882b714fd17c4c9179cf1ba8b68f1
+      internalID: -1951609738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_23
+      name: Boss_GnoccaPazza_Attack_2
       rect:
         serializedVersion: 2
         x: 2048
         y: 4096
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ab08767aeb76eb49907ec20ec846153
-      internalID: 1755284282
+      spriteID: c0f04e899c5f8254db0a69aa44474088
+      internalID: -159499720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_24
+      name: Boss_GnoccaPazza_Attack_3
       rect:
         serializedVersion: 2
         x: 3072
         y: 4096
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f348c804637cd7c4999fd82a4e856cb7
-      internalID: -2078145764
+      spriteID: 0ee3204f42295c248b6eea8129b31387
+      internalID: 1143124430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_25
+      name: Boss_GnoccaPazza_Attack_4
       rect:
         serializedVersion: 2
         x: 4096
         y: 4096
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52cd34bc5c0021b479a9e1de61502708
-      internalID: 1189341809
+      spriteID: 7c7c059046b00394c96a7a0fcdc2a18e
+      internalID: 1644747647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_26
+      name: Boss_GnoccaPazza_Attack_5
       rect:
         serializedVersion: 2
         x: 5120
         y: 4096
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5991c042606def04fb661865f1d4bf2c
-      internalID: 1849785115
+      spriteID: 338838bd5c2986d4286ac7e7515a51e1
+      internalID: -630973667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_27
+      name: Boss_GnoccaPazza_Attack_6
       rect:
         serializedVersion: 2
         x: 6144
         y: 4096
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2b2ac5792ae9e349b0279ecf6f2a40b
-      internalID: -619090515
+      spriteID: 467e4b38505d3f242b61f7c317f6f068
+      internalID: 1394848466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_28
+      name: Boss_GnoccaPazza_Attack_7
       rect:
         serializedVersion: 2
         x: 0
         y: 3072
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbe5e2328d85a97419561e2d2277ca94
-      internalID: 137075648
+      spriteID: ef6fd132257f6764896180c839096be1
+      internalID: 1853050911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_29
+      name: Boss_GnoccaPazza_Attack_8
       rect:
         serializedVersion: 2
         x: 1024
         y: 3072
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 040ffb26c0aca694e8cfe2483f56a9db
-      internalID: -661444391
+      spriteID: 1b3f6238e98630c4e959815d7a88a1ac
+      internalID: -1474818590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_30
+      name: Boss_GnoccaPazza_Attack_9
       rect:
         serializedVersion: 2
         x: 2048
         y: 3072
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 881176f3110c1f141bf4cec7f9a46e16
-      internalID: 1286212891
+      spriteID: e077ab32bfea8d84b985a80e5f037c2b
+      internalID: -1000351553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_31
+      name: Boss_GnoccaPazza_Attack_10
       rect:
         serializedVersion: 2
         x: 3072
         y: 3072
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dcc867c1f39dd146869292e8a3c254b
-      internalID: -1885159360
+      spriteID: 539d0f7bd9ff2dc41b95f465cc5a68de
+      internalID: 1239729893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_32
+      name: Boss_GnoccaPazza_Attack_11
       rect:
         serializedVersion: 2
         x: 4096
         y: 3072
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c758894dd684b1d48909870adf33a7b4
-      internalID: -493321396
+      spriteID: f7a9717052139494f87c054011684d56
+      internalID: 627248268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_33
+      name: Boss_GnoccaPazza_Attack_12
       rect:
         serializedVersion: 2
         x: 5120
         y: 3072
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccf121cdff6590f40b1a24b872121fb9
-      internalID: 1455274412
+      spriteID: 3b5a0c6f838b0544abebdba37e2e3cb1
+      internalID: -1116885662
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_34
+      name: Boss_GnoccaPazza_Attack_13
       rect:
         serializedVersion: 2
         x: 6144
         y: 3072
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3118841a3c8987419f33144c89f2337
-      internalID: -2008717457
+      spriteID: aa122ca679d279b4b931f110a0a97c8b
+      internalID: -1432772184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_35
+      name: Boss_GnoccaPazza_Attack_14
       rect:
         serializedVersion: 2
         x: 0
         y: 2048
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77e16f73467cc30428a771a40358ff01
-      internalID: 688208157
+      spriteID: 8af2b0c7a36f8814398a42382c07bbc9
+      internalID: 883884679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_36
+      name: Boss_GnoccaPazza_Attack_15
       rect:
         serializedVersion: 2
         x: 1024
         y: 2048
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47b5b4b83d6f83c4990cf5e70e784efc
-      internalID: 2021989706
+      spriteID: d8e958e0900b2444b85b7d467422da78
+      internalID: 1003028584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_37
+      name: Boss_GnoccaPazza_Attack_16
       rect:
         serializedVersion: 2
         x: 2048
         y: 2048
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7836956ad96369b43bb124780a28cbf7
-      internalID: 1719422393
+      spriteID: 6a96ef80e22b0a441b8b5e48b6d9008d
+      internalID: 630449622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_38
+      name: Boss_GnoccaPazza_Attack_17
       rect:
         serializedVersion: 2
         x: 3072
         y: 2048
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aebe776876e93094a99e10bc35083faf
-      internalID: -2142317620
+      spriteID: 7663a7d7289a0a14db5f90c58e8465df
+      internalID: 680119056
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_39
+      name: Boss_GnoccaPazza_Attack_18
       rect:
         serializedVersion: 2
         x: 4096
         y: 2048
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b6e1a8e9dabcee4084b09b1599ddcde
-      internalID: -1316691267
+      spriteID: 78df9fc657020e448afc2ee4f410934c
+      internalID: -528689495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_40
+      name: Boss_GnoccaPazza_Damaged_0
       rect:
         serializedVersion: 2
         x: 5120
         y: 2048
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3ddf73c6720e8745b86471bd2bed9bb
-      internalID: 1694474605
+      spriteID: 86fa93c5055c8034dae14a3f971a109c
+      internalID: -70663576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_41
+      name: Boss_GnoccaPazza_Damaged_1
       rect:
         serializedVersion: 2
         x: 6144
         y: 2048
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 071ec98fb0d56064bb6f0f770f90d997
-      internalID: -1635376508
+      spriteID: fd038ece1bdf9d44ebe3d88095bddbb3
+      internalID: 1882452269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_42
+      name: Boss_GnoccaPazza_Damaged_3
       rect:
         serializedVersion: 2
         x: 0
         y: 1024
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1985c6a409dabdf40af2691ea5924282
-      internalID: -1986561041
+      spriteID: 0a734ef4637ac754b852fbb86259dbfe
+      internalID: -1298576585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_43
+      name: Boss_GnoccaPazza_Damaged_4
       rect:
         serializedVersion: 2
         x: 1024
         y: 1024
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7889697f14b2e04c9c7dac27c6051de
-      internalID: -475990867
+      spriteID: 79e7edda2520a154d842017a76493989
+      internalID: -202563729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_44
+      name: Boss_GnoccaPazza_Damaged_5
       rect:
         serializedVersion: 2
         x: 2048
         y: 1024
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24887aeff1f687c49a532cdab63e112a
-      internalID: -692736285
+      spriteID: 973ff945d7dc2bb4d93c053739087450
+      internalID: -188934606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_45
+      name: Boss_GnoccaPazza_Damaged_6
       rect:
         serializedVersion: 2
         x: 3072
         y: 1024
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fd6eedaa3f6acd479809eb6cbae9999
-      internalID: 1114463943
+      spriteID: dc66959ab7cc5064fb2db15bde0a6394
+      internalID: 40971708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_46
+      name: Boss_GnoccaPazza_Damaged_7
       rect:
         serializedVersion: 2
         x: 4096
         y: 1024
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6e15d466811b3a4e91f3cc838c31754
-      internalID: -928821247
+      spriteID: 80f721fb02d418b4c92d7182dec16aa5
+      internalID: 2010080073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_47
+      name: Boss_GnoccaPazza_Damaged_8
       rect:
         serializedVersion: 2
         x: 5120
         y: 1024
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c9f49c44ec85d14a833193c718994be
-      internalID: 1230490974
+      spriteID: 560f59978e1b2194287e935d024f86bf
+      internalID: -1548119829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_48
+      name: Boss_GnoccaPazza_Damaged_9
       rect:
         serializedVersion: 2
         x: 6144
         y: 1024
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24619a7c8c08af040acad31ab31376fb
-      internalID: 1903008377
+      spriteID: 34cc2f7f53975954faa1484dfe6b904c
+      internalID: 7464494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_49
+      name: Boss_GnoccaPazza_Damaged_10
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a40c31e40e35f84fbb67835c7eb60a3
-      internalID: 486427168
+      spriteID: eefde491656f4a147912caba996ec17b
+      internalID: 428920818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_GnoccaPazza_SpriteSheet_50
+      name: Boss_GnoccaPazza_Damaged_11
       rect:
         serializedVersion: 2
         x: 1024
         y: 0
         width: 1024
         height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f54280fae8965846876900ba2f27252
-      internalID: -1015069895
+      spriteID: b84fe0408dd660f4eb9acc1353a18cc0
+      internalID: -1892944156
       vertices: []
       indices: 
       edges: []
@@ -1183,7 +1183,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: de1dfdc2bb415db47a6ee21deb45e2a7
+    spriteID: 1ca6b440ec6ac22438561eed26d4ef5f
     internalID: 0
     vertices: []
     indices: 
@@ -1191,57 +1191,57 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Boss_GnoccaPazza_SpriteSheet_0: -388218081
-      Boss_GnoccaPazza_SpriteSheet_1: -27366922
-      Boss_GnoccaPazza_SpriteSheet_10: -613935622
-      Boss_GnoccaPazza_SpriteSheet_11: -1335214246
-      Boss_GnoccaPazza_SpriteSheet_12: -140350877
-      Boss_GnoccaPazza_SpriteSheet_13: -812225564
-      Boss_GnoccaPazza_SpriteSheet_14: 1152601687
-      Boss_GnoccaPazza_SpriteSheet_15: -469300855
-      Boss_GnoccaPazza_SpriteSheet_16: 1495322950
-      Boss_GnoccaPazza_SpriteSheet_17: -2130088830
-      Boss_GnoccaPazza_SpriteSheet_18: 1873978846
-      Boss_GnoccaPazza_SpriteSheet_19: -2099739703
-      Boss_GnoccaPazza_SpriteSheet_2: -106502564
-      Boss_GnoccaPazza_SpriteSheet_20: -1547613356
-      Boss_GnoccaPazza_SpriteSheet_21: -1541282456
-      Boss_GnoccaPazza_SpriteSheet_22: 1918532071
-      Boss_GnoccaPazza_SpriteSheet_23: 1755284282
-      Boss_GnoccaPazza_SpriteSheet_24: -2078145764
-      Boss_GnoccaPazza_SpriteSheet_25: 1189341809
-      Boss_GnoccaPazza_SpriteSheet_26: 1849785115
-      Boss_GnoccaPazza_SpriteSheet_27: -619090515
-      Boss_GnoccaPazza_SpriteSheet_28: 137075648
-      Boss_GnoccaPazza_SpriteSheet_29: -661444391
-      Boss_GnoccaPazza_SpriteSheet_3: 1712725997
-      Boss_GnoccaPazza_SpriteSheet_30: 1286212891
-      Boss_GnoccaPazza_SpriteSheet_31: -1885159360
-      Boss_GnoccaPazza_SpriteSheet_32: -493321396
-      Boss_GnoccaPazza_SpriteSheet_33: 1455274412
-      Boss_GnoccaPazza_SpriteSheet_34: -2008717457
-      Boss_GnoccaPazza_SpriteSheet_35: 688208157
-      Boss_GnoccaPazza_SpriteSheet_36: 2021989706
-      Boss_GnoccaPazza_SpriteSheet_37: 1719422393
-      Boss_GnoccaPazza_SpriteSheet_38: -2142317620
-      Boss_GnoccaPazza_SpriteSheet_39: -1316691267
-      Boss_GnoccaPazza_SpriteSheet_4: -1821467786
-      Boss_GnoccaPazza_SpriteSheet_40: 1694474605
-      Boss_GnoccaPazza_SpriteSheet_41: -1635376508
-      Boss_GnoccaPazza_SpriteSheet_42: -1986561041
-      Boss_GnoccaPazza_SpriteSheet_43: -475990867
-      Boss_GnoccaPazza_SpriteSheet_44: -692736285
-      Boss_GnoccaPazza_SpriteSheet_45: 1114463943
-      Boss_GnoccaPazza_SpriteSheet_46: -928821247
-      Boss_GnoccaPazza_SpriteSheet_47: 1230490974
-      Boss_GnoccaPazza_SpriteSheet_48: 1903008377
-      Boss_GnoccaPazza_SpriteSheet_49: 486427168
-      Boss_GnoccaPazza_SpriteSheet_5: -625396251
-      Boss_GnoccaPazza_SpriteSheet_50: -1015069895
-      Boss_GnoccaPazza_SpriteSheet_6: -768637813
-      Boss_GnoccaPazza_SpriteSheet_7: -623897627
-      Boss_GnoccaPazza_SpriteSheet_8: 993642388
-      Boss_GnoccaPazza_SpriteSheet_9: -1072133115
+      Boss_GnoccaPazza_Attack_0: -1951609738
+      Boss_GnoccaPazza_Attack_1: -159499720
+      Boss_GnoccaPazza_Attack_10: 1239729893
+      Boss_GnoccaPazza_Attack_11: 1239729893
+      Boss_GnoccaPazza_Attack_12: 627248268
+      Boss_GnoccaPazza_Attack_13: -1116885662
+      Boss_GnoccaPazza_Attack_14: -1432772184
+      Boss_GnoccaPazza_Attack_15: 1003028584
+      Boss_GnoccaPazza_Attack_16: 1003028584
+      Boss_GnoccaPazza_Attack_17: 630449622
+      Boss_GnoccaPazza_Attack_18: 680119056
+      Boss_GnoccaPazza_Attack_2: 1143124430
+      Boss_GnoccaPazza_Attack_3: 1644747647
+      Boss_GnoccaPazza_Attack_4: -630973667
+      Boss_GnoccaPazza_Attack_5: 1394848466
+      Boss_GnoccaPazza_Attack_6: 1853050911
+      Boss_GnoccaPazza_Attack_7: -1474818590
+      Boss_GnoccaPazza_Attack_8: -1000351553
+      Boss_GnoccaPazza_Attack_9: 1239729893
+      Boss_GnoccaPazza_Damaged_0: -70663576
+      Boss_GnoccaPazza_Damaged_1: 1882452269
+      Boss_GnoccaPazza_Damaged_10: 428920818
+      Boss_GnoccaPazza_Damaged_11: -1892944156
+      Boss_GnoccaPazza_Damaged_3: -1298576585
+      Boss_GnoccaPazza_Damaged_4: -202563729
+      Boss_GnoccaPazza_Damaged_5: -188934606
+      Boss_GnoccaPazza_Damaged_6: 40971708
+      Boss_GnoccaPazza_Damaged_7: 2010080073
+      Boss_GnoccaPazza_Damaged_8: -1548119829
+      Boss_GnoccaPazza_Damaged_9: 7464494
+      Boss_GnoccaPazza_Idle_0: -1280753951
+      Boss_GnoccaPazza_Idle_1: -109672422
+      Boss_GnoccaPazza_Idle_10: 353359201
+      Boss_GnoccaPazza_Idle_11: 2124202102
+      Boss_GnoccaPazza_Idle_12: -543318329
+      Boss_GnoccaPazza_Idle_13: 675317990
+      Boss_GnoccaPazza_Idle_14: -1645237651
+      Boss_GnoccaPazza_Idle_15: -496262998
+      Boss_GnoccaPazza_Idle_16: 87360012
+      Boss_GnoccaPazza_Idle_17: -1366226330
+      Boss_GnoccaPazza_Idle_18: 302485949
+      Boss_GnoccaPazza_Idle_19: -874722189
+      Boss_GnoccaPazza_Idle_2: 739222508
+      Boss_GnoccaPazza_Idle_20: -347996549
+      Boss_GnoccaPazza_Idle_3: 1732647359
+      Boss_GnoccaPazza_Idle_4: 1491387083
+      Boss_GnoccaPazza_Idle_5: -218083399
+      Boss_GnoccaPazza_Idle_6: 1836429080
+      Boss_GnoccaPazza_Idle_7: -1720581769
+      Boss_GnoccaPazza_Idle_8: 756942666
+      Boss_GnoccaPazza_Idle_9: -1211278816
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

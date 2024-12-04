@@ -532,6 +532,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 4927562315785172608, guid: 2d7258dc26c6a6f49a4700cef3e97031,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8436888575643999881, guid: 2d7258dc26c6a6f49a4700cef3e97031,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -575,32 +580,32 @@ PrefabInstance:
     - target: {fileID: 8919855594924917206, guid: 2d7258dc26c6a6f49a4700cef3e97031,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 8919855594924917206, guid: 2d7258dc26c6a6f49a4700cef3e97031,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 8919855594924917206, guid: 2d7258dc26c6a6f49a4700cef3e97031,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 8919855594924917206, guid: 2d7258dc26c6a6f49a4700cef3e97031,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 93.95062
+      value: 96.82
       objectReference: {fileID: 0}
     - target: {fileID: 8919855594924917206, guid: 2d7258dc26c6a6f49a4700cef3e97031,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.6
+      value: 11.98
       objectReference: {fileID: 0}
     - target: {fileID: 8919855594924917206, guid: 2d7258dc26c6a6f49a4700cef3e97031,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.045
+      value: -0.8720001
       objectReference: {fileID: 0}
     - target: {fileID: 8919855594924917206, guid: 2d7258dc26c6a6f49a4700cef3e97031,
         type: 3}
@@ -3127,6 +3132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Boss_Projectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559665033272776407, guid: e45fe9473df29cb44a5aab1bb7ad0919,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7292852751786837186, guid: e45fe9473df29cb44a5aab1bb7ad0919,
         type: 3}

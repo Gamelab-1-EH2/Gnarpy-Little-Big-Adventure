@@ -15,8 +15,8 @@ MonoBehaviour:
   HealthPoints: 3
   MaxY: 12
   MinY: -12
-  MovementSpeed: 13
-  JumpForce: 40
+  MovementSpeed: 10
+  JumpForce: 30
   JumpSpeedCurve:
     serializedVersion: 2
     m_Curve:
@@ -30,8 +30,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.43304342
     - serializedVersion: 3
-      time: 1
-      value: 0
+      time: 0.9999898
+      value: 0.20991027
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -58,5 +58,11 @@ MonoBehaviour:
   ShootDelay: 1
   ShootDirection: {x: 0, y: 90, z: 90}
   ShootOffset: {x: 0.8, y: 0.8}
-  _jumpSFX: {fileID: 0}
-  _shootSFX: {fileID: 0}
+  DamagedSFX: {fileID: 0}
+  DeathSFX: {fileID: 0}
+  JumpSFX: {fileID: 0}
+  ShootSFX: {fileID: 0}
+  ShieldOnSFX: {fileID: 0}
+  ShieldOffSFX: {fileID: 0}
+  GravityOnSFX: {fileID: 0}
+  GravityOffSFX: {fileID: 0}

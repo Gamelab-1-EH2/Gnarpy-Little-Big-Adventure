@@ -18,4 +18,4 @@ MonoBehaviour:
   TentacleSpeed: 10
   ProjectileSpeed: 200
   DelayBetweenAttacks: 5
-  Attack1Percentage: 30
+  Attack1Percentage: 10

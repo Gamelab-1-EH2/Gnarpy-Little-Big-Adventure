@@ -16,8 +16,10 @@ public class DestroyableObject : MovableObject, IDestroyable, IDamageable
     {
         base.Awake();
 
-        _normalObject?.gameObject.SetActive(true);
-        _destroyedObject?.gameObject.SetActive(false);
+        if(_normalObject.gameObject != null)
+            _normalObject.gameObject.SetActive(true);
+        if (_destroyedObject.gameObject != null)
+            _destroyedObject?.gameObject.SetActive(false);
     }
 
     public virtual void Damage() => Destroy();
@@ -29,7 +31,10 @@ public class DestroyableObject : MovableObject, IDestroyable, IDamageable
         OnDestroy?.Invoke(this);
         OnDestroy -= OnDestroy;
 
-        _normalObject?.gameObject.SetActive(false);
-        _destroyedObject?.gameObject.SetActive(true);
+
+        if (_normalObject.gameObject != null)
+            _normalObject.gameObject.SetActive(false);
+        if (_destroyedObject.gameObject != null)
+            _destroyedObject?.gameObject.SetActive(true);
     }
 }

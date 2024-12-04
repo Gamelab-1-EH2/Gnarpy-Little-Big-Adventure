@@ -3,7 +3,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class SpiderWeb : MonoBehaviour
 {
-
     private void Awake()
     {
         Rigidbody rigidbody = GetComponent<Rigidbody>();

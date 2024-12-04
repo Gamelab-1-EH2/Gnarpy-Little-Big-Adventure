@@ -17,6 +17,8 @@ namespace UI_System
 
         private void OnEnable()
         {
+            BossController bossController=FindObjectOfType<BossController>();
+
             PlayerModel playerModel = FindObjectOfType<PlayerController>()?.Model;
             if (playerModel == null)
                 return;
@@ -24,7 +26,8 @@ namespace UI_System
             //Player HP
             _playerHealthBar.SetHealth(playerModel.HealthPoints);
             playerModel.OnHPChanged += _playerHealthBar.SetHealth;
-            
+
+
             //Power Ups
             _playerPowerUpBar.LockPowerUp(PowerUpType.RED_STRAWBERRY);
             _playerPowerUpBar.LockPowerUp(PowerUpType.BLUE_STRAWBERRY);

@@ -1,17 +1,16 @@
 using Player;
-using Player.Behaviour.Machine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
-using static UnityEngine.Rendering.DebugUI;
+
 
 public class BossController : MonoBehaviour, IDamageable
 {
     private int i = 0;
     private float _attack;
     private int _phaseHp;
-    [SerializeField] private int _hp = 0;
+    [SerializeField]private int _hp = 0;
 
     public List<ObjectPooler> Pooler=new List<ObjectPooler>();
     public BossView BossView;
@@ -19,20 +18,27 @@ public class BossController : MonoBehaviour, IDamageable
     public List<GameObject> GameObject;
     public GameObject ObjectThrown;
     public List<Phase_So> PhaseSo = new List<Phase_So>();
+    public Action OnBossDefeat;
+    public Action OnBossFightStart;
+    public Action<int> OnBossHealthChange;
+
 
     public void Damage()
     {
         _hp--;
         _phaseHp--;
+        OnBossHealthChange?.Invoke(_hp);
         if (_phaseHp == 0 && _hp != 0)
         {
             i++;
             _phaseHp = PhaseSo[i].Trigger;
         }
-        else
+        if (_hp==0)
         {
             BossView.Animator.SetTrigger("Death");
-            //StateMachine = new BossStateMachine(new BossDeath_State(this, i, BossView));
+            StateMachine = new BossStateMachine(new BossDeath_State());
+            OnBossDefeat?.Invoke();
+            Debug.Log("Death");
         }
         BossView.Animator.SetTrigger("Damage");
     }
@@ -48,6 +54,7 @@ public class BossController : MonoBehaviour, IDamageable
 
     private void OnEnable()
     {
+        OnBossFightStart?.Invoke();
         for (int i = 0; i < GameObject.Count; i++)
         {
             Pooler.Add(new ObjectPooler(GameObject[i], 4));
@@ -66,7 +73,7 @@ public class BossController : MonoBehaviour, IDamageable
     public GameObject SpawnObject()
     {
         int i;
-        i=Random.Range(0, Pooler.Count);
+        i=UnityEngine.Random.Range(0, Pooler.Count);
         Pooler[i].PoolObject().transform.position=transform.position;
         return Pooler[i].PoolObject();
     }
@@ -83,7 +90,7 @@ public class BossController : MonoBehaviour, IDamageable
 
     public IEnumerator Attack()
     {        
-        _attack = Random.Range(0f, 100f);
+        _attack = UnityEngine.Random.Range(0f, 100f);
         Debug.Log(_attack);
         if (_attack <= PhaseSo[i].Attack1Percentage)
         {

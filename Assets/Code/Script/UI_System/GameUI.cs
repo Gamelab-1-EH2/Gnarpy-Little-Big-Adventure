@@ -17,12 +17,12 @@ namespace UI_System
 
         private void OnEnable()
         {
-            BossController bossController=FindObjectOfType<BossController>();
+            BossController bossController=FindObjectOfType<BossController>(true);
 
             bossController.OnBossFightStart += ShowBossHP;
             bossController.OnBossHealthChange += _bossHealthBar.SetHealth;
 
-            PlayerModel playerModel = FindObjectOfType<PlayerController>()?.Model;
+            PlayerModel playerModel = FindObjectOfType<PlayerController>(true)?.Model;
             if (playerModel == null)
                 return;
 
@@ -46,6 +46,7 @@ namespace UI_System
             playerModel.OnBallOfWoolCollected += _collectibleBar.SetCollected;
 
             //Boss HP
+            _bossHealthBar.SetHealth(bossController.HP);
             HideBossHP();
         }
 

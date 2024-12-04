@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31fd60e7ee529374eb85dc88c252d2e1, type: 3}
   m_Name: Phase 2
   m_EditorClassIdentifier: 
-  Trigger: 2
+  Trigger: 4
   TentacleWidth: 1
   WarningDelay: 1
   TentacleSpeed: 10

@@ -11,6 +11,7 @@ public class BossController : MonoBehaviour, IDamageable
     private float _attack;
     private int _phaseHp;
     [SerializeField]private int _hp = 0;
+    public int HP=>_hp;
 
     public List<ObjectPooler> Pooler=new List<ObjectPooler>();
     public BossView BossView;

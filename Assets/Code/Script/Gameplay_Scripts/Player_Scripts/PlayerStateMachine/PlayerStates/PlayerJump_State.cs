@@ -1,3 +1,4 @@
+using Audio_System.SFX;
 using Player.Model;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -32,7 +33,9 @@ namespace Player.Behaviour.States
             _playerModel.State = Model.PlayerState.Jump;
             jumpStartTime = Time.time;
 
-            if(!_isForced)
+            SFXManager.PlaySFX?.Invoke(_playerModel.AudioModel.JumpSFX, _playerModel.Movement.RigidBody.position);
+
+            if (!_isForced)
                 InputManager.ActionMap.Gameplay.Jump.canceled += EndJump;
 
             InputManager.ActionMap.Gameplay.Movement.performed += UpdateDirection;

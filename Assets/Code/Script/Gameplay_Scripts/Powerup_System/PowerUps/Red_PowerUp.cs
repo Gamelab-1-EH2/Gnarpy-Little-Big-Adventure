@@ -1,3 +1,4 @@
+using Audio_System.SFX;
 using Player.Model;
 
 using UnityEngine;
@@ -26,6 +27,9 @@ namespace Collectible_System.PowerUp
                 return;
             
             _reverted = !_reverted;
+
+            SFX sfx = _reverted ? _playerModel.AudioModel.ShieldOffSFX : _playerModel.AudioModel.ShieldOnSFX;
+            SFXManager.PlaySFX?.Invoke(sfx, _playerModel.Movement.RigidBody.position);
 
             _onCoolDown = true;
             _coolDownTime = base._playerModel.PowerUp.RedDelay;

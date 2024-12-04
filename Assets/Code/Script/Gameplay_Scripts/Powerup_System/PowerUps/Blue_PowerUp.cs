@@ -1,3 +1,4 @@
+using Audio_System.SFX;
 using Player.Model;
 
 using UnityEngine;
@@ -41,6 +42,8 @@ namespace Collectible_System.PowerUp
             _coolDownTime = _playerModel.PowerUp.ShootDelay;
             _playerModel.PowerUp.BlueProgress = 1f;
             _inCooldown = true;
+
+            SFXManager.PlaySFX?.Invoke(_playerModel.AudioModel.ShootSFX, _playerModel.Movement.RigidBody.position);
         }
 
         public override void Process()

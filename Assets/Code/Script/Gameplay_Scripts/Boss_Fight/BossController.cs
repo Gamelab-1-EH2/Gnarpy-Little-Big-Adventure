@@ -23,7 +23,7 @@ public class BossController : MonoBehaviour, IDamageable
     public Action OnBossFightStart;
     public Action<int> OnBossHealthChange;
 
-
+    public LayerMask layerMask; 
     public void Damage()
     {
         _hp--;
@@ -46,10 +46,11 @@ public class BossController : MonoBehaviour, IDamageable
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 10 && other.gameObject.GetComponent<BossProjectile>().Deflected)
+        if (other.gameObject.GetComponent<BossProjectile>().Deflected)
         {
             other.gameObject.SetActive(false);
             Damage();
+            other.gameObject.GetComponent<BossProjectile>().Deflected = false;
         }
     }
 

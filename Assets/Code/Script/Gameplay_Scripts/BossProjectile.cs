@@ -2,32 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossProjectile : Projectile
+public class BossProjectile : MonoBehaviour,IDeflectable
 {
-    private bool _deflected;
-    public bool Deflected=>_deflected;
-    //private void Awake()
-    //{
-    //    _rigidBody = GetComponent<Rigidbody>();
-    //}
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.layer == 1 << 16)
-    //        return;
+    public bool Deflected;
+    private Rigidbody _rigidBody;
+    private void Awake()
+    {
+        _rigidBody = GetComponent<Rigidbody>();
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == 1 << 16)
+            return;
 
-    //    if (collision.gameObject.TryGetComponent<IDamageable>(out IDamageable damageable))
-    //        damageable.Damage();
+        if (collision.gameObject.TryGetComponent<IDamageable>(out IDamageable damageable))
+            damageable.Damage();
 
-    //    this.gameObject.SetActive(false);
-    //}
+        this.gameObject.SetActive(false);
+    }
 
-    //private void OnBecameInvisible()
+    private void OnBecameInvisible()
+    {
+        Deflected = false;
+        this.gameObject.SetActive(false);
+    }
+    //private void OnTriggerEnter(Collider other)
     //{
-    //    this.gameObject.SetActive(false);
+    //    if (Deflected)
+    //    {
+    //        Deflected = false;
+    //    }
     //}
     public void Deflect(Vector3 dir, float strenght)
     {
-        _deflected = true;
+        Deflected = true;
         _rigidBody.velocity = Vector3.zero;
         _rigidBody.AddForce(dir * strenght, ForceMode.Impulse);
     }

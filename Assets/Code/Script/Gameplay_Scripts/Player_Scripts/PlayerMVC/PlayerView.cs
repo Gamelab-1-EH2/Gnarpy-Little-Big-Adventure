@@ -48,15 +48,18 @@ namespace Player.View
 
             UpdateRenderer(state);
             
-            ResetAnimator();
+            //ResetAnimator();
+            _animator.ResetTrigger(_currentState.ToString());
             _currentState = state;
-
             _animator.SetTrigger(_currentState.ToString());
         }
 
         //Work around
         private void ResetAnimator()
         {
+            if(_currentState == PlayerState.Move)
+                _animator.ResetTrigger(PlayerState.Fall.ToString());
+
             _animator.ResetTrigger(PlayerState.Idle.ToString());
             _animator.ResetTrigger(PlayerState.Move.ToString());
             _animator.ResetTrigger(PlayerState.Jump.ToString());

@@ -32,7 +32,9 @@ namespace Audio_System.SFX
         /// <param name="position"></param>
         private void Request_SFX(SFX sfx, Vector3 position)
         {
-            if (sfx.Clip == null)
+            if (sfx == null)
+                return;
+            if(sfx.Clip == null)
                 return;
 
             //Find first available AudioSource

@@ -477,6 +477,8 @@ MonoBehaviour:
     _gameScenes:
     - Level1
     _intro: Storyboard Prologue
+    _winDelay: 2.8
+    _winOutro: Storyboard Ending
   _initialState: 2
   _isDebug: 0
 --- !u!1 &1249601104

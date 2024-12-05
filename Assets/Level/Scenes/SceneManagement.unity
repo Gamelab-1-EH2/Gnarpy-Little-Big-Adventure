@@ -468,7 +468,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _droppableManager:
-    _dropData: []
+    _dropData:
+    - ObjectToSpawn: {fileID: 0}
+      Probability: 0
   _turretManager:
     _turretProjectile: {fileID: 8592442538128691829, guid: 218f1fd4695dcb34fbb2c89421e85cb0,
       type: 3}
@@ -479,8 +481,8 @@ MonoBehaviour:
     _intro: Storyboard Prologue
     _winDelay: 2.8
     _winOutro: Storyboard Ending
-  _initialState: 0
-  _isDebug: 1
+  _initialState: 2
+  _isDebug: 0
 --- !u!1 &1249601104
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +549,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798614278816013491, guid: 64c1990dea43f1142861b1ce4e0f399d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c38aca682abb8a54f9b2f082ec159409,
+        type: 3}
     - target: {fileID: 5100147615115953777, guid: 64c1990dea43f1142861b1ce4e0f399d,
         type: 3}
       propertyPath: m_LocalPosition.x

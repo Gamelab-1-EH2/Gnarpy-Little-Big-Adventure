@@ -1,3 +1,4 @@
+using Audio_System.SFX;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +23,7 @@ public class BossAttack2_State : BossState
 
     public override void Process()
     {
+        SFXManager.PlaySFX?.Invoke(controller.BossAttack, controller.transform.position);
         Debug.Log("Attack2");
         controller.BossView.Animator.SetTrigger("Attack");
         Vector3 direction= controller.PlayerPos() - controller.transform.position;

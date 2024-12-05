@@ -1977,8 +1977,8 @@ MonoBehaviour:
     _intro: Storyboard Prologue
     _winDelay: 3
     _winOutro: Storyboard Ending
-  _initialState: 2
-  _isDebug: 0
+  _initialState: 0
+  _isDebug: 1
 --- !u!1 &1249601104
 GameObject:
   m_ObjectHideFlags: 0

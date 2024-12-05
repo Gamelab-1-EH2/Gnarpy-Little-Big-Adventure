@@ -1,3 +1,4 @@
+using Audio_System.SFX;
 using Player;
 using System;
 using System.Collections;
@@ -23,9 +24,22 @@ public class BossController : MonoBehaviour, IDamageable
     public Action OnBossFightStart;
     public Action<int> OnBossHealthChange;
 
-    public LayerMask layerMask; 
+    [SerializeField] private SFX_SO _bossDamageSfx;
+    [SerializeField] private SFX_SO _bossAttackSfx;
+    [SerializeField] private SFX_SO _bossDeathSfx;
+    public SFX BossDamage => GetSFX(_bossDamageSfx);
+    public SFX BossAttack => GetSFX(_bossAttackSfx);
+    public SFX BossDeath => GetSFX(_bossDeathSfx);
+
+    private SFX GetSFX(SFX_SO sfxSO)
+    {
+        if (sfxSO != null)
+            return sfxSO.GetSFX();
+        return null;
+    }
     public void Damage()
     {
+        SFXManager.PlaySFX?.Invoke(BossDamage, this.transform.position);
         _hp--;
         _phaseHp--;
         OnBossHealthChange?.Invoke(_hp);
@@ -36,6 +50,7 @@ public class BossController : MonoBehaviour, IDamageable
         }
         if (_hp==0)
         {
+            SFXManager.PlaySFX?.Invoke(BossDeath, this.transform.position);
             BossView.Animator.SetTrigger("Death");
             StateMachine = new BossStateMachine(new BossDeath_State());
             OnBossDefeat?.Invoke();

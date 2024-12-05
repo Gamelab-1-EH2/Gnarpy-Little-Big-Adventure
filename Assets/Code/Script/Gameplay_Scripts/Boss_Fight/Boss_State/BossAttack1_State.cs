@@ -1,3 +1,4 @@
+using Audio_System.SFX;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -20,6 +21,7 @@ public class BossAttack1_State : BossState
 
     public override void Process()
     {
+        SFXManager.PlaySFX?.Invoke(controller.BossAttack, controller.transform.position);
         Debug.Log("Attack1");
         bossView.Animator.SetTrigger("Attack");
         bossView.WarningSprite.transform.localScale = new Vector3(controller.PhaseSo[i].TentacleWidth, bossView.WarningSprite.transform.localScale.y, 1);

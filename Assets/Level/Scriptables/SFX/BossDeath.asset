@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31fd60e7ee529374eb85dc88c252d2e1, type: 3}
-  m_Name: Phase 1
+  m_Script: {fileID: 11500000, guid: 072a08f8743d0ab4388020cbce61ada2, type: 3}
+  m_Name: BossDeath
   m_EditorClassIdentifier: 
-  Trigger: 3
-  TentacleWidth: 1
-  WarningDelay: 3
-  TentacleSpeed: 10
-  ProjectileSpeed: 100
-  DelayBetweenAttacks: 5
-  Attack1Percentage: 10
+  Clips:
+  - {fileID: 8300000, guid: 592104cb2aed14b4e9a291bec4b823b5, type: 3}
+  StartingPitch: 1
+  PitchVariation: 0
+  SpatialBlend: 1

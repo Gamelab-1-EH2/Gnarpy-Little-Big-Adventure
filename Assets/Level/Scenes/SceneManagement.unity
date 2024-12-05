@@ -476,6 +476,7 @@ MonoBehaviour:
   _gameSceneManager:
     _gameScenes:
     - Level1
+    _intro: Storyboard Prologue
   _initialState: 2
   _isDebug: 0
 --- !u!1 &1249601104

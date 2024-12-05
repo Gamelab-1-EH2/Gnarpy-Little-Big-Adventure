@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level/Scenes/Level1.unity
     guid: 6f3eae07ad071894094a2915079c1987
+  - enabled: 1
+    path: Assets/Level/Scenes/CutScenes/Storyboard Prologue.unity
+    guid: 954cc87e66e11824c83f849e8361001e
+  - enabled: 1
+    path: Assets/Level/Scenes/CutScenes/Storyboard Ending.unity
+    guid: 1e25070c25f283b40af8f9fa48dff411
   m_configObjects: {}

@@ -4,6 +4,9 @@ using UnityEngine;
 public class Projectile : MonoBehaviour, IDeflectable
 {
     private Rigidbody _rigidBody;
+
+    public Rigidbody Rigidbody => _rigidBody;
+
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody>();

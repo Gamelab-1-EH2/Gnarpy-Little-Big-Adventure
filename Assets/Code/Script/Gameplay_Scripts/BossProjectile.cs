@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossProjectile : MonoBehaviour,IDeflectable
+public class BossProjectile : MonoBehaviour, IDeflectable
 {
     public bool Deflected;
     private Rigidbody _rigidBody;
+
+    public Rigidbody Rigidbody => _rigidBody;
+
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody>();

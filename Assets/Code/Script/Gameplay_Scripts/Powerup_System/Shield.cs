@@ -18,9 +18,9 @@ public class Shield : MonoBehaviour
     {
         if(other.gameObject.TryGetComponent<IDeflectable>(out IDeflectable deflectable))
         {
-            Vector3 dir = other.transform.position - transform.position;
+            Vector3 dir = deflectable.Rigidbody.velocity;
             dir.z = 0f;
-            deflectable.Deflect(dir, _deflectionForce);
+            deflectable.Deflect(-dir, _deflectionForce);
         }
     }
 

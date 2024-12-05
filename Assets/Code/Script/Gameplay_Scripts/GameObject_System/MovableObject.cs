@@ -36,6 +36,8 @@ public class MovableObject : MonoBehaviour, IFallable, IDeflectable
 
     public bool IsDeflected => _canBreak;
 
+    public Rigidbody Rigidbody => _rigidBody;
+
     private void OnCollisionEnter(Collision collision)
     {
         if(_canBreak && _isFalling)

@@ -27,14 +27,21 @@ namespace Player.Model
             _gravityOffSFX = playerSO.GravityOffSFX;
         }
 
-        public SFX DamagedSFX => _damagedSFX.GetSFX();
-        public SFX DeathSFX => _deathSFX.GetSFX();
-        public SFX JumpSFX => _jumpSFX.GetSFX();
-        public SFX ShootSFX => _shootSFX.GetSFX();
+        public SFX DamagedSFX => GetSFX(_damagedSFX);
+        public SFX DeathSFX => GetSFX(_deathSFX);
+        public SFX JumpSFX => GetSFX(_jumpSFX);
+        public SFX ShootSFX => GetSFX(_shootSFX);
 
-        public SFX ShieldOnSFX => _shieldOnSFX.GetSFX();
-        public SFX ShieldOffSFX => _shieldOffSFX.GetSFX();
-        public SFX GravityOnSFX => _gravityOnSFX.GetSFX();
-        public SFX GravityOffSFX => _gravityOffSFX.GetSFX();
+        public SFX ShieldOnSFX => GetSFX(_shieldOnSFX);
+        public SFX ShieldOffSFX => GetSFX(_shieldOffSFX);
+        public SFX GravityOnSFX => GetSFX(_gravityOnSFX);
+        public SFX GravityOffSFX => GetSFX(_gravityOffSFX);
+
+        private SFX GetSFX(SFX_SO sfxSO)
+        {
+            if(sfxSO !=  null)
+                return sfxSO.GetSFX();
+            return null;
+        }
     }
 }

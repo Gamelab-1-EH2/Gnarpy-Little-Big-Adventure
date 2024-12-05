@@ -75,6 +75,13 @@ namespace UI_System
                     _menuUI.gameObject.SetActive(false);
                     _loadingUI.gameObject.SetActive(true);
                     break;
+
+                case GameState_Type.CutScene:
+                    _gameUI.gameObject.SetActive(false);
+                    _menuUI.gameObject.SetActive(false);
+                    _loadingUI.gameObject.SetActive(false);
+                    break;
+
             }
         }
     }

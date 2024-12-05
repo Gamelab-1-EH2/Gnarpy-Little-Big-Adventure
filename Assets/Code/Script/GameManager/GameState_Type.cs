@@ -8,5 +8,6 @@ namespace GameManagement
         Defeat = 4,
         Victory = 8,
         Loading = 16,
+        CutScene = 32,
     }
 }

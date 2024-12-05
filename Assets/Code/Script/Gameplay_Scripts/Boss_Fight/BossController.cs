@@ -61,6 +61,7 @@ public class BossController : MonoBehaviour, IDamageable
         {
             Pooler.Add(new ObjectPooler(GameObject[i], 4));
         }
+        _hp=0;
         for (int i = 0; i < PhaseSo.Count; i++)
         {
             _hp = _hp + PhaseSo[i].Trigger;

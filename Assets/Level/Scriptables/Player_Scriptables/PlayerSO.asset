@@ -15,7 +15,7 @@ MonoBehaviour:
   HealthPoints: 3
   MaxY: 12
   MinY: -12
-  MovementSpeed: 10
+  MovementSpeed: 9
   JumpForce: 30
   JumpSpeedCurve:
     serializedVersion: 2
@@ -54,7 +54,7 @@ MonoBehaviour:
   GreenPowerUpDuration: 349.98
   BluePowerUpProjectile: {fileID: 8592442538128691829, guid: 04d1449a439c4bb49a5df1772598e3d4,
     type: 3}
-  ProjectileSpeed: 16
+  ProjectileSpeed: 14
   ShootDelay: 1
   ShootDirection: {x: 0, y: 90, z: 90}
   ShootOffset: {x: 0.8, y: 0.8}

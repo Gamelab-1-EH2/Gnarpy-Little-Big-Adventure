@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7890874514222548745}
   - component: {fileID: 5667665674192711828}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Vines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 1312042268648882557}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: -1, z: 0}
+  m_LocalPosition: {x: 1, y: -1, z: 0.5003906}
   m_LocalScale: {x: 1, y: 1, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -177,7 +177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7543967172057959796}
   - component: {fileID: 541739007515390116}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Vines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ Transform:
   m_GameObject: {fileID: 2492250668156505163}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: -1, z: 0}
+  m_LocalPosition: {x: -1, y: -1, z: 0.5003906}
   m_LocalScale: {x: 1, y: 1, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -361,7 +361,7 @@ Transform:
   m_GameObject: {fileID: 3088985595371299127}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 1, z: 0}
+  m_LocalPosition: {x: 1, y: 1, z: 0.5003906}
   m_LocalScale: {x: 1, y: 1, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -444,7 +444,7 @@ Transform:
   m_GameObject: {fileID: 3980804774967403756}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: -1, y: 0, z: 0.5003906}
   m_LocalScale: {x: 1, y: 1, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -527,7 +527,7 @@ Transform:
   m_GameObject: {fileID: 4223219741889386728}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0.5003906}
   m_LocalScale: {x: 1, y: 1, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -610,7 +610,7 @@ Transform:
   m_GameObject: {fileID: 5034306348098425351}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0.5003906}
   m_LocalScale: {x: 1, y: 1, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -676,7 +676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6862791573306904435}
   - component: {fileID: 4639290770100331193}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Vines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +760,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2007537037018349241}
   - component: {fileID: 2112877008057356032}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Vines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -844,7 +844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4690235988478808642}
   - component: {fileID: 5428606430785443470}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Vines3x3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -890,7 +890,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -906,7 +906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2727028157220337344}
   - component: {fileID: 5315743353553764483}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Vines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1007,7 +1007,7 @@ Transform:
   m_GameObject: {fileID: 6804393488872252503}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 1, z: 0}
+  m_LocalPosition: {x: -1, y: 1, z: 0.5003906}
   m_LocalScale: {x: 1, y: 1, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1090,7 +1090,7 @@ Transform:
   m_GameObject: {fileID: 7405417577698710307}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5003906}
   m_LocalScale: {x: 1, y: 1, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1156,7 +1156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4939579262576135596}
   - component: {fileID: 3925303187153454175}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Vines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1240,7 +1240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6084447030963964682}
   - component: {fileID: 7447592931369310799}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Vines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1324,7 +1324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2294817448202045542}
   - component: {fileID: 3803671231085250882}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Vines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1425,7 +1425,7 @@ Transform:
   m_GameObject: {fileID: 8580092119168058224}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0.5003906}
   m_LocalScale: {x: 1, y: 1, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1491,7 +1491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4033798938523815735}
   - component: {fileID: 4217147340164625560}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Vines
   m_TagString: Untagged
   m_Icon: {fileID: 0}

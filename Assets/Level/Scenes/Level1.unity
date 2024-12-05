@@ -3306,10 +3306,45 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3496259932104158600, guid: be30386c617b63e41b8ad8e896e04479,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3752671989047296830, guid: be30386c617b63e41b8ad8e896e04479,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806665305789714450, guid: be30386c617b63e41b8ad8e896e04479,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806665305789714450, guid: be30386c617b63e41b8ad8e896e04479,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4028007869189669285, guid: be30386c617b63e41b8ad8e896e04479,
         type: 3}
       propertyPath: m_Name
       value: Turret_5 (TEST)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028007869189669285, guid: be30386c617b63e41b8ad8e896e04479,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105156463234861775, guid: be30386c617b63e41b8ad8e896e04479,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105156463234861775, guid: be30386c617b63e41b8ad8e896e04479,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6907,7 +6942,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _toFollow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1171586359}
     - target: {fileID: 2975252782067314466, guid: cee4de7d88b9c9149b57a6b15c2e3da6,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -6952,7 +6987,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _toFollow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1171586359}
     - target: {fileID: 3343012673521934115, guid: cee4de7d88b9c9149b57a6b15c2e3da6,
         type: 3}
       propertyPath: _toFollow
@@ -6982,7 +7017,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _toFollow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1171586359}
     - target: {fileID: 3641164780938356108, guid: cee4de7d88b9c9149b57a6b15c2e3da6,
         type: 3}
       propertyPath: m_Name

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1975,7 +1975,7 @@ MonoBehaviour:
     _gameScenes:
     - Level1
     _intro: Storyboard Prologue
-    _winDelay: 2.8
+    _winDelay: 3
     _winOutro: Storyboard Ending
   _initialState: 2
   _isDebug: 0

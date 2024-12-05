@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8042958224875203612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Nut_broken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2044670995764651263}
   - component: {fileID: 6257602241962503375}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Nut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,6 +173,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8042958224875203612}
     m_Modifications:
+    - target: {fileID: 1129610558175303107, guid: 9faaea7a4778d584daf25d641ff90a91,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1358489323952722655, guid: 9faaea7a4778d584daf25d641ff90a91,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -228,6 +233,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallnutsFull_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 4561574623068511291, guid: 9faaea7a4778d584daf25d641ff90a91,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7061179569169649640, guid: 9faaea7a4778d584daf25d641ff90a91,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -251,6 +266,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WallnutsEmpty_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 742407050886404123, guid: 9019b556a703d204d8bed26365ee0d61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1411750903753561368, guid: 9019b556a703d204d8bed26365ee0d61,
         type: 3}
@@ -302,6 +322,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1888806664372681821, guid: 9019b556a703d204d8bed26365ee0d61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169547482532961705, guid: 9019b556a703d204d8bed26365ee0d61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -321,6 +351,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2044670995764651263}
     m_Modifications:
+    - target: {fileID: 1129610558175303107, guid: 9faaea7a4778d584daf25d641ff90a91,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1358489323952722655, guid: 9faaea7a4778d584daf25d641ff90a91,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -376,6 +411,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallnutsFull_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 4561574623068511291, guid: 9faaea7a4778d584daf25d641ff90a91,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7061179569169649640, guid: 9faaea7a4778d584daf25d641ff90a91,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -399,6 +444,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WallnutsEmpty_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 742407050886404123, guid: 9019b556a703d204d8bed26365ee0d61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1411750903753561368, guid: 9019b556a703d204d8bed26365ee0d61,
         type: 3}
@@ -449,6 +499,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888806664372681821, guid: 9019b556a703d204d8bed26365ee0d61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169547482532961705, guid: 9019b556a703d204d8bed26365ee0d61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

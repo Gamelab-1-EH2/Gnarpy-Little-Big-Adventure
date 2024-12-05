@@ -2277,7 +2277,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _droppableManager:
-    _dropData: []
+    _dropData:
+    - ObjectToSpawn: {fileID: 0}
+      Probability: 0.5
   _turretManager:
     _turretProjectile: {fileID: 8592442538128691829, guid: 218f1fd4695dcb34fbb2c89421e85cb0,
       type: 3}

@@ -8,9 +8,13 @@ namespace GameManagement.Behaviour
 {
     public class GameState_Gameplay : GameState
     {
+        private bool _hasWon;
+        private float _winTime;
+
         public GameState_Gameplay(GameManager_Model model) : base(model)
         {
-
+            _hasWon = false;
+            _winTime = 0;
         }
 
         public override void Enter()
@@ -41,11 +45,26 @@ namespace GameManagement.Behaviour
 
         public override void Process()
         {
-            _model.FallableManager.Process();
-            _model.TurretManager.Process();
+            if(!_hasWon)
+            {
+                _model.FallableManager.Process();
+                _model.TurretManager.Process();
+            }
+            else
+            {
+                if (Time.time - _winTime >= _model.SceneManager.WinDelay)
+                    VictoryExit();
+            }
         }
 
         private void DefeatExit() => base.OnStateExit(new GameState_Defeat(base._model));
+
+        private void TriggerWin()
+        {
+            _hasWon = true;
+            _winTime = Time.time;
+        }
+
         private void VictoryExit()
         {
             string cutScene = _model.SceneManager.WinScene;

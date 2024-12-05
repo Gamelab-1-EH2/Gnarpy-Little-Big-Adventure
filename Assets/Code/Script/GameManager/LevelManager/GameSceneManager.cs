@@ -10,6 +10,7 @@ namespace GameManagement.GameSceneManagement
     {
         [SerializeField] private List<string> _gameScenes = new List<string>{"none"};
         [SerializeField] private string _intro = "none";
+        [SerializeField] private float _winDelay = 2.8f;
         [SerializeField] private string _winOutro = "none";
 
         private AsyncOperation _loadOperation;
@@ -45,6 +46,7 @@ namespace GameManagement.GameSceneManagement
 
         public string IntroScene => _intro;
         public string WinScene => _winOutro;
+        public float WinDelay => _winDelay;
         public AsyncOperation LoadOperation => _loadOperation;
         public List<String> GameScenes => _gameScenes;
     }

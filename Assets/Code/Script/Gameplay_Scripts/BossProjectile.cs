@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class BossProjectile : MonoBehaviour, IDeflectable
 {
-    [HideInInspector]public bool Deflected;
-    [SerializeField] GameObject catnip;
+    public bool Deflected;
     private Rigidbody _rigidBody;
     [SerializeField] LayerMask layer;
 
@@ -20,13 +19,7 @@ public class BossProjectile : MonoBehaviour, IDeflectable
     {
         if (collision.gameObject.layer == 1 << 16)
             return;
-        if (collision.gameObject.layer ==layer)
-        {
-            Debug.Log("Catnip");
-            Instantiate(catnip, this.transform);
-            this.gameObject.SetActive(false);
-        }
-          
+         
 
         if (collision.gameObject.TryGetComponent<IDamageable>(out IDamageable damageable))
             damageable.Damage();

@@ -39,10 +39,11 @@ public class BossController : MonoBehaviour, IDamageable
     }
     public void Damage()
     {
+        BossView.Animator.SetTrigger("Damage");
         SFXManager.PlaySFX?.Invoke(BossDamage, this.transform.position);
+        OnBossHealthChange?.Invoke(_hp);
         _hp--;
         _phaseHp--;
-        OnBossHealthChange?.Invoke(_hp);
         if (_phaseHp == 0 && _hp != 0)
         {
             i++;
@@ -56,15 +57,14 @@ public class BossController : MonoBehaviour, IDamageable
             OnBossDefeat?.Invoke();
             Debug.Log("Death");
         }
-        BossView.Animator.SetTrigger("Damage");
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<BossProjectile>().Deflected)
-        {
-            other.gameObject.SetActive(false);
+        {            
             Damage();
+            other.gameObject.SetActive(false);
             other.gameObject.GetComponent<BossProjectile>().Deflected = false;
         }
     }

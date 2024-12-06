@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4913da6217b839d4199db55ab94b9147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 0
+  _hp: 9
   BossView: {fileID: 8308689880386094039}
   GameObject:
   - {fileID: 0}
@@ -245,6 +245,7 @@ MonoBehaviour:
   PhaseSo:
   - {fileID: 11400000, guid: 8af1ff285f96253408a7d7938db49fc1, type: 2}
   - {fileID: 11400000, guid: f30aa935ed5396f4ca90a662d78fe9ac, type: 2}
+  - {fileID: 11400000, guid: 0c107f3b1708c82498c05b6fab69ad32, type: 2}
   layerMask:
     serializedVersion: 2
     m_Bits: 1024

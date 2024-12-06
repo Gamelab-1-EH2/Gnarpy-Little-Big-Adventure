@@ -2648,7 +2648,7 @@ PrefabInstance:
     - target: {fileID: 2725721882897192009, guid: 67f736da9e44f3843afcd4bdd546dd10,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: -84
       objectReference: {fileID: 0}
     - target: {fileID: 2725721882897192009, guid: 67f736da9e44f3843afcd4bdd546dd10,
         type: 3}
@@ -2718,6 +2718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8320d1b8f2bf84495a91a0040bd49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Deflected: 0
 --- !u!1 &1386561214
 GameObject:
   m_ObjectHideFlags: 0
@@ -3273,6 +3274,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927562315785172608, guid: 2d7258dc26c6a6f49a4700cef3e97031,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8870069456002938600, guid: 2d7258dc26c6a6f49a4700cef3e97031,
         type: 3}

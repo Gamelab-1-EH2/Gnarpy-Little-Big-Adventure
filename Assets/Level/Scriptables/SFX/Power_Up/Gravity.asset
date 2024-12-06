@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 072a08f8743d0ab4388020cbce61ada2, type: 3}
   m_Name: Gravity
   m_EditorClassIdentifier: 
-  Clips: []
+  Clips:
+  - {fileID: 8300000, guid: 62f66c0c58d7a564887c0371ad6558a8, type: 3}
   StartingPitch: 1
   PitchVariation: 0
   SpatialBlend: 0

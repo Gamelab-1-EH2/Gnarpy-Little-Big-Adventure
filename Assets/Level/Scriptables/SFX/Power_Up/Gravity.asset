@@ -15,4 +15,4 @@ MonoBehaviour:
   Clips: []
   StartingPitch: 1
   PitchVariation: 0
-  SpatialBlend: 1
+  SpatialBlend: 0

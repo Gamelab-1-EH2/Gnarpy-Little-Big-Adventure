@@ -16,4 +16,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 073baf6b21c1cc24aae240b1cf297ed0, type: 3}
   StartingPitch: 1
   PitchVariation: 0
-  SpatialBlend: 1
+  SpatialBlend: 0

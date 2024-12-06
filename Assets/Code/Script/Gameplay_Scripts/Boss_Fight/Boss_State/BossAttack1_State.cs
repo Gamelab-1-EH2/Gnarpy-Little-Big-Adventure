@@ -1,4 +1,6 @@
 using Audio_System.SFX;
+using GameManagement;
+using Player;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -21,13 +23,16 @@ public class BossAttack1_State : BossState
 
     public override void Process()
     {
-        SFXManager.PlaySFX?.Invoke(controller.BossAttack, controller.transform.position);
-        Debug.Log("Attack1");
-        bossView.Animator.SetTrigger("Attack");
-        bossView.WarningSprite.transform.localScale = new Vector3(controller.PhaseSo[i].TentacleWidth, bossView.WarningSprite.transform.localScale.y, 1);
-        bossView.WarningSprite.transform.position = controller.PlayerPos();
-        controller.StartCoroutine(controller.DisplayWarning());
-        controller.StartCoroutine(controller.Attack());
+        if(controller.Player().Model.HealthPoints > 0)
+        {
+            SFXManager.PlaySFX?.Invoke(controller.BossAttack, controller.transform.position);
+            Debug.Log("Attack1");
+            bossView.Animator.SetTrigger("Attack");
+            bossView.WarningSprite.transform.localScale = new Vector3(controller.PhaseSo[i].TentacleWidth, bossView.WarningSprite.transform.localScale.y, 1);
+            bossView.WarningSprite.transform.position = controller.Player().transform.position;
+            controller.StartCoroutine(controller.DisplayWarning());
+            controller.StartCoroutine(controller.Attack());
+        }
     }
 
     public override void Exit()

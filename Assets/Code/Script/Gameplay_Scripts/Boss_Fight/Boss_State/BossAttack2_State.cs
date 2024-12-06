@@ -23,13 +23,16 @@ public class BossAttack2_State : BossState
 
     public override void Process()
     {
-        SFXManager.PlaySFX?.Invoke(controller.BossAttack, controller.transform.position);
-        Debug.Log("Attack2");
-        controller.BossView.Animator.SetTrigger("Attack");
-        Vector3 direction= controller.PlayerPos() - controller.transform.position;
-        controller.SpawnObject().GetComponent<Rigidbody>().velocity = direction * Time.deltaTime * controller.PhaseSo[i].ProjectileSpeed;
-        controller.SpawnObject().SetActive(true);
-        controller.StartCoroutine(controller.Attack());
+        if (controller.Player().Model.HealthPoints>0)
+        {
+            SFXManager.PlaySFX?.Invoke(controller.BossAttack, controller.transform.position);
+            Debug.Log("Attack2");
+            controller.BossView.Animator.SetTrigger("Attack");
+            Vector3 direction = controller.Player().transform.position - controller.transform.position;
+            controller.SpawnObject().GetComponent<Rigidbody>().velocity = direction * Time.deltaTime * controller.PhaseSo[i].ProjectileSpeed;
+            controller.SpawnObject().SetActive(true);
+            controller.StartCoroutine(controller.Attack());
+        }
     }
 
     public override void Exit()

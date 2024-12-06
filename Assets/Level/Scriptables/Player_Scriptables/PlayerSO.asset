@@ -49,7 +49,7 @@ MonoBehaviour:
   RedPowerUpRadius: 6
   RedPowerUpStrenght: 30
   RedPowerUpDelay: 2
-  GreenPowerUpStrenght: 30
+  GreenPowerUpStrenght: 5
   GreenPowerUpDelay: 10
   GreenPowerUpDuration: 349.98
   BluePowerUpProjectile: {fileID: 8592442538128691829, guid: 04d1449a439c4bb49a5df1772598e3d4,
@@ -58,10 +58,10 @@ MonoBehaviour:
   ShootDelay: 1
   ShootDirection: {x: 0, y: 90, z: 90}
   ShootOffset: {x: 0.8, y: 0.8}
-  DamagedSFX: {fileID: 0}
-  DeathSFX: {fileID: 0}
-  JumpSFX: {fileID: 0}
-  ShootSFX: {fileID: 0}
+  DamagedSFX: {fileID: 11400000, guid: 909d9d5d67620af419c948507e80ce8f, type: 2}
+  DeathSFX: {fileID: 11400000, guid: 6094316a56f4ba74f8e50a6e84e33d38, type: 2}
+  JumpSFX: {fileID: 11400000, guid: bdb96a13c629c5646b257d46d2f087f1, type: 2}
+  ShootSFX: {fileID: 11400000, guid: 37641a4d4fb6a364fa0eeae2676f9a3c, type: 2}
   ShieldOnSFX: {fileID: 0}
   ShieldOffSFX: {fileID: 0}
   GravityOnSFX: {fileID: 0}

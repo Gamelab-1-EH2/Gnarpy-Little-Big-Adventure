@@ -2277,9 +2277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _droppableManager:
-    _dropData:
-    - ObjectToSpawn: {fileID: 0}
-      Probability: 0.5
+    _dropData: []
   _turretManager:
     _turretProjectile: {fileID: 8592442538128691829, guid: 218f1fd4695dcb34fbb2c89421e85cb0,
       type: 3}
@@ -2308,7 +2306,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1249601105
 Transform:
   m_ObjectHideFlags: 0

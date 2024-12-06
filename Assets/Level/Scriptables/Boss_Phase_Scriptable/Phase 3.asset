@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Phase 3
   m_EditorClassIdentifier: 
   Trigger: 3
-  TentacleWidth: 2
+  TentacleWidth: 3
   WarningDelay: 1
   TentacleSpeed: 20
-  ProjectileSpeed: 140
+  ProjectileSpeed: 150
   DelayBetweenAttacks: 2
   Attack1Percentage: 70

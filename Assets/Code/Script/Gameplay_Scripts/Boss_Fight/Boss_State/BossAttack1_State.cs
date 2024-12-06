@@ -29,7 +29,7 @@ public class BossAttack1_State : BossState
             Debug.Log("Attack1");
             bossView.Animator.SetTrigger("Attack");
             bossView.WarningSprite.transform.localScale = new Vector3(controller.PhaseSo[i].TentacleWidth, bossView.WarningSprite.transform.localScale.y, 1);
-            bossView.WarningSprite.transform.position = controller.Player().transform.position;
+            bossView.WarningSprite.transform.position = controller.PlayerPos();
             controller.StartCoroutine(controller.DisplayWarning());
             controller.StartCoroutine(controller.Attack());
         }

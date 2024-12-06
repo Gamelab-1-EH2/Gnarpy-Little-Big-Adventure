@@ -7826,6 +7826,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6028453972034424232, guid: 2d7258dc26c6a6f49a4700cef3e97031,
         type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028453972034424232, guid: 2d7258dc26c6a6f49a4700cef3e97031,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6028453972034424232, guid: 2d7258dc26c6a6f49a4700cef3e97031,
+        type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}

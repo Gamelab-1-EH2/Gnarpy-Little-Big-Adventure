@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 072a08f8743d0ab4388020cbce61ada2, type: 3}
   m_Name: Shield
   m_EditorClassIdentifier: 
-  Clips: []
+  Clips:
+  - {fileID: 8300000, guid: 73fb3dbc64c11a9408e510ed6cdad128, type: 3}
   StartingPitch: 1
   PitchVariation: 0
   SpatialBlend: 0

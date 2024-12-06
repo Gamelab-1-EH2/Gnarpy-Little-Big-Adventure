@@ -62,7 +62,7 @@ MonoBehaviour:
   DeathSFX: {fileID: 11400000, guid: 6094316a56f4ba74f8e50a6e84e33d38, type: 2}
   JumpSFX: {fileID: 11400000, guid: bdb96a13c629c5646b257d46d2f087f1, type: 2}
   ShootSFX: {fileID: 11400000, guid: 37641a4d4fb6a364fa0eeae2676f9a3c, type: 2}
-  ShieldOnSFX: {fileID: 0}
-  ShieldOffSFX: {fileID: 0}
-  GravityOnSFX: {fileID: 0}
-  GravityOffSFX: {fileID: 0}
+  ShieldOnSFX: {fileID: 11400000, guid: 77c30c9cc6a5d0f4b9f95038f1c89dbd, type: 2}
+  ShieldOffSFX: {fileID: 11400000, guid: 77c30c9cc6a5d0f4b9f95038f1c89dbd, type: 2}
+  GravityOnSFX: {fileID: 11400000, guid: 953a998ba98769c4e95aa8d8cb48a394, type: 2}
+  GravityOffSFX: {fileID: 11400000, guid: 953a998ba98769c4e95aa8d8cb48a394, type: 2}

@@ -52,7 +52,7 @@ Rigidbody:
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -146,3 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8320d1b8f2bf84495a91a0040bd49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Deflected: 0
+  catnip: {fileID: 6672862112433765209, guid: 623b26cb4fb44324b8eabe04c8e2007c, type: 3}
+  layer:
+    serializedVersion: 2
+    m_Bits: 512

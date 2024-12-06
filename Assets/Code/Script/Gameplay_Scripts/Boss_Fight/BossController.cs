@@ -1,3 +1,4 @@
+using Audio_System.SFX;
 using Player;
 using System;
 using System.Collections;
@@ -23,9 +24,22 @@ public class BossController : MonoBehaviour, IDamageable
     public Action OnBossFightStart;
     public Action<int> OnBossHealthChange;
 
-    public LayerMask layerMask; 
+    [SerializeField] private SFX_SO _bossDamageSfx;
+    [SerializeField] private SFX_SO _bossAttackSfx;
+    [SerializeField] private SFX_SO _bossDeathSfx;
+    public SFX BossDamage => GetSFX(_bossDamageSfx);
+    public SFX BossAttack => GetSFX(_bossAttackSfx);
+    public SFX BossDeath => GetSFX(_bossDeathSfx);
+
+    private SFX GetSFX(SFX_SO sfxSO)
+    {
+        if (sfxSO != null)
+            return sfxSO.GetSFX();
+        return null;
+    }
     public void Damage()
     {
+        SFXManager.PlaySFX?.Invoke(BossDamage, this.transform.position);
         _hp--;
         _phaseHp--;
         OnBossHealthChange?.Invoke(_hp);
@@ -36,6 +50,7 @@ public class BossController : MonoBehaviour, IDamageable
         }
         if (_hp==0)
         {
+            SFXManager.PlaySFX?.Invoke(BossDeath, this.transform.position);
             BossView.Animator.SetTrigger("Death");
             StateMachine = new BossStateMachine(new BossDeath_State());
             OnBossDefeat?.Invoke();
@@ -59,7 +74,7 @@ public class BossController : MonoBehaviour, IDamageable
         OnBossFightStart?.Invoke();
         for (int i = 0; i < GameObject.Count; i++)
         {
-            Pooler.Add(new ObjectPooler(GameObject[i], 4));
+            Pooler.Add(new ObjectPooler(GameObject[i], 2));
         }
         _hp=0;
         for (int i = 0; i < PhaseSo.Count; i++)
@@ -69,22 +84,22 @@ public class BossController : MonoBehaviour, IDamageable
         _phaseHp = PhaseSo[i].Trigger;
         StartCoroutine(Attack());
     }
-
-    public Vector3 PlayerPos (){
-        return FindObjectOfType<PlayerController>().transform.position;
+    public PlayerController Player()
+    {
+        return FindObjectOfType<PlayerController>();
     }
     public GameObject SpawnObject()
     {
         int i;
         i=UnityEngine.Random.Range(0, Pooler.Count);
-        Pooler[i].PoolObject().transform.position=transform.position;
+        Pooler[i].PoolObject().transform.position= new Vector3(transform.position.x,transform.position.y+1,transform.position.z);
         return Pooler[i].PoolObject();
     }
 
     public IEnumerator DisplayWarning()
     {
         BossView.WarningSprite.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1 / 2f);
-        BossView.Tentacle.transform.position = PlayerPos() + Vector3.up * 10;
+        BossView.Tentacle.transform.position = Player().transform.position + Vector3.up * 10;
         yield return new WaitForSeconds(PhaseSo[i].WarningDelay);
         BossView.WarningSprite.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0);
         BossView.Tentacle.transform.GetComponent<Rigidbody>().velocity = Vector3.down*PhaseSo[i].TentacleSpeed;

@@ -1,11 +1,14 @@
+using Collectible_System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BossProjectile : MonoBehaviour, IDeflectable
 {
-    public bool Deflected;
+    [HideInInspector]public bool Deflected;
+    [SerializeField] GameObject catnip;
     private Rigidbody _rigidBody;
+    [SerializeField] LayerMask layer;
 
     public Rigidbody Rigidbody => _rigidBody;
 
@@ -17,6 +20,13 @@ public class BossProjectile : MonoBehaviour, IDeflectable
     {
         if (collision.gameObject.layer == 1 << 16)
             return;
+        if (collision.gameObject.layer ==layer)
+        {
+            Debug.Log("Catnip");
+            Instantiate(catnip, this.transform);
+            this.gameObject.SetActive(false);
+        }
+          
 
         if (collision.gameObject.TryGetComponent<IDamageable>(out IDamageable damageable))
             damageable.Damage();

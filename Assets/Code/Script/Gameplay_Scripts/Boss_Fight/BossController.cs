@@ -88,6 +88,10 @@ public class BossController : MonoBehaviour, IDamageable
     {
         return FindObjectOfType<PlayerController>();
     }
+    public Vector3 PlayerPos()
+    {
+        return FindObjectOfType<PlayerController>().transform.position;
+    }
     public GameObject SpawnObject()
     {
         int i;
@@ -99,7 +103,7 @@ public class BossController : MonoBehaviour, IDamageable
     public IEnumerator DisplayWarning()
     {
         BossView.WarningSprite.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1 / 2f);
-        BossView.Tentacle.transform.position = Player().transform.position + Vector3.up * 10;
+        BossView.Tentacle.transform.position = PlayerPos() + Vector3.up * 10;
         yield return new WaitForSeconds(PhaseSo[i].WarningDelay);
         BossView.WarningSprite.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0);
         BossView.Tentacle.transform.GetComponent<Rigidbody>().velocity = Vector3.down*PhaseSo[i].TentacleSpeed;
